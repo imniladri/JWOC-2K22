@@ -68,7 +68,7 @@ section#about.waypoint div.about .fig img {
 section#about.waypoint div.about .desc {
     right: 0;
     opacity: 0;
-    transition: all 0.2s ease, right 0.8s ease;
+    transition: opacity 0.4s ease, right 0.8s ease;
 }
 
 section#about.viewpoint div.about .fig img {
