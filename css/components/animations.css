@@ -79,7 +79,7 @@ section#about.viewpoint div.about .desc {
     opacity: 1;
 }
 
-@media (max-width: 472px) {
+@media (max-width: 992px) {
     section#about.viewpoint div.about .desc {
         right: 0;
     }

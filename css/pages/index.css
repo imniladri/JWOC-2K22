@@ -23,7 +23,7 @@ section#banner div#particles-js {
 section#banner div.banner {
     padding: 4rem 6rem;
     width: 90%;
-    height: 90%;
+    height: 92%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,13 +176,7 @@ section#about::before {
     opacity: 0.8;
 }
 
-section#about div.about {
-    position: relative;
-    margin: 5rem auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* =============== About Heading =============== */
 
 section#about div.heading {
     position: relative;
@@ -234,6 +228,16 @@ section#about div.heading span.divider_2 {
     border-radius: 2px;
     background: var(--primarylight);
     z-index: -1;
+}
+
+/* =============== About Description/Desc =============== */
+
+section#about div.about {
+    position: relative;
+    margin: 5rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 section#about div.about .fig {
@@ -333,12 +337,102 @@ section#about div.about .desc a.btn:hover {
     background-position: bottom right;
 }
 
+/* =============== About Information/Info =============== */
+
+section#about div.info {
+    position: relative;
+    margin: 15rem auto 5rem;
+}
+
+section#about div.info h3 {
+    position: relative;
+    margin: 2rem auto;
+    font-size: 3.5rem;
+    font-weight: 600;
+    font-family: "Blanka";
+    color: var(--lightblack);
+    letter-spacing: 6px;
+    text-align: center;
+}
+
+section#about div.info h3 span {
+    color: var(--primarylight);
+}
+
+section#about div.info .content {
+    margin: 1rem auto 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#about div.info img {
+    margin: auto -6rem;
+    width: 15rem;
+    height: auto;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+section#about div.info .info_card {
+    margin: 2rem 4rem;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 16px rgba(50, 69, 107, 0.2);
+}
+
+section#about div.info .info_card i {
+    margin: auto;
+    font-size: 5rem;
+    color: var(--lightblack);
+}
+
+section#about div.info .info_card h4 {
+    margin: 1rem 0;
+    font-size: 2.6rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+section#about div.info .info_card a.btn {
+    margin: 1rem 0;
+    padding: 0.6rem 1.6rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: var(--curlfont);
+    color: var(--darkwhite);
+    background: var(--primarylight);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+section#about div.info .info_card a.btn:hover {
+    background: var(--primarydark);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* =============== About Organiser/Org =============== */
+
 /* **************************** Responsive **************************** */
 
 @media (max-width: 1240px) {
     section#about div.about .desc {
         right: 5%;
         width: 80%;
+    }
+    section#about div.info {
+        margin: 20rem auto 5rem;
     }
 }
 
@@ -351,12 +445,25 @@ section#about div.about .desc a.btn:hover {
         margin-left: auto;
     }
     section#about div.about .desc {
-        position: absolute;
-        right: 10%;
-        top: 40%;
+        margin: -10rem auto;
+        width: 95%;
+        position: relative;
+        transform: translate(0) !important;
     }
     section#about::before {
         display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    section#about div.info .content {
+        flex-direction: column;
+    }
+    section#about div.info img {
+        margin: -8rem auto;
+    }
+    section#about div.info .info_card {
+        width: 90%;
     }
 }
 
@@ -365,11 +472,114 @@ section#about div.about .desc a.btn:hover {
         margin: auto 2rem;
     }
     section#about div.about .desc {
+        margin: -2rem auto;
         padding: 4rem 2rem;
-        right: 0;
-        width: 95%;
     }
     section#about div.about .desc h2 span {
         width: min-content;
+    }
+    section#about div.info {
+        margin: 10rem auto 5rem;
+    }
+}
+
+/* **************************** Stats Section **************************** */
+
+section#stats {
+    position: relative;
+    margin: 5rem auto;
+}
+
+section#stats div.stats {
+    margin: 2rem auto;
+    padding: 8rem 2rem;
+    background: rgba(62, 100, 255, 0.9) url(/assets/img/pattern_bg.png) fixed
+        no-repeat center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section#stats div.stats .stats_card {
+    margin: 2rem;
+    padding: 2rem 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 16px rgba(50, 69, 107, 0.2);
+    transition: all 0.4s ease;
+}
+
+section#stats div.stats .stats_card:hover {
+    transform: translateY(-2rem);
+}
+
+section#stats div.stats .stats_card i {
+    margin: 1rem auto auto;
+    padding: 1.5rem;
+    font-size: 4rem;
+    color: var(--darkwhite);
+    background: var(--primarylight);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+section#stats div.stats .stats_card h4 {
+    margin: 1rem auto 0.5rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+    font-family: var(--mainfont);
+    color: var(--darkblack);
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+section#stats div.stats .stats_card p {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#stats div.stats .stats_card p span {
+    font-size: 4rem;
+    font-weight: 600;
+    font-family: var(--mainfont);
+    color: var(--darkblack);
+}
+
+section#stats div.stats .stats_card p i.fa {
+    margin: 0.5rem;
+    padding: 6px 7px;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    color: var(--darkwhite);
+    background: var(--primarylight);
+}
+
+/* **************************** Responsive **************************** */
+
+@media (max-width: 992px) {
+    section#stats div.stats {
+        padding: 6rem 2rem;
+    }
+    section#stats div.stats .stats_card i {
+        font-size: 3.5rem;
+    }
+    section#stats div.stats .stats_card h4 {
+        font-size: 2rem;
+    }
+    section#stats div.stats .stats_card p span {
+        font-size: 3rem;
+    }
+    section#stats div.stats .stats_card p i.fa {
+        padding: 6px;
+        font-size: 1.8rem;
     }
 }
