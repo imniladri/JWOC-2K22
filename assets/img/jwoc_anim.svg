@@ -1,0 +1,76 @@
+<svg version="1.1" id="JWOC" data-name="JWOC" xmlns="http://www.w3.org/2000/svg" viewBox="-10 0 730 160">
+    <defs>
+        <linearGradient id="grad" x1="0%" x2="100%" y1="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#3e64ff;stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:#1d4cb0;stop-opacity:1"/>
+        </linearGradient>
+
+        <style>
+            svg#JWOC {
+                visibility: hidden;
+            }
+
+            svg#JWOC.loaded {
+                visibility: visible;
+            }
+
+            svg#JWOC.loaded path {
+                fill: none;
+                stroke: url(#grad);
+                stroke-linecap: round;
+                stroke-width: 34px;
+                stroke-miterlimit: 10;
+            }
+
+            @keyframes line {
+                100% {
+                    stroke-dashoffset: 0;
+                }
+            }
+
+            svg#JWOC.loaded path#J {
+                stroke-dasharray: 336;
+                stroke-dashoffset: 336;
+                animation: line 2s cubic-bezier(0.83, 0, 0.17, 1) forwards 0s;
+            }
+            svg#JWOC.loaded path#W1 {
+                stroke-dasharray: 214;
+                stroke-dashoffset: 214;
+                animation: line 1.5s cubic-bezier(0.83, 0, 0.17, 1) forwards 1.5s;
+            }
+            svg#JWOC.loaded path#W2 {
+                stroke-dasharray: 292;
+                stroke-dashoffset: 292;
+                animation: line 2s cubic-bezier(0.83, 0, 0.17, 1) forwards 1.5s;
+            }
+            svg#JWOC.loaded path#O {
+                stroke-dasharray: 410;
+                stroke-dashoffset: 410;
+                animation: line 2s cubic-bezier(0.83, 0, 0.17, 1) forwards 2s;
+            }
+            svg#JWOC.loaded path#C {
+                stroke-dasharray: 360;
+                stroke-dashoffset: 360;
+                animation: line 1.5s cubic-bezier(0.83, 0, 0.17, 1) forwards 3s;
+            }
+        </style>
+    </defs>
+
+    <script>
+		window.addEventListener("load", () => {
+			var svg = document.querySelector('svg');
+
+			setTimeout(() => {
+				svg.setAttribute("class", "loaded");
+			}, 6000);
+		});
+	</script>
+    
+    <title>JWOC</title>
+
+    <path id="J" d="M237,284H364v46.86A62.32,62.32,0,0,1,301.86,393H237" transform="translate(-237 -270)" />
+    <path id="W1" d="M411,270c0,33.89,57,123,57,123h17l27-54" transform="translate(-237 -270)" />
+    <path id="W2" d="M486,270c0,33.79,57,123,57,123h17s56-89.54,56-123" transform="translate(-237 -270)" />
+    <path id="O" d="M781,285H688a21,21,0,0,0-21,21v87h55.47c31.22,0,58.53-25.31,58.53-56.53Z" transform="translate(-237 -270)" />
+    <path id="C" d="M944,323V287H878.72A45.72,45.72,0,0,0,833,332.72V393H958" transform="translate(-237 -270)" />
+</svg>

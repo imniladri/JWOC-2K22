@@ -1,0 +1,86 @@
+/* **************************** All View Animations **************************** */
+
+/* **************************** Banner **************************** */
+
+body section#banner div.banner h2 {
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 1s cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+body section#banner div.banner p {
+    opacity: 0;
+    transform: translateY(10rem);
+    transition: all 0.3s ease, transform 1s cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+body section#banner div.banner::before {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    transition-delay: 1s;
+}
+
+body.loaded section#banner div.banner h2 {
+    clip-path: inset(0 0 0 0);
+}
+
+body.loaded section#banner div.banner p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.loaded section#banner div.banner::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* **************************** About **************************** */
+
+section#about.waypoint div.heading h1,
+section#about.waypoint div.heading span.pseudo {
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+section#about.waypoint div.heading span.divider_1 {
+    width: 0;
+    transition: width 1s cubic-bezier(0.87, 0, 0.13, 1);
+}
+section#about.waypoint div.heading span.divider_2 {
+    height: 0;
+    transition: height 1s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+section#about.viewpoint div.heading h1,
+section#about.viewpoint div.heading span.pseudo {
+    opacity: 1;
+}
+section#about.viewpoint div.heading span.divider_1 {
+    width: 100%;
+}
+section#about.viewpoint div.heading span.divider_2 {
+    height: 100vh;
+}
+
+section#about.waypoint div.about .fig img {
+    clip-path: circle(0% at 50% 50%);
+    transition: all 0.3s ease, clip-path 1s cubic-bezier(0.87, 0, 0.13, 1);
+}
+section#about.waypoint div.about .desc {
+    right: 0;
+    opacity: 0;
+    transition: all 0.2s ease, right 0.8s ease;
+}
+
+section#about.viewpoint div.about .fig img {
+    clip-path: circle(100% at 50% 50%);
+}
+section#about.viewpoint div.about .desc {
+    right: 10%;
+    opacity: 1;
+}
+
+@media (max-width: 472px) {
+    section#about.viewpoint div.about .desc {
+        right: 0;
+    }
+}
