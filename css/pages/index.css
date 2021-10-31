@@ -739,7 +739,7 @@ section#register div.details .register_card a.btn {
     color: var(--darkwhite);
     background: rgba(62, 100, 255, 1);
     letter-spacing: 0.5px;
-    border-radius: 4px;
+    border-radius: 10px;
     transition: all 0.2s ease;
 }
 
