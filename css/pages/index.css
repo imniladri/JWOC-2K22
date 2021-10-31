@@ -30,6 +30,10 @@ section#banner div.banner {
     flex-direction: column;
     background: transparent;
     border-radius: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 section#banner div.banner::before {
@@ -164,6 +168,10 @@ section#about div.heading,
 section#register div.heading {
     position: relative;
     margin: auto 8rem;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 section#about div.heading h1,
@@ -300,6 +308,7 @@ section#about div.about .desc h2 span {
     color: var(--darkwhite);
     background: var(--primarylight);
     border-radius: 10px;
+    user-select: none;
 }
 
 section#about div.about .desc h2::after {

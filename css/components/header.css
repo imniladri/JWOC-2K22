@@ -32,6 +32,7 @@ header nav a.nav_brand {
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    user-select: none;
 }
 
 header nav a.nav_brand img {
@@ -196,6 +197,10 @@ header nav div.navbar_menus .nav_menus {
     border-radius: 4px;
     transform: translateY(-10rem);
     transition: all 0.4s cubic-bezier(0.44, 1.79, 0.63, 0.85);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 header nav div.menu_btn.active ~ div.navbar_menus .nav_menus {
