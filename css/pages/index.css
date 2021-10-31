@@ -665,8 +665,9 @@ section#register div.details {
     align-items: center;
 }
 
-section#register div.details img {
-    margin: auto -20rem;
+section#register div.details img.reg_img {
+    position: absolute;
+    margin: auto;
     width: 30%;
     height: auto;
     z-index: -1;
@@ -683,6 +684,13 @@ section#register div.details .register_card {
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.8);
     box-shadow: 0 8px 14px rgba(50, 69, 107, 0.2);
+}
+
+section#register div.details .register_card:nth-child(1) {
+    margin-right: 4rem;
+}
+section#register div.details .register_card:nth-child(3) {
+    margin-left: 4rem;
 }
 
 section#register div.details .register_card img {
@@ -750,9 +758,6 @@ section#register div.details .register_card a.btn:hover {
 /* **************************** Responsive **************************** */
 
 @media (max-width: 1240px) {
-    section#register div.details img.reg_img {
-        margin: auto -15rem;
-    }
     section#register div.details .register_card {
         padding: 4rem 2rem;
     }
@@ -762,9 +767,6 @@ section#register div.details .register_card a.btn:hover {
 }
 
 @media (max-width: 992px) {
-    section#register div.details img.reg_img {
-        margin: auto -10rem;
-    }
     section#register div.details .register_card img {
         width: 8rem;
     }
@@ -777,6 +779,9 @@ section#register div.details .register_card a.btn:hover {
     section#register div.details img.reg_img {
         margin: -15rem auto -5rem;
         width: 50%;
+    }
+    section#register div.details .register_card {
+        margin: 2rem !important;
     }
 }
 
