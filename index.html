@@ -40,12 +40,10 @@
     <link rel="stylesheet" href="./css/components/loader.css" />
     <link rel="stylesheet" href="./css/components/header.css" />
     <link rel="stylesheet" href="./css/pages/index.css" />
-    <link rel="stylesheet" href="./css/components/animations.css" />
+    <link rel="stylesheet" href="./css/components/onview.css" />
 
     <!-- External JS -->
     <script defer src="./js/libraries/jquery-3.6.0.min.js"></script>
-    <script defer src="./js/libraries/jquery.waypoints.min.js"></script>
-    <script defer src="./js/libraries/jquery.easing.min.js"></script>
     <script defer src="./js/libraries/particles.min.js"></script>
     <script defer src="./js/libraries/rellax.min.js"></script>
 
@@ -81,21 +79,7 @@
                 JWoC (JGEC Winter of Code) is a coding event organised by JGEC
                 which helps students to plunge into Open Source contribution
                 and get the realm of Software Development.
-
-                <!-- <span>In association with</span> -->
             </p>
-            <!-- 
-            <div class="groups">
-                <div class="grp">
-                    <img src="https://gdscjgec.github.io/assets/logo.svg" alt="GDSC Logo">
-                    <span>Google Developer Student Club, JGEC</span>
-                </div>
-                <div class="grp">
-                    <img src="https://jgec.ac.in/images/logojgec.jpg" alt="JGEC Logo">
-                    <span>Jalpaiguri Govt. Engg. College</span>
-                </div>
-            </div>
-            -->
         </div>
     </section>
     <!-- Main Banner End -->
@@ -125,7 +109,7 @@
             <div class="navbar_menus">
                 <div class="nav_menus">
                     <a href="#about" class="nav_links">About</a>
-                    <a href="#" class="nav_links">Register</a>
+                    <a href="#register" class="nav_links">Register</a>
                     <a href="#" class="nav_links">Timeline</a>
                     <a href="#" class="nav_links">Projects</a>
                     <a href="#" class="nav_links">Team</a>
@@ -141,7 +125,7 @@
     <!-- Header Navbar End -->
 
     <!-- About Section Start -->
-    <section id="about" class="waypoint">
+    <section id="about">
         <div class="heading">
             <span class="pseudo"></span>
             <h1>About Us</h1>
@@ -176,7 +160,7 @@
                     <h4>Mentors Manual</h4>
                     <a href="#" class="btn">Get Here!</a>
                 </div>
-                <img src="./assets/img/snowflake.png" alt="Snow Flake" />
+                <img src="./assets/img/snowflake.png" alt="Snow Flake" class="rellax" data-rellax-speed="-1" />
                 <div class="info_card">
                     <i class="bx bxs-graduation"></i>
                     <h4>Students Manual</h4>
@@ -185,13 +169,27 @@
             </div>
         </div>
 
-        <div class="org container"></div>
+        <div class="org container">
+            <!--
+            <h3>Organised <span>By</span></h3>
+            <div class="org_grp">
+                <div class="org_card">
+                    <img src="https://gdscjgec.github.io/assets/logo.svg" alt="GDSC Logo">
+                    <span>Google Developer Student Club, JGEC</span>
+                </div>
+                <div class="org_card">
+                    <img src="https://jgec.ac.in/images/logojgec.jpg" alt="JGEC Logo">
+                    <span>Jalpaiguri Govt. Engg. College</span>
+                </div>
+            </div>
+            -->
+        </div>
     </section>
     <!-- About Section End -->
 
     <!-- Stats Section Start -->
     <section id="stats">
-        <div class="stats">
+        <div class="stats rellax" data-rellax-speed="1">
             <div class="stats_card">
                 <i class="bx bx-bulb"></i>
                 <h4>Projects</h4>
@@ -218,6 +216,47 @@
         </div>
     </section>
     <!-- Stats Section End -->
+
+    <!-- Registration Start -->
+    <section id="register">
+        <div class="heading">
+            <span class="pseudo"></span>
+            <h1>Registration</h1>
+            <span class="divider_1"></span>
+            <span class="divider_2"></span>
+        </div>
+
+        <div class="sub_head">
+            <h2>What you want to be?</h2>
+        </div>
+
+        <div class="details">
+            <!-- Mentee -->
+            <div class="register_card rellax" data-rellax-speed="-1">
+                <img src="./assets/img/mentee_reg.png" alt="Mentee Fig" />
+                <h4>Become a Mentee</h4>
+                <p>
+                    If you are new to open source world or have some experience in open source and
+                    want to contribute in some amazing open source projects register as a mentee.
+                </p>
+                <a href="#" class="btn">Mentee's Registration</a>
+            </div>
+
+            <img src="./assets/img/register.svg" alt="Registration" class="reg_img" />
+
+            <!-- Mentor -->
+            <div class="register_card rellax" data-rellax-speed="-1">
+                <img src="./assets/img/mentor_reg.png" alt="Mentor Fig" />
+                <h4>Become a Mentor</h4>
+                <p>
+                    If you have some unique projects which you are willing to add some features or complete
+                    it by open sourcing them, we encourage you to apply for mentorship in our program.
+                </p>
+                <a href="#" class="btn">Mentor's Registration</a>
+            </div>
+        </div>
+    </section>
+    <!-- Registration End -->
 
 </body>
 

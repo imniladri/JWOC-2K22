@@ -1,4 +1,4 @@
-// Loaded ***************************************************
+// Loaded ******************************************************
 
 $(window).on("load", () => {
     $("#preloader").css({
@@ -17,15 +17,18 @@ $(window).on("load", () => {
     }, 6000);
 });
 
-// Scrolled ***************************************************
+// Scrolled *******************************************************
 
 $(window).scroll(() => {
-    $("header").toggleClass("showHeader", window.scrollY > 1000);
+    $("header").toggleClass("active", window.scrollY > 1000);
 });
 
 // Rellax JS Int ***************************************************
 
-var rellax = new Rellax(".rellax");
+// var rellax = new Rellax(".rellax");
+var rellax = new Rellax(".rellax", {
+    center: true,
+});
 
 // Navbar Toggle ***************************************************
 
@@ -41,22 +44,7 @@ $('a[href^="#"]').on("click", function (e) {
         {
             scrollTop: $($(this).attr("href")).offset().top,
         },
-        1000,
-        "easeInOutExpo"
+        500
+        // "easeInOutExpo"
     );
 });
-
-// Viewport Detect ***************************************************
-
-$(".waypoint").waypoint(
-    (direction) => {
-        if (direction == "down") {
-            $(".waypoint").addClass("viewpoint");
-        } else {
-            $(".waypoint").removeClass("viewpoint");
-        }
-    },
-    {
-        offset: "50%",
-    }
-);

@@ -157,33 +157,17 @@ section#banner div.banner .groups .grp span {
     }
 }
 
-/* **************************** About Section **************************** */
+/* **************************** Section Common Headings **************************** */
+/* ========== About & Registration ========== */
 
-section#about {
-    position: relative;
-    margin: 10rem auto;
-}
-
-section#about::before {
-    content: "";
-    position: absolute;
-    top: 30%;
-    right: 12%;
-    width: 10rem;
-    height: 10rem;
-    border-radius: 5rem;
-    background: var(--primarylight);
-    opacity: 0.8;
-}
-
-/* =============== About Heading =============== */
-
-section#about div.heading {
+section#about div.heading,
+section#register div.heading {
     position: relative;
     margin: auto 8rem;
 }
 
-section#about div.heading h1 {
+section#about div.heading h1,
+section#register div.heading h1 {
     padding: 0.5rem 1rem 1.5rem;
     width: fit-content;
     font-size: 3.5rem;
@@ -197,7 +181,8 @@ section#about div.heading h1 {
     box-shadow: 0 4px 10px rgba(50, 69, 107, 0.2);
 }
 
-section#about div.heading span.pseudo {
+section#about div.heading span.pseudo,
+section#register div.heading span.pseudo {
     position: absolute;
     top: -2rem;
     left: -2rem;
@@ -208,7 +193,8 @@ section#about div.heading span.pseudo {
     z-index: -1;
 }
 
-section#about div.heading span.divider_1 {
+section#about div.heading span.divider_1,
+section#register div.heading span.divider_1 {
     position: absolute;
     top: 0;
     left: 0;
@@ -219,7 +205,8 @@ section#about div.heading span.divider_1 {
     z-index: -1;
 }
 
-section#about div.heading span.divider_2 {
+section#about div.heading span.divider_2,
+section#register div.heading span.divider_2 {
     position: absolute;
     top: 0;
     left: 0;
@@ -228,6 +215,25 @@ section#about div.heading span.divider_2 {
     border-radius: 2px;
     background: var(--primarylight);
     z-index: -1;
+}
+
+/* **************************** About Section **************************** */
+
+section#about {
+    position: relative;
+    margin: 10rem auto;
+}
+
+section#about::before {
+    content: "";
+    position: absolute;
+    top: 15%;
+    right: 12%;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 5rem;
+    background: var(--primarylight);
+    opacity: 0.8;
 }
 
 /* =============== About Description/Desc =============== */
@@ -258,6 +264,7 @@ section#about div.about .fig img {
 
 section#about div.about .desc {
     position: absolute;
+    top: 15%;
     right: 10%;
     display: flex;
     justify-content: center;
@@ -440,12 +447,16 @@ section#about div.info .info_card a.btn:hover {
     section#about div.about {
         flex-direction: column;
     }
+    section#about div.info {
+        margin: 15rem auto 5rem;
+    }
     section#about div.about .fig img {
         margin-top: auto;
         margin-left: auto;
     }
     section#about div.about .desc {
-        margin: -10rem auto;
+        margin: -5rem auto;
+        right: 0;
         width: 95%;
         position: relative;
         transform: translate(0) !important;
@@ -509,7 +520,6 @@ section#stats div.stats .stats_card {
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
-    backdrop-filter: blur(6px);
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 8px 16px rgba(50, 69, 107, 0.2);
     transition: all 0.4s ease;
@@ -570,6 +580,7 @@ section#stats div.stats .stats_card p i.fa {
         padding: 6rem 2rem;
     }
     section#stats div.stats .stats_card i {
+        padding: 1rem;
         font-size: 3.5rem;
     }
     section#stats div.stats .stats_card h4 {
@@ -581,5 +592,213 @@ section#stats div.stats .stats_card p i.fa {
     section#stats div.stats .stats_card p i.fa {
         padding: 6px;
         font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 552px) {
+    section#stats div.stats {
+        padding: 4rem 1rem;
+    }
+    section#stats div.stats .stats_card {
+        margin: 2rem 1rem;
+        padding: 1rem 6rem;
+    }
+    section#stats div.stats .stats_card i {
+        font-size: 3rem;
+    }
+    section#stats div.stats .stats_card h4 {
+        font-size: 1.8rem;
+    }
+    section#stats div.stats .stats_card p span {
+        font-size: 2.5rem;
+    }
+    section#stats div.stats .stats_card p i.fa {
+        padding: 6px;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 402px) {
+    section#stats div.stats .stats_card {
+        padding: 1rem 4rem;
+    }
+}
+
+/* **************************** Registration Section **************************** */
+
+section#register {
+    position: relative;
+    margin: 10rem auto;
+}
+
+section#register div.heading h1 {
+    font-size: 3rem;
+}
+
+section#register div.sub_head {
+    position: relative;
+    margin: 4rem auto;
+}
+
+section#register div.sub_head h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: var(--mainfont);
+    color: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+section#register div.details {
+    margin: 1rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#register div.details img {
+    margin: auto -20rem;
+    width: 30%;
+    height: auto;
+    z-index: -1;
+}
+
+section#register div.details .register_card {
+    margin: 2rem;
+    padding: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 14px rgba(50, 69, 107, 0.2);
+}
+
+section#register div.details .register_card img {
+    margin: auto;
+    width: 10rem;
+    height: auto;
+    z-index: 1;
+}
+
+section#register div.details .register_card h4 {
+    position: relative;
+    margin: 2rem auto;
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+section#register div.details .register_card h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -30%;
+    height: 0.6rem;
+    width: 100%;
+    border-radius: 4px;
+    background: linear-gradient(
+        90deg,
+        var(--darkwhite),
+        var(--primarylight),
+        var(--darkwhite)
+    );
+}
+
+section#register div.details .register_card p {
+    margin: 1rem auto;
+    padding: 0 4rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+section#register div.details .register_card a.btn {
+    margin: 2rem auto 1rem;
+    padding: 0.8rem 1.6rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: var(--curlfont);
+    color: var(--darkwhite);
+    background: rgba(62, 100, 255, 1);
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+section#register div.details .register_card a.btn:hover {
+    background: rgba(62, 100, 255, 0.8);
+}
+
+/* **************************** Responsive **************************** */
+
+@media (max-width: 1240px) {
+    section#register div.details img.reg_img {
+        margin: auto -15rem;
+    }
+    section#register div.details .register_card {
+        padding: 4rem 2rem;
+    }
+    section#register div.details .register_card p {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    section#register div.details img.reg_img {
+        margin: auto -10rem;
+    }
+    section#register div.details .register_card img {
+        width: 8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    section#register div.details {
+        flex-direction: column;
+    }
+    section#register div.details img.reg_img {
+        margin: -15rem auto -5rem;
+        width: 50%;
+    }
+}
+
+@media (max-width: 572px) {
+    section#register div.heading {
+        margin: auto 2rem;
+    }
+    section#register div.heading h1,
+    section#register div.sub_head h2 {
+        font-size: 2.5rem;
+    }
+    section#register div.details {
+        margin: 2rem;
+    }
+    section#register div.details img.reg_img {
+        display: none;
+    }
+    section#register div.details .register_card {
+        transform: translate(0) !important;
+    }
+    section#register div.details .register_card img {
+        width: 6rem;
+    }
+    section#register div.details .register_card h4 {
+        font-size: 2.8rem;
+    }
+    section#register div.details .register_card p {
+        padding: 0;
+    }
+    section#register div.details .register_card a.btn {
+        font-size: 1.6rem;
+        font-weight: 600;
     }
 }

@@ -12,9 +12,8 @@
 /* **************************** Fonts **************************** */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 
 /* **************************** Site General Settings **************************** */
 
@@ -46,8 +45,6 @@ html {
 body {
     background: var(--lightwhite);
     font-family: var(--mainfont);
-
-    height: 500vh; /* Just for Test */
 }
 
 /* **************************** Root Variables **************************** */
@@ -74,7 +71,6 @@ body {
     --mainfont: "Poppins", sans-serif;
     --codefont: "Ubuntu", sans-serif;
     --curlfont: "Nunito", sans-serif;
-    --monofont: "Ubuntu Mono", monospace;
 }
 
 /* **************************** Scroll Bar **************************** */

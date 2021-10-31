@@ -13,7 +13,7 @@ header {
     transition: all 0.4s ease;
 }
 
-header.showHeader {
+header.active {
     opacity: 1;
     visibility: visible;
 }
