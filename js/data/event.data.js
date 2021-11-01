@@ -42,7 +42,7 @@ let eventsTimeline = [
     {
         id: 4,
         date: "18 January, 2022",
-        name: "Mentor & Mentee Registration",
+        name: "Projects Announced",
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit velit, aliquid.",
 
         completeClass: "",
