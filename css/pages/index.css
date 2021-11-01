@@ -5,7 +5,7 @@
 section#banner {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,37 +21,30 @@ section#banner div#particles-js {
 }
 
 section#banner div.banner {
+    margin: 10rem auto 6rem;
     padding: 4rem 6rem;
-    width: 90%;
-    height: 92%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: transparent;
-    border-radius: 20px;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-}
-
-section#banner div.banner::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
     border-radius: 20px;
     backdrop-filter: blur(6px);
     background: rgba(255, 255, 255, 0.5);
     box-shadow: 0 8px 16px rgba(50, 69, 107, 0.2);
-    z-index: -1;
+}
+
+section#banner div.banner img {
+    margin: 1rem auto;
+    width: 20rem;
+    height: auto;
+    user-select: none;
 }
 
 section#banner div.banner object {
     margin: 2rem auto;
     width: 60%;
     height: auto;
+    user-select: none;
 }
 
 section#banner div.banner h2 {
@@ -64,6 +57,7 @@ section#banner div.banner h2 {
     letter-spacing: 10px;
     text-align: center;
     line-height: 4.5rem;
+    user-select: none;
 }
 
 section#banner div.banner p {
@@ -80,66 +74,44 @@ section#banner div.banner p {
 
 section#banner div.banner p span {
     display: block;
-    margin: 2rem auto 1rem;
+    margin: 2rem auto 0;
     padding: 0 1.5rem;
     font-size: 2rem;
     font-weight: 700;
     font-family: var(--curlfont);
     color: var(--darkwhite);
-    background: var(--primarylight);
+    background: var(--primarydark);
     width: fit-content;
     border-radius: 20px;
 }
 
-section#banner div.banner .groups {
-    margin: auto 10rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-section#banner div.banner .groups .grp {
-    margin: auto 1rem;
-    padding: 2rem;
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--darkwhite);
-    border: 4px solid var(--primarylight);
-    border-radius: 10px;
-}
-
-section#banner div.banner .groups .grp img {
-    margin: auto 1rem;
-    height: auto;
-    border-radius: 50%;
-}
-
-section#banner div.banner .groups .grp:nth-child(1) img {
-    width: 8rem;
-}
-section#banner div.banner .groups .grp:nth-child(2) img {
-    width: 6rem;
-}
-
-section#banner div.banner .groups .grp span {
-    margin: auto 1rem;
-    font-size: 2rem;
+section#banner div.banner .org_grp span {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.5rem 2rem;
+    width: fit-content;
+    font-size: 2.2rem;
     font-weight: 600;
     font-family: var(--mainfont);
     color: var(--darkblack);
-    letter-spacing: 0.5px;
+    background: var(--lightwhite);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 20px;
+    letter-spacing: 0.8px;
 }
 
 /* **************************** Responsive **************************** */
 
 @media (max-width: 1240px) {
+    section#banner div.banner img {
+        width: 15rem;
+    }
     section#banner div.banner h2 {
         font-size: 3rem;
     }
     section#banner div.banner p {
-        padding: 1rem 10rem;
+        padding: 1rem 8rem;
         font-size: 2.5rem;
     }
 }
@@ -158,6 +130,9 @@ section#banner div.banner .groups .grp span {
         padding: 1rem 2rem;
         font-size: 2.2rem;
         line-height: 3rem;
+    }
+    section#banner div.banner .org_grp span {
+        font-size: 2rem;
     }
 }
 
@@ -464,11 +439,10 @@ section#about div.info .info_card a.btn:hover {
         margin-left: auto;
     }
     section#about div.about .desc {
-        margin: -5rem auto;
+        margin: 2rem auto;
         right: 0;
         width: 95%;
         position: relative;
-        transform: translate(0) !important;
     }
     section#about::before {
         display: none;
@@ -492,7 +466,6 @@ section#about div.info .info_card a.btn:hover {
         margin: auto 2rem;
     }
     section#about div.about .desc {
-        margin: -2rem auto;
         padding: 4rem 2rem;
     }
     section#about div.about .desc h2 span {
@@ -523,7 +496,7 @@ section#stats div.stats {
 
 section#stats div.stats .stats_card {
     margin: 2rem;
-    padding: 2rem 8rem;
+    padding: 2rem 6rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -548,9 +521,19 @@ section#stats div.stats .stats_card i {
     border-radius: 50%;
 }
 
-section#stats div.stats .stats_card h4 {
-    margin: 1rem auto 0.5rem;
+section#stats div.stats .stats_card p {
+    margin: 1rem auto 0;
     font-size: 2.2rem;
+    font-weight: 600;
+    font-family: var(--mainfont);
+    color: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+section#stats div.stats .stats_card h4 {
+    margin: 0.5rem auto;
+    font-size: 4rem;
     font-weight: 600;
     font-family: var(--mainfont);
     color: var(--darkblack);
@@ -558,28 +541,13 @@ section#stats div.stats .stats_card h4 {
     letter-spacing: 0.2px;
 }
 
-section#stats div.stats .stats_card p {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-section#stats div.stats .stats_card p span {
-    font-size: 4rem;
-    font-weight: 600;
+section#stats div.stats .stats_card span {
+    margin: auto;
+    font-size: 1.5rem;
+    font-weight: 500;
     font-family: var(--mainfont);
-    color: var(--darkblack);
-}
-
-section#stats div.stats .stats_card p i.fa {
-    margin: 0.5rem;
-    padding: 6px 7px;
-    width: 3rem;
-    height: 3rem;
-    font-size: 2rem;
-    color: var(--darkwhite);
-    background: var(--primarylight);
+    font-style: italic;
+    color: var(--darkgrey);
 }
 
 /* **************************** Responsive **************************** */
@@ -592,15 +560,11 @@ section#stats div.stats .stats_card p i.fa {
         padding: 1rem;
         font-size: 3.5rem;
     }
-    section#stats div.stats .stats_card h4 {
+    section#stats div.stats .stats_card p {
         font-size: 2rem;
     }
-    section#stats div.stats .stats_card p span {
+    section#stats div.stats .stats_card h4 {
         font-size: 3rem;
-    }
-    section#stats div.stats .stats_card p i.fa {
-        padding: 6px;
-        font-size: 1.8rem;
     }
 }
 
@@ -615,21 +579,23 @@ section#stats div.stats .stats_card p i.fa {
     section#stats div.stats .stats_card i {
         font-size: 3rem;
     }
+    section#stats div.stats .stats_card p {
+        font-size: 1.8rem;
+    }
     section#stats div.stats .stats_card h4 {
-        font-size: 1.8rem;
-    }
-    section#stats div.stats .stats_card p span {
         font-size: 2.5rem;
-    }
-    section#stats div.stats .stats_card p i.fa {
-        padding: 6px;
-        font-size: 1.8rem;
     }
 }
 
-@media (max-width: 402px) {
+@media (max-width: 472px) {
     section#stats div.stats .stats_card {
-        padding: 1rem 4rem;
+        padding: 1rem 2rem;
+    }
+}
+
+@media (max-width: 412px) {
+    section#stats div.stats .stats_card {
+        padding: 1rem;
     }
 }
 
@@ -659,7 +625,7 @@ section#register div.sub_head h2 {
 }
 
 section#register div.details {
-    margin: 1rem 4rem;
+    margin: 2rem 8rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -674,8 +640,8 @@ section#register div.details img.reg_img {
 }
 
 section#register div.details .register_card {
-    margin: 2rem;
-    padding: 4rem;
+    margin: 2rem 4rem;
+    padding: 4rem 2rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -684,13 +650,6 @@ section#register div.details .register_card {
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.8);
     box-shadow: 0 8px 14px rgba(50, 69, 107, 0.2);
-}
-
-section#register div.details .register_card:nth-child(1) {
-    margin-right: 4rem;
-}
-section#register div.details .register_card:nth-child(3) {
-    margin-left: 4rem;
 }
 
 section#register div.details .register_card img {
@@ -729,7 +688,6 @@ section#register div.details .register_card h4::after {
 
 section#register div.details .register_card p {
     margin: 1rem auto;
-    padding: 0 4rem;
     font-size: 1.6rem;
     font-weight: 500;
     font-family: var(--mainfont);
@@ -757,15 +715,6 @@ section#register div.details .register_card a.btn:hover {
 
 /* **************************** Responsive **************************** */
 
-@media (max-width: 1240px) {
-    section#register div.details .register_card {
-        padding: 4rem 2rem;
-    }
-    section#register div.details .register_card p {
-        padding: 0 2rem;
-    }
-}
-
 @media (max-width: 992px) {
     section#register div.details .register_card img {
         width: 8rem;
@@ -781,7 +730,7 @@ section#register div.details .register_card a.btn:hover {
         width: 50%;
     }
     section#register div.details .register_card {
-        margin: 2rem !important;
+        margin: 2rem;
     }
 }
 
@@ -799,17 +748,11 @@ section#register div.details .register_card a.btn:hover {
     section#register div.details img.reg_img {
         display: none;
     }
-    section#register div.details .register_card {
-        transform: translate(0) !important;
-    }
     section#register div.details .register_card img {
         width: 6rem;
     }
     section#register div.details .register_card h4 {
         font-size: 2.8rem;
-    }
-    section#register div.details .register_card p {
-        padding: 0;
     }
     section#register div.details .register_card a.btn {
         font-size: 1.6rem;

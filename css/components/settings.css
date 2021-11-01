@@ -62,10 +62,8 @@ body {
     --primaryoff: #1d9dcd;
     --primarylight: #3e64ff;
     --primarydark: #1d4cb0;
-    --violetlight: #6807f9;
-    --purplelight: #6a0090;
     --highlight: #f7f0c2;
-    --bgcolor: #1d1d24;
+    --lightorange: ;
 
     /* Default Fonts */
     --mainfont: "Poppins", sans-serif;

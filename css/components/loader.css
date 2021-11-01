@@ -12,6 +12,8 @@
     background: var(--darkwhite);
     z-index: 9999;
     transition: all 0.6s ease;
+
+    display: none;
 }
 
 /* The Loader Container */

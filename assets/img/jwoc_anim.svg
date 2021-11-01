@@ -62,7 +62,7 @@
 
 			setTimeout(() => {
 				svg.setAttribute("class", "loaded");
-			}, 6000);
+			}, 4000);
 		});
 	</script>
     

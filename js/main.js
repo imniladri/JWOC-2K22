@@ -4,30 +4,22 @@ $(window).on("load", () => {
     $("#preloader").css({
         opacity: 0,
         visibility: "hidden",
-        transitionDelay: "5.5s",
+        transitionDelay: "4s",
     });
-    $(".loader").css({
-        opacity: 0,
-        visibility: "hidden",
-        transitionDelay: "5s",
-    });
-
-    setTimeout(() => {
-        $("body").addClass("loaded");
-    }, 6000);
 });
 
 // Scrolled *******************************************************
 
-$(window).scroll(() => {
-    $("header").toggleClass("active", window.scrollY > 1000);
-});
+let scrollPos = 0;
+window.addEventListener("scroll", () => {
+    let scrollPosNow = window.pageYOffset || document.pageYOffset;
 
-// Rellax JS Int ***************************************************
-
-// var rellax = new Rellax(".rellax");
-var rellax = new Rellax(".rellax", {
-    center: true,
+    if (scrollPosNow > scrollPos) {
+        $("header").addClass("active");
+    } else {
+        $("header").removeClass("active");
+    }
+    scrollPos = scrollPosNow;
 });
 
 // Navbar Toggle ***************************************************

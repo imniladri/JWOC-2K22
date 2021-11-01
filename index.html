@@ -5,7 +5,7 @@
     <!-- Site Title -->
     <title>JWOC 2K21</title>
     <!-- Favicon-->
-    <link rel="shortcut icon" type="image/svg" href="./assets/img/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/img/favicon.png" />
 
     <!-- Meta Character & Device Dimension -->
     <meta charset="UTF-8" />
@@ -40,12 +40,10 @@
     <link rel="stylesheet" href="./css/components/loader.css" />
     <link rel="stylesheet" href="./css/components/header.css" />
     <link rel="stylesheet" href="./css/pages/index.css" />
-    <link rel="stylesheet" href="./css/components/onview.css" />
 
     <!-- External JS -->
     <script defer src="./js/libraries/jquery-3.6.0.min.js"></script>
     <script defer src="./js/libraries/particles.min.js"></script>
-    <script defer src="./js/libraries/rellax.min.js"></script>
 
     <!-- Main JS -->
     <script defer src="./js/sketch.app.js"></script>
@@ -68,21 +66,6 @@
         </div>
     </div>
     <!-- Preloader End -->
-
-    <!-- Main Banner Start -->
-    <section id="banner">
-        <div id="particles-js"></div>
-        <div class="banner rellax" data-rellax-speed="-1">
-            <object data="./assets/img/jwoc_anim.svg" type="image/svg+xml"></object>
-            <h2>JGEC WINTER OF CODE</h2>
-            <p>
-                JWoC (JGEC Winter of Code) is a coding event organised by JGEC
-                which helps students to plunge into Open Source contribution
-                and get the realm of Software Development.
-            </p>
-        </div>
-    </section>
-    <!-- Main Banner End -->
 
     <!-- Header Navbar Start -->
     <header>
@@ -124,6 +107,29 @@
     </header>
     <!-- Header Navbar End -->
 
+    <!-- Main Banner Start -->
+    <section id="banner">
+        <div id="particles-js"></div>
+        <div class="banner container">
+            <img src="./assets/img/jwoc_logo.svg" alt="Logo" />
+            <object data="./assets/img/jwoc_anim.svg" type="image/svg+xml"></object>
+            <h2>JGEC WINTER OF CODE</h2>
+            <p>
+                JWoC (JGEC Winter of Code) is a coding event organised by JGEC
+                which helps students to plunge into Open Source contribution
+                and get the realm of Software Development.
+
+                <span>In association with</span>
+            </p>
+            <div class="org_grp">
+                <span>Google Developer Student Club, JGEC</span>
+                <span>Jalpaiguri Govt. Engg. College</span>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Main Banner End -->
+
     <!-- About Section Start -->
     <section id="about">
         <div class="heading">
@@ -137,7 +143,7 @@
             <div class="fig">
                 <img src="./assets/img/jwoc_logo.svg" alt="Logo" />
             </div>
-            <div class="desc rellax" data-rellax-speed="-1">
+            <div class="desc">
                 <h2>JWoC: <span>How it Works?</span></h2>
                 <p>
                     Participants (restrained to 1st and 2nd year undergraduate students) participate
@@ -160,7 +166,7 @@
                     <h4>Mentors Manual</h4>
                     <a href="#" class="btn">Get Here!</a>
                 </div>
-                <img src="./assets/img/snowflake.png" alt="Snow Flake" class="rellax" data-rellax-speed="-1" />
+                <img src="./assets/img/snowflake.png" alt="Snow Flake" />
                 <div class="info_card">
                     <i class="bx bxs-graduation"></i>
                     <h4>Students Manual</h4>
@@ -168,50 +174,38 @@
                 </div>
             </div>
         </div>
-
-        <div class="org container">
-            <!--
-            <h3>Organised <span>By</span></h3>
-            <div class="org_grp">
-                <div class="org_card">
-                    <img src="https://gdscjgec.github.io/assets/logo.svg" alt="GDSC Logo">
-                    <span>Google Developer Student Club, JGEC</span>
-                </div>
-                <div class="org_card">
-                    <img src="https://jgec.ac.in/images/logojgec.jpg" alt="JGEC Logo">
-                    <span>Jalpaiguri Govt. Engg. College</span>
-                </div>
-            </div>
-            -->
-        </div>
     </section>
     <!-- About Section End -->
 
     <!-- Stats Section Start -->
     <section id="stats">
-        <div class="stats rellax" data-rellax-speed="1">
+        <div class="stats">
             <div class="stats_card">
                 <i class="bx bx-bulb"></i>
-                <h4>Projects</h4>
-                <p><span>50</span> <i class="fa fa-plus"></i></p>
+                <p>Projects</p>
+                <h4>50+</h4>
+                <span>(Previous Year Stats)</span>
             </div>
 
             <div class="stats_card">
                 <i class="bx bx-buildings"></i>
-                <h4>Colleges</h4>
-                <p><span>70</span> <i class="fa fa-plus"></i></p>
+                <p>Colleges</p>
+                <h4>100+</h4>
+                <span>(Previous Year Stats)</span>
             </div>
 
             <div class="stats_card">
                 <i class="bx bxs-graduation"></i>
-                <h4>Students</h4>
-                <p><span>600</span> <i class="fa fa-plus"></i></p>
+                <p>Students</p>
+                <h4>900+</h4>
+                <span>(Previous Year Stats)</span>
             </div>
 
             <div class="stats_card">
                 <i class="bx bxs-user-pin"></i>
-                <h4>Mentors</h4>
-                <p><span>25</span> <i class="fa fa-plus"></i></p>
+                <p>Mentors</p>
+                <h4>25+</h4>
+                <span>(Previous Year Stats)</span>
             </div>
         </div>
     </section>
@@ -242,7 +236,7 @@
                 <a href="#" class="btn">Mentee's Registration</a>
             </div>
 
-            <img src="./assets/img/register.svg" alt="Reg Img" class="reg_img rellax" data-rellax-speed="1" />
+            <img src="./assets/img/register.svg" alt="Reg Img" class="reg_img" />
 
             <!-- Mentor -->
             <div class="register_card">
