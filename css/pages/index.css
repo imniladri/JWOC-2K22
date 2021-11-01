@@ -140,9 +140,10 @@ section#banner div.banner .org_grp span {
 /* ========== About & Registration ========== */
 
 section#about div.heading,
-section#register div.heading {
+section#register div.heading,
+section#timeline div.heading {
     position: relative;
-    margin: auto 8rem;
+    margin: auto 4rem;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -150,7 +151,8 @@ section#register div.heading {
 }
 
 section#about div.heading h1,
-section#register div.heading h1 {
+section#register div.heading h1,
+section#timeline div.heading h1 {
     padding: 0.5rem 1rem 1.5rem;
     width: fit-content;
     font-size: 3.5rem;
@@ -165,7 +167,8 @@ section#register div.heading h1 {
 }
 
 section#about div.heading span.pseudo,
-section#register div.heading span.pseudo {
+section#register div.heading span.pseudo,
+section#timeline div.heading span.pseudo {
     position: absolute;
     top: -2rem;
     left: -2rem;
@@ -177,7 +180,8 @@ section#register div.heading span.pseudo {
 }
 
 section#about div.heading span.divider_1,
-section#register div.heading span.divider_1 {
+section#register div.heading span.divider_1,
+section#timeline div.heading span.divider_1 {
     position: absolute;
     top: 0;
     left: 0;
@@ -189,7 +193,8 @@ section#register div.heading span.divider_1 {
 }
 
 section#about div.heading span.divider_2,
-section#register div.heading span.divider_2 {
+section#register div.heading span.divider_2,
+section#timeline div.heading span.divider_2 {
     position: absolute;
     top: 0;
     left: 0;
@@ -468,9 +473,6 @@ section#about div.info .info_card a.btn:hover {
     section#about div.about .desc {
         padding: 4rem 2rem;
     }
-    section#about div.about .desc h2 span {
-        width: min-content;
-    }
     section#about div.info {
         margin: 10rem auto 5rem;
     }
@@ -603,7 +605,7 @@ section#stats div.stats .stats_card span {
 
 section#register {
     position: relative;
-    margin: 10rem auto;
+    margin: 20rem auto;
 }
 
 section#register div.heading h1 {
@@ -757,5 +759,272 @@ section#register div.details .register_card a.btn:hover {
     section#register div.details .register_card a.btn {
         font-size: 1.6rem;
         font-weight: 600;
+    }
+}
+
+/* **************************** Timeline Section **************************** */
+
+section#timeline {
+    position: relative;
+    margin: 20rem auto;
+}
+
+section#timeline div.sub_head {
+    position: relative;
+    margin: 4rem auto 8rem;
+}
+
+section#timeline div.sub_head h3 {
+    margin: 1rem auto;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: var(--mainfont);
+    color: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+section#timeline div.sub_head p {
+    margin: 1rem auto;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--darkgrey);
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+section#timeline div.sub_head p span {
+    padding: 0.2rem 1rem;
+    color: var(--darkwhite);
+    background: var(--primarylight);
+    border-radius: 20px;
+    user-select: none;
+}
+
+section#timeline div.details {
+    position: relative;
+    margin: 2rem 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+section#timeline div.details .fig {
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+section#timeline div.details .fig img {
+    margin: auto;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+section#timeline div.details .events {
+    position: relative;
+    margin: auto 4rem;
+    padding: 2rem 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: none;
+    border-left: 4px solid rgba(62, 100, 255, 0.8);
+}
+
+section#timeline div.details .events::before,
+section#timeline div.details .events::after {
+    position: absolute;
+    padding: 0.5rem 1rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: var(--mainfont);
+    color: var(--darkwhite);
+    text-align: center;
+    letter-spacing: 0.5px;
+    border-radius: 20px;
+    width: fit-content;
+    height: fit-content;
+}
+
+section#timeline div.details .events::before {
+    content: "Begin";
+    top: -1.5%;
+    left: -6%;
+    background: var(--lightgreen);
+}
+
+section#timeline div.details .events::after {
+    content: "Ended";
+    bottom: -1.5%;
+    left: -6.5%;
+    background: var(--lightorange);
+}
+
+section#timeline div.details .events .event_card {
+    position: relative;
+    margin: 2rem auto;
+    padding: 2rem 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(50, 69, 107, 0.2);
+}
+
+section#timeline div.details .events .event_card i {
+    position: absolute;
+    top: -5%;
+    left: -8.2rem;
+    width: 4rem;
+    height: 4rem;
+    background: var(--lightwhite);
+    border: 2px solid rgba(62, 100, 255, 0.6);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+section#timeline div.details .events .event_card i.bx {
+    padding: 2px;
+    font-size: 3rem;
+    color: var(--darkwhite);
+    background: var(--lightgreen);
+    border: 2px solid var(--darkwhite);
+}
+
+section#timeline div.details .events .event_card span {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--darkwhite);
+    background: var(--primarylight);
+    letter-spacing: 0.5px;
+    border-radius: 20px;
+    user-select: none;
+}
+
+section#timeline div.details .events .event_card h2 {
+    margin: 0 0 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: var(--mainfont);
+    color: var(--primarydark);
+    letter-spacing: 0.5px;
+}
+
+section#timeline div.details .events .event_card h4 {
+    position: relative;
+    margin: 0 0 1rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: var(--mainfont);
+    color: var(--lightblack);
+    letter-spacing: 0.5px;
+}
+
+section#timeline div.details .events .event_card h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -50%;
+    height: 4px;
+    width: 80%;
+    background: linear-gradient(45deg, var(--primarylight), var(--darkwhite));
+    border-radius: 4px;
+}
+
+section#timeline div.details .events .event_card p {
+    margin: 1.5rem 0 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: var(--curlfont);
+    font-style: italic;
+    color: var(--darkgrey);
+    letter-spacing: 0.5px;
+}
+
+/* **************************** Responsive **************************** */
+
+@media (max-width: 1240px) {
+    section#timeline div.details .events {
+        margin-right: 2rem;
+        padding-right: 0;
+    }
+    section#timeline div.details .events .event_card {
+        padding: 2rem 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    section#timeline div.sub_head {
+        margin: 4rem auto;
+        padding: 1rem 6rem;
+    }
+    section#timeline div.details {
+        flex-direction: column;
+    }
+    section#timeline div.details .fig {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    section#timeline div.details .fig img {
+        width: 50%;
+    }
+    section#timeline div.details .events {
+        margin: auto;
+        padding: 2rem 3rem;
+        width: max-content;
+        background: rgba(247, 250, 252, 0.8);
+    }
+    section#timeline div.details .events .event_card i {
+        left: -5.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    section#timeline div.details {
+        margin: 2rem;
+    }
+    section#timeline div.details .events {
+        margin: auto 2rem;
+        width: fit-content;
+    }
+}
+
+@media (max-width: 472px) {
+    section#timeline div.heading {
+        margin: auto 2rem;
+    }
+    section#timeline div.details .events {
+        margin: auto 2rem;
+        padding-right: 0;
+        width: fit-content;
+    }
+    section#timeline div.details .events .event_card span {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin: 1rem 0;
+    }
+    section#timeline div.details .events::before {
+        top: -1%;
+        left: -9%;
+    }
+    section#timeline div.details .events::after {
+        bottom: -1%;
+        left: -10.5%;
     }
 }
