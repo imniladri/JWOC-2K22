@@ -137,11 +137,11 @@ section#banner div.banner .org_grp span {
 }
 
 /* **************************** Section Common Headings **************************** */
-/* ========== About & Registration ========== */
 
 section#about div.heading,
 section#register div.heading,
-section#timeline div.heading {
+section#timeline div.heading,
+section#team div.heading {
     position: relative;
     margin: auto 4rem;
     user-select: none;
@@ -152,7 +152,8 @@ section#timeline div.heading {
 
 section#about div.heading h1,
 section#register div.heading h1,
-section#timeline div.heading h1 {
+section#timeline div.heading h1,
+section#team div.heading h1 {
     padding: 0.5rem 1rem 1.5rem;
     width: fit-content;
     font-size: 3.5rem;
@@ -168,7 +169,8 @@ section#timeline div.heading h1 {
 
 section#about div.heading span.pseudo,
 section#register div.heading span.pseudo,
-section#timeline div.heading span.pseudo {
+section#timeline div.heading span.pseudo,
+section#team div.heading span.pseudo {
     position: absolute;
     top: -2rem;
     left: -2rem;
@@ -181,7 +183,8 @@ section#timeline div.heading span.pseudo {
 
 section#about div.heading span.divider_1,
 section#register div.heading span.divider_1,
-section#timeline div.heading span.divider_1 {
+section#timeline div.heading span.divider_1,
+section#team div.heading span.divider_1 {
     position: absolute;
     top: 0;
     left: 0;
@@ -194,7 +197,8 @@ section#timeline div.heading span.divider_1 {
 
 section#about div.heading span.divider_2,
 section#register div.heading span.divider_2,
-section#timeline div.heading span.divider_2 {
+section#timeline div.heading span.divider_2,
+section#team div.heading span.divider_2 {
     position: absolute;
     top: 0;
     left: 0;
@@ -417,8 +421,6 @@ section#about div.info .info_card a.btn:hover {
     background: var(--primarydark);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
-
-/* =============== About Organiser/Org =============== */
 
 /* **************************** Responsive **************************** */
 
@@ -1026,5 +1028,169 @@ section#timeline div.details .events .event_card p {
     section#timeline div.details .events::after {
         bottom: -1%;
         left: -10.5%;
+    }
+}
+
+/* **************************** Team Section **************************** */
+
+section#team {
+    position: relative;
+    margin: 10rem auto;
+}
+
+section#team div.members {
+    margin: 4rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section#team div.members .member_card {
+    position: relative;
+    margin: 2rem;
+    padding: 2rem;
+    width: 32rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background: rgba(62, 100, 255, 0.05);
+    box-shadow: 0 4px 4px rgba(50, 69, 107, 0.1);
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.4s ease;
+}
+
+section#team div.members .member_card:hover {
+    transform: translateY(-2rem);
+    background: rgba(62, 100, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(50, 69, 107, 0.2);
+}
+
+section#team div.members .member_card::before,
+section#team div.members .member_card::after {
+    content: "";
+    position: absolute;
+    top: -10rem;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    z-index: -1;
+    transition: all 0.2s ease;
+}
+
+section#team div.members .member_card::before {
+    left: -10rem;
+    border: 3px solid var(--lightgreen);
+}
+section#team div.members .member_card::after {
+    right: -5rem;
+    border: 3px solid var(--lightorange);
+}
+
+section#team div.members .member_card:hover::before,
+section#team div.members .member_card:hover::after {
+    border: 3px solid rgba(255, 255, 255, 0.6);
+}
+
+section#team div.members .member_card img {
+    margin: 1rem auto 2rem;
+    padding: 2rem;
+    width: 50%;
+    height: auto;
+    background: var(--lightwhite);
+    border-radius: 20px;
+}
+
+section#team div.members .member_card h2 {
+    margin: 1rem auto 2rem;
+    font-size: 2.8rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.2px;
+    transition: all 0.2s ease;
+}
+
+section#team div.members .member_card:hover h2 {
+    color: var(--darkwhite);
+}
+
+section#team div.members .member_card p span {
+    margin: 1rem auto;
+    padding: 0.5rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: var(--mainfont);
+    color: var(--darkwhite);
+    background: var(--primarylight);
+    text-align: center;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    translate: all 0.4s ease;
+}
+
+section#team div.members .member_card:hover p span {
+    color: var(--primarylight);
+    background: var(--darkwhite);
+}
+
+section#team div.members .member_card .social {
+    margin: 2rem auto 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#team div.members .member_card .social a {
+    margin: auto 1rem;
+    padding: 1rem;
+    font-size: 2.2rem;
+    color: var(--darkblack);
+    background: var(--darkwhite);
+    border-radius: 8px;
+    box-shadow: 0 0 4px rgba(50, 69, 107, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+section#team div.members .member_card .social a:hover {
+    color: var(--darkwhite);
+    background: var(--darkblack);
+}
+
+section#team div.members .member_card .social a i {
+    transition: transform 0.8s ease;
+}
+
+section#team div.members .member_card .social a:hover i {
+    transform: rotateY(1turn);
+}
+
+/* **************************** Responsive **************************** */
+
+@media (max-width: 992px) {
+    section#team div.members .member_card {
+        width: 30rem;
+    }
+    section#team div.members .member_card::before,
+    section#team div.members .member_card::after {
+        width: 25rem;
+        height: 25rem;
+    }
+    section#team div.members .member_card h2 {
+        font-size: 2.5rem;
+    }
+    section#team div.members .member_card p span {
+        font-size: 1.5rem;
+        font-weight: 500;
     }
 }
