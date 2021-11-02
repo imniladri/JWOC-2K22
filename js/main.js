@@ -30,7 +30,7 @@ $("div.menu_btn, a.nav_links").click(() => {
 
 // #Id Url, Page Scroll *********************************************
 
-$('a[href^="#"]').on("click", function (e) {
+$('a[href^="#"]').click(function (e) {
     e.preventDefault();
     $("html, body").animate(
         {
@@ -39,4 +39,11 @@ $('a[href^="#"]').on("click", function (e) {
         500
         // "easeInOutExpo"
     );
+});
+
+// Accordion Slide Toggle *********************************************
+
+$("div.faq_card").click(function () {
+    $(this).toggleClass("active");
+    $(this).find("span p").slideToggle(200);
 });

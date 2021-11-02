@@ -142,7 +142,8 @@ section#about div.heading,
 section#register div.heading,
 section#timeline div.heading,
 section#team div.heading,
-section#sponsors div.heading {
+section#sponsors div.heading,
+section#faqs div.heading {
     position: relative;
     margin: auto 4rem;
     user-select: none;
@@ -155,7 +156,8 @@ section#about div.heading h1,
 section#register div.heading h1,
 section#timeline div.heading h1,
 section#team div.heading h1,
-section#sponsors div.heading h1 {
+section#sponsors div.heading h1,
+section#faqs div.heading h1 {
     padding: 0.5rem 1rem 1.5rem;
     width: fit-content;
     font-size: 3.5rem;
@@ -173,7 +175,8 @@ section#about div.heading span.pseudo,
 section#register div.heading span.pseudo,
 section#timeline div.heading span.pseudo,
 section#team div.heading span.pseudo,
-section#sponsors div.heading span.pseudo {
+section#sponsors div.heading span.pseudo,
+section#faqs div.heading span.pseudo {
     position: absolute;
     top: -2rem;
     left: -2rem;
@@ -188,7 +191,8 @@ section#about div.heading span.divider_1,
 section#register div.heading span.divider_1,
 section#timeline div.heading span.divider_1,
 section#team div.heading span.divider_1,
-section#sponsors div.heading span.divider_1 {
+section#sponsors div.heading span.divider_1,
+section#faqs div.heading span.divider_1 {
     position: absolute;
     top: 0;
     left: 0;
@@ -203,7 +207,8 @@ section#about div.heading span.divider_2,
 section#register div.heading span.divider_2,
 section#timeline div.heading span.divider_2,
 section#team div.heading span.divider_2,
-section#sponsors div.heading span.divider_2 {
+section#sponsors div.heading span.divider_2,
+section#faqs div.heading span.divider_2 {
     position: absolute;
     top: 0;
     left: 0;
@@ -1045,7 +1050,7 @@ section#team {
 
 section#team div.members {
     margin: 4rem;
-    padding: 2rem;
+    padding: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1323,6 +1328,120 @@ section#sponsors div.details .category .sponsors h3 {
 
 @media (max-width: 472px) {
     section#sponsors div.heading {
+        margin: auto 2rem;
+    }
+}
+
+/* **************************** FAQs Section **************************** */
+
+section#faqs {
+    position: relative;
+    margin: 10rem auto;
+}
+
+section#faqs div.sub_head {
+    position: relative;
+    margin: 4rem auto;
+}
+
+section#faqs div.sub_head h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: var(--mainfont);
+    color: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+section#faqs div.faqs {
+    margin: 4rem auto;
+    max-width: 100rem;
+}
+
+section#faqs div.faqs .faq_card {
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(50, 69, 107, 0.2);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+section#faqs div.faqs .faq_card:hover,
+section#faqs div.faqs .faq_card.active {
+    background: rgba(62, 100, 255, 0.9);
+}
+
+section#faqs div.faqs .faq_card i.bx {
+    margin: auto 1rem;
+    padding: 1rem;
+    font-size: 2rem;
+    color: var(--darkwhite);
+    background: var(--darkblack);
+    border-radius: 6px;
+    transition: all 0.4s ease;
+}
+
+section#faqs div.faqs .faq_card:hover i.bx,
+section#faqs div.faqs .faq_card.active i.bx {
+    color: var(--darkblack);
+    background: var(--darkwhite);
+}
+
+section#faqs div.faqs .faq_card span h4 {
+    margin: 1rem auto;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: var(--mainfont);
+    color: var(--darkblack);
+    text-align: left;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+}
+
+section#faqs div.faqs .faq_card span p {
+    display: none;
+    margin: 2rem auto 1rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: var(--curlfont);
+    color: var(--lightblack);
+    text-align: left;
+    letter-spacing: 0.5px;
+}
+
+section#faqs div.faqs .faq_card:hover span h4,
+section#faqs div.faqs .faq_card:hover span p,
+section#faqs div.faqs .faq_card.active span h4,
+section#faqs div.faqs .faq_card.active span p {
+    color: var(--darkwhite);
+}
+
+/* **************************** Responsive **************************** */
+
+@media (max-width: 1240px) {
+    section#faqs div.faqs {
+        margin: 4rem;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    section#faqs div.sub_head {
+        padding: 1rem 6rem;
+    }
+    section#faqs div.faqs .faq_card span h4 {
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 472px) {
+    section#faqs div.heading {
         margin: auto 2rem;
     }
 }

@@ -7,7 +7,7 @@ let teamDetails = [
         id: 1,
         name: "Utpalendu Barman",
         avatar: "https://gdscjgec.github.io/assets/img/team/avatar_b.png",
-        desc: "Member Tag Line",
+        desc: "Member Role",
 
         githubLink: "#",
         linkedinLink: "#",
@@ -17,7 +17,7 @@ let teamDetails = [
         id: 2,
         name: "Niloy Sikdar",
         avatar: "https://gdscjgec.github.io/assets/img/team/avatar_b.png",
-        desc: "Member Tag Line",
+        desc: "Member Role",
 
         githubLink: "#",
         linkedinLink: "#",
@@ -27,7 +27,7 @@ let teamDetails = [
         id: 3,
         name: "Anubhab Sarkar",
         avatar: "https://gdscjgec.github.io/assets/img/team/avatar_b.png",
-        desc: "Member Tag Line",
+        desc: "Member Role",
 
         githubLink: "#",
         linkedinLink: "#",
@@ -37,7 +37,7 @@ let teamDetails = [
         id: 4,
         name: "Niladri Mondal",
         avatar: "https://gdscjgec.github.io/assets/img/team/avatar_b.png",
-        desc: "Member Tag Line",
+        desc: "Member Role",
 
         githubLink: "#",
         linkedinLink: "#",
@@ -47,7 +47,7 @@ let teamDetails = [
         id: 5,
         name: "Shreya Paul",
         avatar: "https://gdscjgec.github.io/assets/img/team/avatar_g.png",
-        desc: "Member Tag Line",
+        desc: "Member Role",
 
         githubLink: "#",
         linkedinLink: "#",
@@ -57,7 +57,7 @@ let teamDetails = [
         id: 6,
         name: "Aman Prakash Jha",
         avatar: "https://gdscjgec.github.io/assets/img/team/avatar_b.png",
-        desc: "Member Tag Line",
+        desc: "Member Role",
 
         githubLink: "#",
         linkedinLink: "#",
@@ -67,7 +67,7 @@ let teamDetails = [
         id: 7,
         name: "Sagnik Roy",
         avatar: "https://gdscjgec.github.io/assets/img/team/avatar_b.png",
-        desc: "Member Tag Line",
+        desc: "Member Role",
 
         githubLink: "#",
         linkedinLink: "#",
