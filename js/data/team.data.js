@@ -91,7 +91,7 @@ Object.values(teamDetails).map((val) => {
             <div class="social">
                 <a href="${val.githubLink}"><i class="bx bxl-github"></i></a>
                 <a href="${val.linkedinLink}"><i class="bx bxl-linkedin"></i></a>
-                <a href="${val.instagramLink}"><i class="bx bxl-instagram-alt"></i></a>
+                <a href="${val.instagramLink}"><i class="bx bxl-twitter"></i></a>
             </div>
         </div>
     `;

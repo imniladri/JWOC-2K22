@@ -64,7 +64,7 @@ body {
     --primarydark: #1d4cb0;
     --highlight: #f7f0c2;
     --lightorange: #ff8d01;
-    --lightgreen: #19ce67;
+    --lightgreen: #20ce65;
 
     /* Default Fonts */
     --mainfont: "Poppins", sans-serif;
@@ -99,6 +99,12 @@ img,
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+
+    pointer-events: none;
+
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
 }
 
 button.btn:active,
