@@ -143,7 +143,8 @@ section#register div.heading,
 section#timeline div.heading,
 section#team div.heading,
 section#sponsors div.heading,
-section#faqs div.heading {
+section#faqs div.heading,
+section#contact div.heading {
     position: relative;
     margin: auto 4rem;
     user-select: none;
@@ -157,7 +158,8 @@ section#register div.heading h1,
 section#timeline div.heading h1,
 section#team div.heading h1,
 section#sponsors div.heading h1,
-section#faqs div.heading h1 {
+section#faqs div.heading h1,
+section#contact div.heading h1 {
     padding: 0.5rem 1rem 1.5rem;
     width: fit-content;
     font-size: 3.5rem;
@@ -176,7 +178,8 @@ section#register div.heading span.pseudo,
 section#timeline div.heading span.pseudo,
 section#team div.heading span.pseudo,
 section#sponsors div.heading span.pseudo,
-section#faqs div.heading span.pseudo {
+section#faqs div.heading span.pseudo,
+section#contact div.heading span.pseudo {
     position: absolute;
     top: -2rem;
     left: -2rem;
@@ -192,7 +195,8 @@ section#register div.heading span.divider_1,
 section#timeline div.heading span.divider_1,
 section#team div.heading span.divider_1,
 section#sponsors div.heading span.divider_1,
-section#faqs div.heading span.divider_1 {
+section#faqs div.heading span.divider_1,
+section#contact div.heading span.divider_1 {
     position: absolute;
     top: 0;
     left: 0;
@@ -208,7 +212,8 @@ section#register div.heading span.divider_2,
 section#timeline div.heading span.divider_2,
 section#team div.heading span.divider_2,
 section#sponsors div.heading span.divider_2,
-section#faqs div.heading span.divider_2 {
+section#faqs div.heading span.divider_2,
+section#contact div.heading span.divider_2 {
     position: absolute;
     top: 0;
     left: 0;
@@ -1445,3 +1450,155 @@ section#faqs div.faqs .faq_card.active span p {
         margin: auto 2rem;
     }
 }
+
+/* **************************** Contact Section **************************** */
+
+section#contact {
+    position: relative;
+    margin: 10rem auto;
+}
+
+section#contact div.sub_head {
+    position: relative;
+    margin: 4rem auto;
+}
+
+section#contact div.sub_head h4 {
+    margin: 1rem auto;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+section#contact div.sub_head h2 {
+    position: relative;
+    margin: 1rem auto;
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: var(--mainfont);
+    color: var(--darkblack);
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+section#contact div.sub_head h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -30%;
+    transform: translateX(-50%);
+    height: 0.6rem;
+    width: 40%;
+    border-radius: 4px;
+    background: linear-gradient(
+        90deg,
+        var(--darkwhite),
+        var(--primarylight),
+        var(--darkwhite)
+    );
+}
+
+section#contact div.sub_head p {
+    margin: 2rem auto;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--darkgrey);
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+section#contact div.platforms {
+    margin: 4rem auto;
+    padding: 2rem 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section#contact div.platforms .social_box {
+    margin: 2rem;
+    padding: 2rem;
+    width: 25rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 4px rgba(50, 69, 107, 0.1);
+    transition: all 0.2s linear;
+}
+
+section#contact div.platforms .social_box:hover {
+    box-shadow: 0 0 0 3px rgba(62, 100, 255, 0.8);
+}
+
+section#contact div.platforms .social_box i {
+    padding: 1rem;
+    font-size: 2.8rem;
+    color: var(--darkwhite);
+    background: var(--primarylight);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+section#contact div.platforms .social_box span {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--lightblack);
+    text-align: left;
+    letter-spacing: 0.5px;
+}
+
+section#contact div.platforms .social_box a {
+    font-size: 1.7rem;
+    font-weight: 600;
+    font-family: var(--mainfont);
+    color: var(--darkblack);
+    text-align: left;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+}
+
+section#contact div.platforms .social_box a:hover {
+    color: var(--primarylight);
+}
+
+/* **************************** Responsive **************************** */
+
+@media (max-width: 992px) {
+    section#contact div.platforms .social_box {
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    section#contact div.sub_head {
+        margin: 2rem auto auto;
+        padding: 1rem 6rem;
+    }
+    section#contact div.sub_head p {
+        font-size: 1.8rem;
+    }
+    section#contact div.platforms {
+        margin: auto;
+        padding: 2rem 6rem;
+    }
+}
+
+@media (max-width: 472px) {
+    section#contact div.heading {
+        margin: auto 2rem;
+    }
+}
+
+/* **************************** Styles End **************************** */

@@ -1,0 +1,59 @@
+/* **************************** Footer Section **************************** */
+
+footer {
+    margin: auto;
+    padding: 4rem 2rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer img {
+    margin: auto;
+    width: 10rem;
+    height: auto;
+}
+
+footer h2 {
+    margin: 1rem auto;
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: "Blanka";
+    color: var(--darkblack);
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+footer h4 {
+    margin: 1rem auto;
+    font-size: 2.5rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+footer p {
+    margin: 1rem auto;
+    font-size: 1.8rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* **************************** Responsive Medias **************************** */
+
+@media (max-width: 572px) {
+    footer {
+        padding: 4rem 4rem 2rem;
+    }
+    footer img {
+        width: 8rem;
+    }
+}
+
+/* **************************** Styles End **************************** */
