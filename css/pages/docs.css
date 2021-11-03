@@ -1,0 +1,242 @@
+/* **************************** Bulletin Styles **************************** */
+
+/* **************************** Code of Conduct **************************** */
+
+section#bulletin {
+    position: relative;
+    margin: 12rem auto 6rem;
+}
+
+section#bulletin div.bulletin,
+section#bulletin div.manual {
+    margin: auto;
+    padding: 4rem 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(50, 69, 107, 0.2);
+}
+
+div.bulletin img,
+div.manual img {
+    margin: 1rem auto;
+    width: 15rem;
+    height: auto;
+}
+
+div.bulletin h2,
+div.manual h2 {
+    position: relative;
+    margin: 1rem auto;
+    font-size: 3.2rem;
+    font-weight: 600;
+    font-family: "Blanka";
+    color: var(--lightblack);
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+div.bulletin h2::after,
+div.manual h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -60%;
+    transform: translateX(-50%);
+    height: 0.6rem;
+    width: 100%;
+    border-radius: 4px;
+    background: linear-gradient(
+        90deg,
+        var(--darkwhite),
+        var(--primarylight),
+        var(--darkwhite)
+    );
+}
+
+div.bulletin h4,
+div.manual h4 {
+    margin: 6rem auto 3rem;
+    font-size: 2.2rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--lightblack);
+    text-align: justify;
+    letter-spacing: 0.5px;
+    line-height: 1.8;
+}
+
+div.bulletin p,
+div.manual p {
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.bulletin p span,
+div.manual p span {
+    margin: 2rem auto;
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--lightblack);
+    background: rgba(62, 100, 255, 0.05);
+    text-align: justify;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    border-left: 6px solid rgba(62, 100, 255, 0.8);
+}
+
+div.bulletin p span a,
+div.manual p span a {
+    margin: 0.5rem auto;
+    font-weight: 600;
+    color: var(--primarylight);
+    text-decoration: none;
+}
+
+div.bulletin p span a:hover,
+div.manual p span a:hover {
+    color: var(--primarydark);
+    text-decoration: underline;
+}
+
+div.bulletin a.btn,
+div.manual a.btn {
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    background: var(--lightblack);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.bulletin a.btn:hover,
+div.manual a.btn:hover {
+    background: var(--darkblack);
+}
+
+div.bulletin a.btn i,
+div.manual a.btn i {
+    margin: auto 0.2rem;
+    font-size: 2.6rem;
+    color: var(--darkwhite);
+}
+
+div.bulletin a.btn span,
+div.manual a.btn span {
+    margin: auto 0.2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: var(--mainfont);
+    color: var(--darkwhite);
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* ********************* Mentor & Student Manual Styles ********************* */
+
+section#bulletin div.manual {
+    align-items: flex-start;
+}
+
+div.manual h2 {
+    margin: 1rem auto 2rem;
+    font-size: 3.5rem;
+}
+
+div.manual h4 {
+    margin: 2rem 0 1rem;
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--primarydark);
+    text-align: left;
+}
+
+div.manual h5 {
+    margin: 1rem 0;
+    font-size: 2.2rem;
+    font-weight: 600;
+    font-family: var(--mainfont);
+    color: var(--lightorange);
+    text-align: left;
+}
+
+div.manual p {
+    margin: 0;
+    align-items: flex-start;
+}
+
+div.manual p span {
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 1.8rem;
+    width: 100%;
+}
+
+div.manual h6 p {
+    margin: 2rem 0;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--lightblack);
+    text-align: justify;
+    letter-spacing: 0.5px;
+    line-height: 1.8;
+}
+
+div.manual h6 p a {
+    display: contents;
+    margin: 0 0.5rem;
+    font-weight: 600;
+    color: var(--primarylight);
+    text-decoration: none;
+}
+
+div.manual h6 p a:hover {
+    color: var(--primarydark);
+    text-decoration: underline;
+}
+
+/* **************************** Responsive **************************** */
+
+@media (max-width: 992px) {
+    section#bulletin div.bulletin,
+    section#bulletin div.manual {
+        padding: 4rem;
+    }
+    div.bulletin h4 {
+        font-size: 2rem;
+        line-height: 1.6;
+    }
+    div.manual h4 {
+        font-size: 2.8rem;
+        line-height: 1.4;
+    }
+    div.bulletin p span,
+    div.manual p span {
+        font-size: 1.8rem;
+        line-height: 1.5;
+    }
+    div.bulletin a.btn i,
+    div.manual a.btn i {
+        font-size: 2.4rem;
+    }
+    div.bulletin a.btn span,
+    div.manual a.btn span {
+        font-size: 1.8rem;
+    }
+}
+
+/* **************************** Styles End **************************** */
