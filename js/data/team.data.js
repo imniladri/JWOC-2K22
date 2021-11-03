@@ -11,37 +11,37 @@ let teamDetails = [
 
         githubLink: "#",
         linkedinLink: "#",
-        instagramLink: "#",
+        twitterLink: "#",
     },
     {
         id: 2,
         name: "Niloy Sikdar",
-        avatar: "https://gdscjgec.github.io/assets/img/team/avatar_b.png",
+        avatar: "/assets/img/team/niloy_sikdar.jpg",
         desc: "Member Role",
 
-        githubLink: "#",
-        linkedinLink: "#",
-        instagramLink: "#",
+        githubLink: "https://github.com/niloysikdar",
+        linkedinLink: "https://www.linkedin.com/in/niloysikdar/",
+        twitterLink: "https://twitter.com/niloysikdar_",
     },
     {
         id: 3,
         name: "Anubhab Sarkar",
-        avatar: "https://gdscjgec.github.io/assets/img/team/avatar_b.png",
+        avatar: "/assets/img/team/anubhab_sarkar.jpg",
         desc: "Member Role",
 
-        githubLink: "#",
-        linkedinLink: "#",
-        instagramLink: "#",
+        githubLink: "https://github.com/anubhab1710",
+        linkedinLink: "https://www.linkedin.com/in/anubhabsarkar/",
+        twitterLink: "https://twitter.com/xperiencewhiz",
     },
     {
         id: 4,
         name: "Niladri Mondal",
-        avatar: "https://gdscjgec.github.io/assets/img/team/avatar_b.png",
+        avatar: "/assets/img/team/niladri_mondal.jpg",
         desc: "Member Role",
 
-        githubLink: "#",
-        linkedinLink: "#",
-        instagramLink: "#",
+        githubLink: "https://github.com/imniladri",
+        linkedinLink: "https://www.linkedin.com/in/imniladrimondal/",
+        twitterLink: "https://twitter.com/imniladrimondal",
     },
     {
         id: 5,
@@ -51,7 +51,7 @@ let teamDetails = [
 
         githubLink: "#",
         linkedinLink: "#",
-        instagramLink: "#",
+        twitterLink: "#",
     },
     {
         id: 6,
@@ -61,17 +61,17 @@ let teamDetails = [
 
         githubLink: "#",
         linkedinLink: "#",
-        instagramLink: "#",
+        twitterLink: "#",
     },
     {
         id: 7,
         name: "Sagnik Roy",
-        avatar: "https://gdscjgec.github.io/assets/img/team/avatar_b.png",
+        avatar: "/assets/img/team/sagnik_roy.jpg",
         desc: "Member Role",
 
-        githubLink: "#",
-        linkedinLink: "#",
-        instagramLink: "#",
+        githubLink: "https://github.com/sagnik1511",
+        linkedinLink: "https://www.linkedin.com/in/sagnik1511/",
+        twitterLink: "https://twitter.com/Agnik1511S",
     },
 ];
 
@@ -89,9 +89,9 @@ Object.values(teamDetails).map((val) => {
             <h2>${val.name}</h2>
             <p><span>${val.desc}</span></p>
             <div class="social">
-                <a href="${val.githubLink}"><i class="bx bxl-github"></i></a>
-                <a href="${val.linkedinLink}"><i class="bx bxl-linkedin"></i></a>
-                <a href="${val.instagramLink}"><i class="bx bxl-twitter"></i></a>
+                <a href="${val.githubLink}" target="_blank"><i class="bx bxl-github"></i></a>
+                <a href="${val.linkedinLink}" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                <a href="${val.twitterLink}" target="_blank"><i class="bx bxl-twitter"></i></a>
             </div>
         </div>
     `;
