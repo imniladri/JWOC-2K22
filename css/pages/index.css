@@ -1364,17 +1364,6 @@ section#faqs div.faqs {
     max-width: 100rem;
 }
 
-section#faqs div.faqs img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    height: auto;
-    opacity: 0.4;
-    z-index: -1;
-}
-
 section#faqs div.faqs .faq_card {
     margin: 2rem auto;
     padding: 1rem 2rem;
