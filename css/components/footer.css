@@ -45,6 +45,33 @@ footer p {
     letter-spacing: 0.5px;
 }
 
+/* ************************* Social & Default Footer ************************* */
+
+footer.default {
+    margin: 6rem auto 0;
+}
+
+footer .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .social a i {
+    margin: 1rem;
+    padding: 0.8rem;
+    font-size: 2.2rem;
+    color: var(--darkwhite);
+    background: var(--darkblack);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.2s linear;
+}
+
+footer .social a i:hover {
+    background: var(--lightblack);
+}
+
 /* **************************** Responsive Medias **************************** */
 
 @media (max-width: 572px) {

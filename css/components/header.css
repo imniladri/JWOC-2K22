@@ -62,6 +62,13 @@ header nav a.authIn {
     transition: all 0.2s ease;
 }
 
+header nav a.authIn.disabled {
+    cursor: not-allowed;
+    pointer-events: unset;
+    opacity: 0.8;
+    background: var(--primarylight) !important;
+}
+
 header nav a.authIn:hover {
     background: var(--primarydark);
 }

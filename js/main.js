@@ -47,3 +47,9 @@ $("div.faq_card").click(function () {
     $(this).toggleClass("active");
     $(this).find("span p").slideToggle(200);
 });
+
+// Go Back Function *********************************************
+
+$(".goBack").click(function () {
+    window.history.back();
+});

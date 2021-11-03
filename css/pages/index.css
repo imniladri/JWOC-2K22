@@ -1359,8 +1359,20 @@ section#faqs div.sub_head h2 {
 }
 
 section#faqs div.faqs {
+    position: relative;
     margin: 4rem auto;
     max-width: 100rem;
+}
+
+section#faqs div.faqs img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: auto;
+    opacity: 0.6;
+    z-index: -1;
 }
 
 section#faqs div.faqs .faq_card {

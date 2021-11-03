@@ -1,0 +1,117 @@
+/* **************************** Coming Soon Styles **************************** */
+
+section#comingsoon {
+    position: relative;
+    margin: 12rem auto 6rem;
+}
+
+/* **************************** Sub Head Section **************************** */
+
+section#comingsoon div.sub_head {
+    position: relative;
+    margin: 2rem auto;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section#comingsoon div.sub_head h2 {
+    padding: 0.5rem 1rem 1.5rem;
+    font-size: 3.2rem;
+    font-weight: 600;
+    font-family: "Blanka";
+    color: var(--lightblack);
+    letter-spacing: 3px;
+    text-align: center;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 2px 4px rgba(50, 69, 107, 0.2);
+}
+
+section#comingsoon div.sub_head p {
+    margin: 1rem auto;
+    font-size: 2.2rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* **************************** Banner Section **************************** */
+
+section#comingsoon div.comingsoon {
+    margin: 4rem auto;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section#comingsoon div.comingsoon img {
+    margin: auto auto 2rem;
+    width: 40%;
+    height: auto;
+}
+
+section#comingsoon div.comingsoon h4 {
+    margin: 2rem auto 1rem;
+    font-size: 3.5rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+section#comingsoon div.comingsoon p {
+    margin: 1rem auto;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: var(--mainfont);
+    color: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+section#comingsoon div.comingsoon a {
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: var(--mainfont);
+    color: var(--darkwhite);
+    background: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.5px;
+    border-radius: 10px;
+}
+
+section#comingsoon div.comingsoon a:hover {
+    background: var(--darkblack);
+}
+
+/* **************************** Responsive **************************** */
+
+@media (max-width: 992px) {
+    section#comingsoon div.comingsoon img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    section#comingsoon div.comingsoon h4 {
+        font-size: 3rem;
+    }
+    section#comingsoon div.comingsoon p {
+        font-size: 2.2rem;
+    }
+    section#comingsoon div.comingsoon a {
+        font-size: 1.8rem;
+    }
+}
+
+/* **************************** Styles End **************************** */
