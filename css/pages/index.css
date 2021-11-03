@@ -506,7 +506,7 @@ section#stats div.stats {
     margin: 2rem auto;
     padding: 8rem 2rem;
     background: rgba(62, 100, 255, 0.9) url(/assets/img/pattern_bg.png) fixed
-        no-repeat center / cover;
+        center / 80%;
     display: flex;
     justify-content: center;
     align-items: center;
