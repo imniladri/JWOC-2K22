@@ -48,7 +48,7 @@ let faqQuesAns = [
     {
         id: 8,
         faqQues: "Can 3rd year students also participate?",
-        faqAns: "Preferably, Yes you can but if you are expert then will not recommend.",
+        faqAns: "You can participate as a mentee if you are a beginner to open source and development. If you have sound knowledge about these, then we highly encourage you to participate as a mentor or project admin.",
         faqIcon: "bx bxs-quote-right",
     },
 ];
