@@ -1371,7 +1371,7 @@ section#faqs div.faqs img {
     transform: translate(-50%, -50%);
     width: 70%;
     height: auto;
-    opacity: 0.6;
+    opacity: 0.4;
     z-index: -1;
 }
 
@@ -1384,7 +1384,7 @@ section#faqs div.faqs .faq_card {
     flex-direction: row-reverse;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 4px 8px rgba(50, 69, 107, 0.2);
+    box-shadow: 0 2px 4px rgba(50, 69, 107, 0.2);
     cursor: pointer;
     transition: all 0.4s ease;
 }
