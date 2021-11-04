@@ -1113,9 +1113,9 @@ section#team div.members .member_card:hover::after {
 }
 
 section#team div.members .member_card img {
-    margin: 1rem auto 2rem;
+    margin: 1rem auto;
     padding: 1rem;
-    width: 50%;
+    width: 60%;
     height: auto;
     background: rgba(62, 100, 255, 0.4);
     border-radius: 20px;

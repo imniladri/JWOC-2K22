@@ -6,12 +6,12 @@ let teamDetails = [
     {
         id: 1,
         name: "Utpalendu Barman",
-        avatar: "https://gdscjgec.github.io/assets/img/team/avatar_b.png",
+        avatar: "/assets/img/team/utpalendu_barman.jpg",
         desc: "Member Role",
 
-        githubLink: "#",
-        linkedinLink: "#",
-        twitterLink: "#",
+        githubLink: "https://github.com/utpalendubarman",
+        linkedinLink: "https://www.linkedin.com/in/utpalendubarman/",
+        twitterLink: "https://twitter.com/badhanbarman",
     },
     {
         id: 2,
@@ -46,12 +46,12 @@ let teamDetails = [
     {
         id: 5,
         name: "Shreya Paul",
-        avatar: "https://gdscjgec.github.io/assets/img/team/avatar_g.png",
+        avatar: "/assets/img/team/shreya_paul.jpg",
         desc: "Member Role",
 
-        githubLink: "#",
-        linkedinLink: "#",
-        twitterLink: "#",
+        githubLink: "https://github.com/paulshreya",
+        linkedinLink: "https://www.linkedin.com/in/shreya-paul-05a0a61aa/",
+        twitterLink: "https://twitter.com/__paul_shreya__",
     },
     {
         id: 6,
