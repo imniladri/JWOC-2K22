@@ -1214,6 +1214,9 @@ section#team div.members .member_card .social a:hover i {
     section#team div.heading {
         margin: auto 2rem;
     }
+    section#team div.members {
+        padding: 2rem;
+    }
 }
 
 /* **************************** Sponsors Section **************************** */

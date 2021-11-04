@@ -10,9 +10,10 @@ let eventsTimeline = [
         id: 1,
         date: "25 December, 2021",
         name: "JWoC Program Announced",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit velit, aliquid.",
+        desc: "Here we go announced our JWoC program as a big start!",
 
-        completeClass: "bx bx-check",
+        // completeClass: "bx bx-check",
+        completeClass: "",
         daysLeft: Math.floor(
             (new Date("25 December, 2021").getTime() - intDate) / intValue
         ),
@@ -21,7 +22,7 @@ let eventsTimeline = [
         id: 2,
         date: "25 December, 2021",
         name: "Mentor & Mentee Registration",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit velit, aliquid.",
+        desc: "All the mentors & mentees can start your registration from now on.",
 
         completeClass: "",
         daysLeft: Math.floor(
@@ -32,7 +33,7 @@ let eventsTimeline = [
         id: 3,
         date: "15 January, 2022",
         name: "Mentor Registration Ends",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit velit, aliquid.",
+        desc: "Hope all the mentors have registered themselves & submitted their projects.",
 
         completeClass: "",
         daysLeft: Math.floor(
@@ -43,7 +44,7 @@ let eventsTimeline = [
         id: 4,
         date: "18 January, 2022",
         name: "Projects Announced",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit velit, aliquid.",
+        desc: "Wait is over, We are going to reveal all the projects for this event.",
 
         completeClass: "",
         daysLeft: Math.floor(
@@ -54,7 +55,7 @@ let eventsTimeline = [
         id: 5,
         date: "18 January, 2022",
         name: "Community Bonding Starts",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit velit, aliquid.",
+        desc: "Lets work together as good community for the next few weeks.",
 
         completeClass: "",
         daysLeft: Math.floor(
@@ -65,7 +66,7 @@ let eventsTimeline = [
         id: 6,
         date: "20 January, 2022",
         name: "Community Bonding Ends",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit velit, aliquid.",
+        desc: "From now on we will work together!",
 
         completeClass: "",
         daysLeft: Math.floor(
@@ -76,7 +77,7 @@ let eventsTimeline = [
         id: 7,
         date: "21 January, 2022",
         name: "Coding Period Starts",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit velit, aliquid.",
+        desc: "Finally the moment is here, You can start working on your desired projects. Code Hard!",
 
         completeClass: "",
         daysLeft: Math.floor(
@@ -87,7 +88,7 @@ let eventsTimeline = [
         id: 8,
         date: "9 February, 2022",
         name: "Phase I Completion",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit velit, aliquid.",
+        desc: "Just our Phase I of the event is over!",
 
         completeClass: "",
         daysLeft: Math.floor(
@@ -98,7 +99,7 @@ let eventsTimeline = [
         id: 9,
         date: "19 February, 2022",
         name: "Phase II Ends - JWoC Ends",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit velit, aliquid.",
+        desc: "And at our last stage, JWoC comes to an end, its time to wait till next year.",
 
         completeClass: "",
         daysLeft: Math.floor(
@@ -109,7 +110,7 @@ let eventsTimeline = [
         id: 10,
         date: "24 February, 2022",
         name: "Result Announcement",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit velit, aliquid.",
+        desc: "All participants get ready to know who is big winner of JWoC 2k21.",
 
         completeClass: "",
         daysLeft: Math.floor(

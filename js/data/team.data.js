@@ -56,12 +56,12 @@ let teamDetails = [
     {
         id: 6,
         name: "Aman Prakash Jha",
-        avatar: "https://gdscjgec.github.io/assets/img/team/avatar_b.png",
+        avatar: "/assets/img/team/aman_prakash_jha.jpg",
         desc: "Member Role",
 
-        githubLink: "#",
-        linkedinLink: "#",
-        twitterLink: "#",
+        githubLink: "https://github.com/amanjha8100",
+        linkedinLink: "https://www.linkedin.com/in/aman-prakash-jha/",
+        twitterLink: "https://twitter.com/aman_ItIs",
     },
     {
         id: 7,
