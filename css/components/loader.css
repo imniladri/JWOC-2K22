@@ -42,7 +42,7 @@ div.loader .svglayer span {
     width: 14rem;
     height: 14rem;
     border-radius: 7rem;
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(4px);
     background: rgba(255, 255, 255, 0.8);
     box-shadow: 0 8px 16px rgba(50, 69, 107, 0.2);
 }

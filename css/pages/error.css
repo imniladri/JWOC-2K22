@@ -1,0 +1,79 @@
+/* **************************** Coming Soon Styles **************************** */
+
+section#error_404 {
+    position: relative;
+    margin: 12rem auto 6rem;
+}
+
+/* **************************** Sub Head Section **************************** */
+
+div.error_404 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.error_404 img {
+    margin: auto;
+    width: 40%;
+    height: auto;
+}
+
+div.error_404 h3 {
+    margin: 1rem auto;
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: var(--codefont);
+    color: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+div.error_404 p {
+    margin: 1rem auto;
+    font-size: 2.3rem;
+    font-weight: 600;
+    font-family: var(--mainfont);
+    color: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+div.error_404 a.btn_404 {
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: var(--mainfont);
+    color: var(--darkwhite);
+    background: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.5px;
+    border-radius: 10px;
+}
+
+div.error_404 a.btn_404:hover {
+    background: var(--darkblack);
+}
+
+/* **************************** Responsive **************************** */
+
+@media (max-width: 992px) {
+    div.error_404 img {
+        width: 80%;
+    }
+    div.error_404 h3 {
+        font-size: 3.5rem;
+    }
+    div.error_404 p {
+        font-size: 2rem;
+    }
+    div.error_404 a.btn_404 {
+        padding: 0.8rem 1.6rem;
+        font-size: 1.7rem;
+    }
+}
+
+/* **************************** Styles End **************************** */
