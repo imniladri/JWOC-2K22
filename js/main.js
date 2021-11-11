@@ -53,3 +53,23 @@ $("div.faq_card").click(function () {
 $(".goBack").click(function () {
     window.history.back();
 });
+
+// Count Down Function *********************************************
+
+setInterval(function () {
+    const finalDate = new Date("18 January, 2022").getTime();
+    const intDate = new Date().getTime();
+
+    let seconds = 1000;
+    let minutes = seconds * 60;
+    let hours = minutes * 60;
+    let days = hours * 24;
+
+    let d = Math.floor((finalDate - intDate) / days);
+    let h = Math.floor(((finalDate - intDate) % days) / hours);
+    let m = Math.floor(((finalDate - intDate) % hours) / minutes);
+
+    $("#day").text(d);
+    $("#hour").text(h);
+    $("#minute").text(m);
+}, 1000);

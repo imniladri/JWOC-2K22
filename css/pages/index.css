@@ -141,6 +141,7 @@ section#banner div.banner .org_grp span {
 section#about div.heading,
 section#register div.heading,
 section#timeline div.heading,
+section#projects div.heading,
 section#team div.heading,
 section#sponsors div.heading,
 section#faqs div.heading,
@@ -156,6 +157,7 @@ section#contact div.heading {
 section#about div.heading h1,
 section#register div.heading h1,
 section#timeline div.heading h1,
+section#projects div.heading h1,
 section#team div.heading h1,
 section#sponsors div.heading h1,
 section#faqs div.heading h1,
@@ -176,6 +178,7 @@ section#contact div.heading h1 {
 section#about div.heading span.pseudo,
 section#register div.heading span.pseudo,
 section#timeline div.heading span.pseudo,
+section#projects div.heading span.pseudo,
 section#team div.heading span.pseudo,
 section#sponsors div.heading span.pseudo,
 section#faqs div.heading span.pseudo,
@@ -193,6 +196,7 @@ section#contact div.heading span.pseudo {
 section#about div.heading span.divider_1,
 section#register div.heading span.divider_1,
 section#timeline div.heading span.divider_1,
+section#projects div.heading span.divider_1,
 section#team div.heading span.divider_1,
 section#sponsors div.heading span.divider_1,
 section#faqs div.heading span.divider_1,
@@ -210,6 +214,7 @@ section#contact div.heading span.divider_1 {
 section#about div.heading span.divider_2,
 section#register div.heading span.divider_2,
 section#timeline div.heading span.divider_2,
+section#projects div.heading span.divider_2,
 section#team div.heading span.divider_2,
 section#sponsors div.heading span.divider_2,
 section#faqs div.heading span.divider_2,
@@ -1043,6 +1048,85 @@ section#timeline div.details .events .event_card p {
     section#timeline div.details .events::after {
         bottom: -1%;
         left: -10.5%;
+    }
+}
+
+/* **************************** Projects Section **************************** */
+
+section#projects {
+    position: relative;
+    margin: 5rem auto 20rem;
+}
+
+section#projects div.heading span.divider_2 {
+    height: 50vh;
+}
+
+section#projects div.sub_head {
+    position: relative;
+    margin: 4rem auto;
+}
+
+section#projects div.sub_head h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: var(--mainfont);
+    color: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+section#projects div.timer {
+    position: relative;
+    margin: 4rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section#projects div.timer .time {
+    margin: 2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section#projects div.timer .time span {
+    font-size: 4.5rem;
+    font-weight: 600;
+    font-family: var(--codefont);
+    color: var(--lightblack);
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+section#projects div.timer .time p {
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: var(--mainfont);
+    color: var(--lightblack);
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* **************************** Responsive **************************** */
+
+@media (max-width: 992px) {
+    section#projects div.sub_head {
+        padding: 1rem 6rem;
+    }
+    section#projects div.sub_head h2 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 472px) {
+    section#projects div.heading {
+        margin: auto 2rem;
     }
 }
 
