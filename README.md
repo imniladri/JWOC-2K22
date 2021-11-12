@@ -1,4 +1,4 @@
 # JWOC-2K21
 
 Official Website of JGEC Winter of Code, 2K21.
-[Stable Version](https://jwoc2k21.netlify.app/)
+[Beta Version](https://jwoc2k21-beta.netlify.app/)
