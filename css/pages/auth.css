@@ -1,0 +1,90 @@
+/* **************************** Auth Form Styles **************************** */
+
+form#auth_form {
+    position: relative;
+    width: 100rem;
+    margin: auto;
+    padding: 3rem 8rem 6rem;
+    background: var(--darkwhite);
+    box-shadow: 0 4px 6px rgba(50, 69, 107, 0.2);
+    border-radius: 20px;
+}
+
+form#auth_form .form-group {
+    margin: 3rem auto;
+    display: block;
+}
+
+form#auth_form .form-group label {
+    margin: 1px auto;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    color: var(--lightblack);
+}
+
+form#auth_form .form-group label span {
+    color: #ff3838;
+    font-weight: 700;
+}
+
+form#auth_form .form-group input {
+    margin: 1rem auto;
+    padding: 0 0 0.5rem;
+    font-size: 2.2rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--lightblack) !important;
+    background: transparent !important;
+    letter-spacing: 0.5px;
+    border: none;
+    border-bottom: 2.3px solid rgba(62, 100, 255, 0.5);
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transition: all ease 0.3s;
+}
+
+form#auth_form .form-group input:focus {
+    border-bottom: 2.5px solid rgba(62, 100, 255, 1);
+}
+
+form#auth_form .form-group input:-webkit-autofill,
+form#auth_form .form-group input:-webkit-autofill:hover,
+form#auth_form .form-group input:-webkit-autofill:focus,
+form#auth_form .form-group input:-webkit-autofill:active {
+    -webkit-text-fill-color: var(--lightblack);
+    box-shadow: 0 0 0 30px var(--darkwhite) inset !important;
+}
+
+form#auth_form button.btn-auth {
+    margin: 0;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: var(--mainfont);
+    color: var(--darkwhite);
+    background: var(--primarylight);
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+form#auth_form button.btn-auth:hover {
+    background: var(--primarydark);
+}
+
+/* **************************** Responsive **************************** */
+
+@media (max-width: 992px) {
+    form#auth_form {
+        width: 100%;
+        padding: 3rem 4rem 6rem;
+    }
+}
+
+@media (max-width: 402px) {
+    form#auth_form {
+        padding: 3rem 2rem 6rem;
+    }
+}
+
+/* **************************** Styles End **************************** */
