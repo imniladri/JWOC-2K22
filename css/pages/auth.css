@@ -1,3 +1,51 @@
+/* **************************** Registration Auth Styles **************************** */
+
+section#auth_register {
+    position: relative;
+    margin: 12rem auto 6rem;
+}
+
+/* **************************** Sub Head Section **************************** */
+
+section#auth_register div.sub_head {
+    position: relative;
+    margin: 2rem auto;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section#auth_register div.sub_head h2 {
+    padding: 0.5rem 1rem 1.5rem;
+    font-size: 3.2rem;
+    font-weight: 600;
+    font-family: "Blanka";
+    color: var(--lightblack);
+    letter-spacing: 3px;
+    text-align: center;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 2px 4px rgba(50, 69, 107, 0.2);
+}
+
+section#auth_register div.sub_head p {
+    margin: 1rem auto;
+    font-size: 2.2rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+section#auth_register div.sub_head img {
+    margin: 0 auto -5rem;
+    width: 15rem;
+    height: auto;
+}
+
 /* **************************** Auth Form Styles **************************** */
 
 form#auth_form {
@@ -5,22 +53,29 @@ form#auth_form {
     width: 100rem;
     margin: auto;
     padding: 3rem 8rem 6rem;
-    background: var(--darkwhite);
-    box-shadow: 0 4px 6px rgba(50, 69, 107, 0.2);
-    border-radius: 20px;
 }
 
 form#auth_form .form-group {
     margin: 3rem auto;
+    padding: 3rem 2rem 2rem;
     display: block;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 3px rgba(73, 84, 100, 0.4);
+    transition: all 0.2s linear;
+}
+
+form#auth_form .form-group:hover {
+    box-shadow: 0 0 0 2.5px rgba(62, 100, 255, 0.8);
 }
 
 form#auth_form .form-group label {
     margin: 1px auto;
-    font-size: 1.8rem;
-    font-weight: 400;
+    font-size: 1.6rem;
+    font-weight: 500;
     font-family: var(--mainfont);
     color: var(--lightblack);
+    letter-spacing: 0.2px;
 }
 
 form#auth_form .form-group label span {
@@ -28,7 +83,8 @@ form#auth_form .form-group label span {
     font-weight: 700;
 }
 
-form#auth_form .form-group input {
+form#auth_form .form-group input,
+form#auth_form .form-group textarea {
     margin: 1rem auto;
     padding: 0 0 0.5rem;
     font-size: 2.2rem;
@@ -38,14 +94,19 @@ form#auth_form .form-group input {
     background: transparent !important;
     letter-spacing: 0.5px;
     border: none;
-    border-bottom: 2.3px solid rgba(62, 100, 255, 0.5);
+    border-bottom: 2px solid rgba(73, 84, 100, 0.3);
     border-radius: 0 !important;
     box-shadow: none !important;
-    transition: all ease 0.3s;
+    transition: all 0.2s linear;
 }
 
-form#auth_form .form-group input:focus {
-    border-bottom: 2.5px solid rgba(62, 100, 255, 1);
+form#auth_form .form-group textarea {
+    font-size: 2rem;
+}
+
+form#auth_form .form-group input:focus,
+form#auth_form .form-group textarea:focus {
+    border-bottom: 2px solid rgba(62, 100, 255, 0.8);
 }
 
 form#auth_form .form-group input:-webkit-autofill,
@@ -59,6 +120,7 @@ form#auth_form .form-group input:-webkit-autofill:active {
 form#auth_form button.btn-auth {
     margin: 0;
     padding: 1rem 2rem;
+    width: 100%;
     font-size: 1.8rem;
     font-weight: 600;
     font-family: var(--mainfont);
@@ -81,9 +143,19 @@ form#auth_form button.btn-auth:hover {
     }
 }
 
+@media (max-width: 768px) {
+    form#auth_form .form-group input {
+        font-size: 2rem;
+        letter-spacing: 0.2px;
+    }
+}
+
 @media (max-width: 402px) {
     form#auth_form {
         padding: 3rem 2rem 6rem;
+    }
+    form#auth_form .form-group {
+        border-radius: 6px;
     }
 }
 
