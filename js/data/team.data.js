@@ -7,7 +7,7 @@ let teamDetails = [
         id: 1,
         name: "Utpalendu Barman",
         avatar: "/assets/img/team/utpalendu_barman.jpg",
-        desc: "Member Role",
+        desc: "Portfolio",
 
         githubLink: "https://github.com/utpalendubarman",
         linkedinLink: "https://www.linkedin.com/in/utpalendubarman/",
@@ -17,7 +17,7 @@ let teamDetails = [
         id: 2,
         name: "Niloy Sikdar",
         avatar: "/assets/img/team/niloy_sikdar.jpg",
-        desc: "Member Role",
+        desc: "Portfolio",
 
         githubLink: "https://github.com/niloysikdar",
         linkedinLink: "https://www.linkedin.com/in/niloysikdar/",
@@ -27,7 +27,7 @@ let teamDetails = [
         id: 3,
         name: "Anubhab Sarkar",
         avatar: "/assets/img/team/anubhab_sarkar.jpg",
-        desc: "Member Role",
+        desc: "Portfolio",
 
         githubLink: "https://github.com/anubhab1710",
         linkedinLink: "https://www.linkedin.com/in/anubhabsarkar/",
@@ -37,7 +37,7 @@ let teamDetails = [
         id: 4,
         name: "Niladri Mondal",
         avatar: "/assets/img/team/niladri_mondal.jpg",
-        desc: "Member Role",
+        desc: "Portfolio",
 
         githubLink: "https://github.com/imniladri",
         linkedinLink: "https://www.linkedin.com/in/imniladrimondal/",
@@ -47,7 +47,7 @@ let teamDetails = [
         id: 5,
         name: "Shreya Paul",
         avatar: "/assets/img/team/shreya_paul.jpg",
-        desc: "Member Role",
+        desc: "Portfolio",
 
         githubLink: "https://github.com/paulshreya",
         linkedinLink: "https://www.linkedin.com/in/shreya-paul-05a0a61aa/",
@@ -57,7 +57,7 @@ let teamDetails = [
         id: 6,
         name: "Aman Prakash Jha",
         avatar: "/assets/img/team/aman_prakash_jha.jpg",
-        desc: "Member Role",
+        desc: "Portfolio",
 
         githubLink: "https://github.com/amanjha8100",
         linkedinLink: "https://www.linkedin.com/in/aman-prakash-jha/",
@@ -67,7 +67,7 @@ let teamDetails = [
         id: 7,
         name: "Sagnik Roy",
         avatar: "/assets/img/team/sagnik_roy.jpg",
-        desc: "Member Role",
+        desc: "Portfolio",
 
         githubLink: "https://github.com/sagnik1511",
         linkedinLink: "https://www.linkedin.com/in/sagnik1511/",
@@ -87,11 +87,11 @@ Object.values(teamDetails).map((val) => {
         <div class="member_card">
             <img src="${val.avatar}" alt="Profile Img" />
             <h2>${val.name}</h2>
-            <p><span>${val.desc}</span></p>
+            <a href="#" class="btn"><span>${val.desc}</span></a>
             <div class="social">
                 <a href="${val.githubLink}" target="_blank"><i class="bx bxl-github"></i></a>
                 <a href="${val.linkedinLink}" target="_blank"><i class="bx bxl-linkedin"></i></a>
-                <a href="${val.twitterLink}" target="_blank"><i class="bx bxl-twitter"></i></a>
+                <a href="${val.twitterLink}" target="_blank"><i class="bx bxl-instagram"></i></a>
             </div>
         </div>
     `;

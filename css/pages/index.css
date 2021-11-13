@@ -1220,7 +1220,7 @@ section#team div.members .member_card:hover h2 {
     color: var(--darkwhite);
 }
 
-section#team div.members .member_card p span {
+section#team div.members .member_card a span {
     margin: 1rem auto;
     padding: 0.5rem 2rem;
     font-size: 1.6rem;
@@ -1234,7 +1234,7 @@ section#team div.members .member_card p span {
     translate: all 0.4s ease;
 }
 
-section#team div.members .member_card:hover p span {
+section#team div.members .member_card:hover a span {
     color: var(--primarylight);
     background: var(--darkwhite);
 }
