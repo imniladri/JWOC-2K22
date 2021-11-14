@@ -75,8 +75,8 @@ let teamDetails = [
         socialIcon2: "bx bxl-linkedin",
         socialLink2: "https://www.linkedin.com/in/shreya-paul-05a0a61aa/",
 
-        socialIcon3: "bx bxl-instagram",
-        socialLink3: "https://www.instagram.com/__paul_shreya__/",
+        socialIcon3: "bx bxl-twitter",
+        socialLink3: "https://twitter.com/__paul_shreya__",
     },
     {
         id: 6,
