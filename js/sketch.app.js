@@ -14,23 +14,23 @@ particlesJS(
     {
         particles: {
             number: {
-                value: 40,
+                value: 30,
                 density: {
                     enable: true,
-                    value_area: 500,
+                    value_area: 600,
                 },
             },
             color: {
                 value: "#E8FFFF",
             },
             shape: {
-                type: "circle",
+                type: "polygon",
                 stroke: {
                     width: 0,
                     color: "#000000",
                 },
                 polygon: {
-                    nb_sides: 5,
+                    nb_sides: 6,
                 },
                 image: {
                     src: "img/logo.svg",
@@ -49,7 +49,7 @@ particlesJS(
                 },
             },
             size: {
-                value: 10,
+                value: 8,
                 random: true,
                 anim: {
                     enable: true,

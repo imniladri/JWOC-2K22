@@ -13,7 +13,9 @@ let eventsTimeline = [
         desc: "Here we go announced our JWoC program as a big start!",
 
         // completeClass: "bx bx-check",
+        // completeStyle: "display:none",
         completeClass: "",
+        completeStyle: "",
         daysLeft: Math.floor(
             (new Date("25 December, 2021").getTime() - intDate) / intValue
         ),
@@ -25,6 +27,7 @@ let eventsTimeline = [
         desc: "All the mentors & mentees can start your registration from now on.",
 
         completeClass: "",
+        completeStyle: "",
         daysLeft: Math.floor(
             (new Date("25 December, 2021").getTime() - intDate) / intValue
         ),
@@ -36,6 +39,7 @@ let eventsTimeline = [
         desc: "Hope all the mentors have registered themselves & submitted their projects.",
 
         completeClass: "",
+        completeStyle: "",
         daysLeft: Math.floor(
             (new Date("15 January, 2022").getTime() - intDate) / intValue
         ),
@@ -47,6 +51,7 @@ let eventsTimeline = [
         desc: "Wait is over, We are going to reveal all the projects for this event.",
 
         completeClass: "",
+        completeStyle: "",
         daysLeft: Math.floor(
             (new Date("18 January, 2022").getTime() - intDate) / intValue
         ),
@@ -58,6 +63,7 @@ let eventsTimeline = [
         desc: "Lets work together as good community for the next few weeks.",
 
         completeClass: "",
+        completeStyle: "",
         daysLeft: Math.floor(
             (new Date("18 January, 2022").getTime() - intDate) / intValue
         ),
@@ -69,6 +75,7 @@ let eventsTimeline = [
         desc: "From now on we will work together!",
 
         completeClass: "",
+        completeStyle: "",
         daysLeft: Math.floor(
             (new Date("20 January, 2022").getTime() - intDate) / intValue
         ),
@@ -80,6 +87,7 @@ let eventsTimeline = [
         desc: "Finally the moment is here, You can start working on your desired projects. Code Hard!",
 
         completeClass: "",
+        completeStyle: "",
         daysLeft: Math.floor(
             (new Date("21 January, 2022").getTime() - intDate) / intValue
         ),
@@ -91,6 +99,7 @@ let eventsTimeline = [
         desc: "Just our Phase I of the event is over!",
 
         completeClass: "",
+        completeStyle: "",
         daysLeft: Math.floor(
             (new Date("9 February, 2022").getTime() - intDate) / intValue
         ),
@@ -102,6 +111,7 @@ let eventsTimeline = [
         desc: "And at our last stage, JWoC comes to an end, its time to wait till next year.",
 
         completeClass: "",
+        completeStyle: "",
         daysLeft: Math.floor(
             (new Date("19 February, 2022").getTime() - intDate) / intValue
         ),
@@ -113,6 +123,7 @@ let eventsTimeline = [
         desc: "All participants get ready to know who is big winner of JWoC 2k21.",
 
         completeClass: "",
+        completeStyle: "",
         daysLeft: Math.floor(
             (new Date("24 February, 2022").getTime() - intDate) / intValue
         ),
@@ -130,7 +141,9 @@ Object.values(eventsTimeline).map((val) => {
         <!-- Event ${val.id} -->
         <div class="event_card">
             <i class="${val.completeClass}"></i>
-            <span>${val.daysLeft} Days</span>
+            <span style="${val.completeStyle}">
+                ${val.daysLeft} Days
+            </span>
             <h2>${val.date}</h2>
             <h4>${val.name}</h4>
             <p>${val.desc}</p>
