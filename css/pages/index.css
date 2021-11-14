@@ -29,8 +29,8 @@ section#banner div.banner {
     align-items: center;
     flex-direction: column;
     border-radius: 20px;
-    backdrop-filter: blur(6px);
-    background: rgba(6, 30, 53, 0.4);
+    backdrop-filter: blur(2px);
+    background: rgba(6, 30, 53, 0.6);
     box-shadow: 0 8px 16px rgba(5, 26, 43, 0.6);
 }
 
