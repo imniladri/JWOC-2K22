@@ -14,14 +14,14 @@ particlesJS(
     {
         particles: {
             number: {
-                value: 50,
+                value: 40,
                 density: {
                     enable: true,
                     value_area: 500,
                 },
             },
             color: {
-                value: "#D3E0EA",
+                value: "#E8FFFF",
             },
             shape: {
                 type: "circle",

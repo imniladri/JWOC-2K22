@@ -6,11 +6,16 @@ header {
     z-index: 10;
     width: 100%;
     padding: 1rem 8rem;
-    background: rgba(247, 250, 252, 0.8);
+    background: rgba(6, 30, 53, 0.8);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     opacity: 1;
     visibility: visible;
     transition: all 0.4s ease;
+}
+
+header.default,
+header.scrolled {
+    background: rgba(255, 255, 255, 0.8);
 }
 
 header.active {
@@ -46,6 +51,11 @@ header nav a.nav_brand span {
     font-size: 3rem;
     font-weight: 600;
     font-family: var(--mainfont);
+    color: var(--darkwhite);
+}
+
+header.default nav a.nav_brand span,
+header.scrolled nav a.nav_brand span {
     color: var(--lightblack);
 }
 
@@ -99,11 +109,17 @@ header div.menu_btn {
     align-items: center;
     width: 5rem;
     height: 5rem;
-    background: var(--primarylight);
+    background: rgba(6, 30, 53, 1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
     border-radius: 50px;
     cursor: pointer;
     z-index: 20;
     transition: all 0.6s cubic-bezier(0.67, -0.34, 0.38, 1.43);
+}
+
+header.scrolled div.menu_btn {
+    background: var(--primarylight);
+    box-shadow: none;
 }
 
 header div.menu_btn.active {
