@@ -10,7 +10,7 @@ section#banner {
     justify-content: center;
     align-items: center;
     background: url(/assets/img/banner_bg.png) no-repeat 50% 50% / cover,
-        linear-gradient(45deg, #104258, #051a2b, #104258);
+        linear-gradient(45deg, #061e35, #05192d, #061e35);
 }
 
 section#banner div#particles-js {
@@ -30,7 +30,7 @@ section#banner div.banner {
     flex-direction: column;
     border-radius: 20px;
     backdrop-filter: blur(6px);
-    background: rgba(16, 66, 88, 0.6);
+    background: rgba(6, 30, 53, 0.4);
     box-shadow: 0 8px 16px rgba(5, 26, 43, 0.6);
 }
 
@@ -67,7 +67,7 @@ section#banner div.banner .logos img.tech {
     width: 25rem;
     height: auto;
     z-index: -2;
-    animation: rotate 8s linear infinite;
+    animation: rotate 10s linear infinite;
 }
 
 @keyframes rotate {
@@ -143,9 +143,6 @@ section#banner div.banner .org_grp span {
 /* **************************** Responsive **************************** */
 
 @media (max-width: 1240px) {
-    section#banner div.banner img {
-        width: 15rem;
-    }
     section#banner div.banner h2 {
         font-size: 3rem;
     }
@@ -161,6 +158,16 @@ section#banner div.banner .org_grp span {
     }
     section#banner div.banner object {
         width: 80%;
+    }
+    section#banner div.banner .logos span.blur {
+        width: 16rem;
+        height: 16rem;
+    }
+    section#banner div.banner .logos img.jwoc {
+        width: 15rem;
+    }
+    section#banner div.banner .logos img.tech {
+        width: 22rem;
     }
     section#banner div.banner h2 {
         font-size: 3rem;
