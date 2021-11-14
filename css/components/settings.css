@@ -59,8 +59,8 @@ body {
     --lightgrey: #9ba4b4;
 
     /* Theme Colors */
-    --primaryoff: #1d9dcd;
-    --primarylight: #3e64ff;
+    --primaryoff: #00dbff;
+    --primarylight: #385cf0;
     --primarydark: #1d4cb0;
     --highlight: #f7f0c2;
     --lightorange: #ff8d01;
@@ -112,6 +112,18 @@ button.btn:focus,
 a.btn:active,
 a.btn:focus {
     box-shadow: none;
+}
+
+/* **************************** Section Divider **************************** */
+
+section#divider div.skewed {
+    position: relative;
+    width: 100%;
+    height: 10rem;
+    background: linear-gradient(45deg, #104258, #051a2b);
+    transform: skewY(2deg);
+    transform-origin: top right;
+    z-index: -1;
 }
 
 /* **************************** Custom Fonts **************************** */

@@ -10,6 +10,10 @@ $(window).on("load", () => {
 
 // Scrolled *******************************************************
 
+$(window).scroll(() => {
+    $("header").toggleClass("scrolled", window.scrollY > 1000);
+});
+
 let scrollPos = 0;
 window.addEventListener("scroll", () => {
     let scrollPosNow = window.pageYOffset || document.pageYOffset;

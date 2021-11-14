@@ -9,7 +9,8 @@ section#banner {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(/assets/img/banner_bg.png) no-repeat 50% 50% / cover;
+    background: url(/assets/img/banner_bg.png) no-repeat 50% 50% / cover,
+        linear-gradient(45deg, #104258, #051a2b, #104258);
 }
 
 section#banner div#particles-js {
@@ -29,15 +30,53 @@ section#banner div.banner {
     flex-direction: column;
     border-radius: 20px;
     backdrop-filter: blur(6px);
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 8px 16px rgba(50, 69, 107, 0.2);
+    background: rgba(16, 66, 88, 0.6);
+    box-shadow: 0 8px 16px rgba(5, 26, 43, 0.6);
 }
 
-section#banner div.banner img {
-    margin: 1rem auto;
-    width: 20rem;
-    height: auto;
+section#banner div.banner .logos {
+    margin: 4rem auto 8rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     user-select: none;
+    z-index: 1;
+}
+
+section#banner div.banner .logos span.blur {
+    position: absolute;
+    width: 19rem;
+    height: 19rem;
+    backdrop-filter: blur(2px);
+    background: rgba(62, 100, 255, 0.2);
+    box-shadow: 0 0 8px rgba(5, 26, 43, 0.6);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+section#banner div.banner .logos img.jwoc {
+    position: relative;
+    width: 18rem;
+    height: auto;
+    z-index: 1;
+}
+
+section#banner div.banner .logos img.tech {
+    position: absolute;
+    width: 25rem;
+    height: auto;
+    z-index: -2;
+    animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 section#banner div.banner object {
@@ -52,8 +91,8 @@ section#banner div.banner h2 {
     font-size: 5rem;
     font-weight: 600;
     font-family: "Anurati";
-    color: var(--primarydark);
-    -webkit-text-stroke: 1px var(--primarydark);
+    color: var(--primaryoff);
+    -webkit-text-stroke: 1px var(--primaryoff);
     letter-spacing: 10px;
     text-align: center;
     line-height: 4.5rem;
@@ -63,10 +102,10 @@ section#banner div.banner h2 {
 section#banner div.banner p {
     margin: 2rem auto;
     padding: 1rem 20rem;
-    font-size: 2.7rem;
+    font-size: 2.6rem;
     font-weight: 500;
     font-family: var(--codefont);
-    color: var(--lightblack);
+    color: var(--lightwhite);
     text-align: center;
     letter-spacing: 0.5px;
     line-height: 4rem;
@@ -79,8 +118,8 @@ section#banner div.banner p span {
     font-size: 2rem;
     font-weight: 700;
     font-family: var(--curlfont);
-    color: var(--darkwhite);
-    background: var(--primarydark);
+    color: var(--darkblack);
+    background: var(--primaryoff);
     width: fit-content;
     border-radius: 20px;
 }
@@ -93,7 +132,7 @@ section#banner div.banner .org_grp span {
     font-size: 2.2rem;
     font-weight: 600;
     font-family: var(--mainfont);
-    color: var(--darkblack);
+    color: var(--lightblack);
     background: var(--lightwhite);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -1220,7 +1259,7 @@ section#team div.members .member_card:hover h2 {
     color: var(--darkwhite);
 }
 
-section#team div.members .member_card a span {
+section#team div.members .member_card p span {
     margin: 1rem auto;
     padding: 0.5rem 2rem;
     font-size: 1.6rem;
@@ -1229,12 +1268,13 @@ section#team div.members .member_card a span {
     color: var(--darkwhite);
     background: var(--primarylight);
     text-align: center;
+    text-transform: uppercase;
     letter-spacing: 1px;
     border-radius: 20px;
     translate: all 0.4s ease;
 }
 
-section#team div.members .member_card:hover a span {
+section#team div.members .member_card:hover p span {
     color: var(--primarylight);
     background: var(--darkwhite);
 }
