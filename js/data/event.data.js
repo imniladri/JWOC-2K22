@@ -120,7 +120,7 @@ let eventsTimeline = [
         id: 10,
         date: "24 February, 2022",
         name: "Result Announcement",
-        desc: "All participants get ready to know who is big winner of JWoC 2k21.",
+        desc: "All participants get ready to know who is big winner of this year JWoC.",
 
         completeClass: "",
         completeStyle: "",
