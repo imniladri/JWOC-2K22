@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="/css/components/settings.css" />
     <link rel="stylesheet" href="/css/components/footer.css" />
     <link rel="stylesheet" href="/css/components/header.css" />
-    <link rel="stylesheet" href="/css/pages/soon.css" />
+    <link rel="stylesheet" href="/css/pages/auth.css" />
 
     <!-- External JS -->
     <script defer src="/js/libraries/jquery-3.6.0.min.js"></script>
@@ -69,18 +69,56 @@
     <!-- Header Navbar End -->
 
     <!-- Banner Start -->
-    <section id="comingsoon">
+    <section id="auth_register">
         <div class="sub_head">
             <h2>Mentee's Registration</h2>
             <p>Register yourselves as mentee to work.</p>
+            <img src="/assets/img/winter_text.png" alt="Winter Text" />
         </div>
 
-        <div class="comingsoon container">
-            <img src="/assets/img/coming_soon.svg" alt="Coming Soon Img" />
-            <h4>Mentee's Registration has not yet began.</h4>
-            <p>Till then checkout our schedule timeline.</p>
-            <a href="/" class="btn">Go To Home</a>
-        </div>
+        <form id="auth_form" class="container">
+            <div class="form-group">
+                <label for="name">Name <span>*</span></label>
+                <input type="text" class="form-control" placeholder="" id="name" name="Name" required />
+            </div>
+
+            <div class="form-group">
+                <label for="college">College <span>*</span></label>
+                <input type="text" class="form-control" placeholder="" id="college" name="College" required />
+            </div>
+
+            <div class="form-group">
+                <label for="gituser">Github Username <span>*</span></label>
+                <input type="text" class="form-control" placeholder="" id="gituser" name="GitUser" required />
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address <span>*</span></label>
+                <input type="email" class="form-control" placeholder="" id="email" name="Email" required />
+            </div>
+
+            <div class="form-group">
+                <label for="dept">Department <span>*</span></label>
+                <input type="text" class="form-control" placeholder="" id="dept" name="Dept" required />
+            </div>
+
+            <div class="form-group">
+                <label for="sem">Semester <span>*</span></label>
+                <input type="text" class="form-control" placeholder="" id="sem" name="Sem" required />
+            </div>
+
+            <div class="form-group">
+                <label for="year">Year <span>*</span></label>
+                <input type="text" class="form-control" placeholder="" id="year" name="Year" required />
+            </div>
+
+            <div class="form-group">
+                <label for="name">Contact (optional)</label>
+                <input type="text" class="form-control" placeholder="" id="name" name="name" required />
+            </div>
+
+            <button type="submit" class="btn btn-auth">Register Now</button>
+        </form>
     </section>
     <!-- Banner End -->
 
