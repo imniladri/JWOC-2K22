@@ -239,4 +239,15 @@ div.manual h6 p a:hover {
     }
 }
 
+@media (max-width: 572px) {
+    section#bulletin {
+        padding: 1rem;
+    }
+    section#bulletin div.bulletin,
+    section#bulletin div.manual {
+        padding: 3rem;
+        border-radius: 10px;
+    }
+}
+
 /* **************************** Styles End **************************** */

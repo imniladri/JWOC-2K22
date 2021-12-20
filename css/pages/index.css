@@ -9,8 +9,9 @@ section#banner {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(/assets/img/banner_bg.png) no-repeat 50% 50% / cover,
-        linear-gradient(45deg, #061e35, #05192d, #061e35);
+    background: url(../../assets/img/banner_bg.png) no-repeat 50% 50% / cover,
+        linear-gradient(315deg, #0d1524 0%, #0f1927 80%);
+    z-index: 1;
 }
 
 section#banner div#particles-js {
@@ -19,23 +20,23 @@ section#banner div#particles-js {
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: -1;
 }
 
 section#banner div.banner {
-    margin: 10rem auto 6rem;
+    margin: 10rem 1rem 6rem;
     padding: 4rem 6rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius: 20px;
-    backdrop-filter: blur(2px);
-    background: rgba(6, 30, 53, 0.6);
-    box-shadow: 0 8px 16px rgba(5, 26, 43, 0.6);
+    border-radius: 10px;
+    background: rgba(15, 25, 39, 0.7);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
 section#banner div.banner .logos {
-    margin: 4rem auto 8rem;
+    margin: 6rem auto 8rem;
     position: relative;
     display: flex;
     justify-content: center;
@@ -48,9 +49,8 @@ section#banner div.banner .logos span.blur {
     position: absolute;
     width: 19rem;
     height: 19rem;
-    backdrop-filter: blur(2px);
-    background: rgba(62, 100, 255, 0.2);
-    box-shadow: 0 0 8px rgba(5, 26, 43, 0.6);
+    background: rgba(15, 25, 39, 0.7);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
     border-radius: 50%;
     z-index: -1;
 }
@@ -95,33 +95,32 @@ section#banner div.banner h2 {
     -webkit-text-stroke: 1px var(--primaryoff);
     letter-spacing: 10px;
     text-align: center;
-    line-height: 4.5rem;
     user-select: none;
 }
 
 section#banner div.banner p {
     margin: 2rem auto;
-    padding: 1rem 20rem;
+    padding: 1rem 15rem;
     font-size: 2.6rem;
     font-weight: 500;
     font-family: var(--codefont);
     color: var(--lightwhite);
     text-align: center;
-    letter-spacing: 0.5px;
-    line-height: 4rem;
+    letter-spacing: 2px;
+    line-height: 1.6;
 }
 
-section#banner div.banner p span {
-    display: block;
-    margin: 2rem auto 0;
-    padding: 0 1.5rem;
+section#banner div.banner h4 {
+    margin: 0 auto 1rem;
+    padding: 0.6rem 1.6rem;
     font-size: 2rem;
-    font-weight: 700;
-    font-family: var(--curlfont);
-    color: var(--darkblack);
-    background: var(--primaryoff);
-    width: fit-content;
+    font-weight: 600;
+    font-family: "Orbitron", sans-serif;
+    color: var(--darkwhite);
+    background: rgba(255, 32, 133, 1);
     border-radius: 20px;
+    text-align: center;
+    letter-spacing: 1px;
 }
 
 section#banner div.banner .org_grp span {
@@ -132,7 +131,7 @@ section#banner div.banner .org_grp span {
     font-size: 2.2rem;
     font-weight: 600;
     font-family: var(--mainfont);
-    color: var(--lightblack);
+    color: var(--darkblack);
     background: var(--lightwhite);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -171,14 +170,26 @@ section#banner div.banner .org_grp span {
     }
     section#banner div.banner h2 {
         font-size: 3rem;
+        line-height: 1.6;
     }
     section#banner div.banner p {
         padding: 1rem 2rem;
         font-size: 2.2rem;
-        line-height: 3rem;
+        line-height: 1.4;
+        text-align: justify;
+        text-align-last: center;
     }
     section#banner div.banner .org_grp span {
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 572px) {
+    section#banner div.banner p {
+        padding: 1rem;
+    }
+    section#banner div.banner h4 {
+        font-size: 1.8rem;
     }
 }
 
@@ -331,8 +342,7 @@ section#about div.about .desc {
     padding: 4rem;
     width: 60%;
     border-radius: 20px;
-    backdrop-filter: blur(6px);
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 8px 16px rgba(50, 69, 107, 0.2);
 }
 
@@ -373,28 +383,29 @@ section#about div.about .desc h2::after {
 }
 
 section#about div.about .desc p {
-    margin: 2rem auto;
+    margin: 2rem auto 1rem;
     font-size: 1.8rem;
     font-weight: 500;
     font-family: var(--mainfont);
     color: var(--lightblack);
     text-align: justify;
     letter-spacing: 0.5px;
+    line-height: 1.7;
 }
 
 section#about div.about .desc a.btn {
     margin: 1rem 0;
-    padding: 1rem 2rem 0.8rem;
+    padding: 0.8rem 2rem;
     font-size: 2rem;
-    font-weight: 700;
-    font-family: var(--curlfont);
+    font-weight: 600;
+    font-family: var(--codefont);
     color: var(--darkwhite);
     background: linear-gradient(45deg, var(--primarylight), var(--primarydark));
     background-size: 200%;
     outline: none;
     border: none;
     text-align: justify;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     border-radius: 10px;
     transition: all 0.3s ease;
 }
@@ -448,8 +459,7 @@ section#about div.info .info_card {
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
-    backdrop-filter: blur(4px);
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.8);
     box-shadow: 0 8px 16px rgba(50, 69, 107, 0.2);
 }
 
@@ -466,19 +476,19 @@ section#about div.info .info_card h4 {
     font-family: var(--codefont);
     color: var(--lightblack);
     text-align: center;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.6px;
 }
 
 section#about div.info .info_card a.btn {
     margin: 1rem 0;
     padding: 0.6rem 1.6rem;
-    font-size: 1.8rem;
-    font-weight: 700;
-    font-family: var(--curlfont);
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: var(--codefont);
     color: var(--darkwhite);
     background: var(--primarylight);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     border-radius: 10px;
     transition: all 0.2s ease;
 }
@@ -556,8 +566,8 @@ section#stats {
 section#stats div.stats {
     margin: 2rem auto;
     padding: 8rem 2rem;
-    background: rgba(62, 100, 255, 0.9) url(/assets/img/pattern_bg.png) fixed
-        center / 80%;
+    background: rgba(62, 100, 255, 0.9) url(../../assets/img/pattern_bg.png)
+        fixed center / 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -593,27 +603,27 @@ section#stats div.stats .stats_card i {
 
 section#stats div.stats .stats_card p {
     margin: 1rem auto 0;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     font-weight: 600;
-    font-family: var(--mainfont);
+    font-family: var(--codefont);
     color: var(--lightblack);
     text-align: center;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.5px;
 }
 
 section#stats div.stats .stats_card h4 {
     margin: 0.5rem auto;
     font-size: 4rem;
     font-weight: 600;
-    font-family: var(--mainfont);
+    font-family: var(--codefont);
     color: var(--darkblack);
     text-align: center;
     letter-spacing: 0.2px;
 }
 
 section#stats div.stats .stats_card span {
-    margin: auto;
-    font-size: 1.5rem;
+    margin: 0.5rem auto;
+    font-size: 1.6rem;
     font-weight: 500;
     font-family: var(--mainfont);
     font-style: italic;
@@ -631,7 +641,7 @@ section#stats div.stats .stats_card span {
         font-size: 3.5rem;
     }
     section#stats div.stats .stats_card p {
-        font-size: 2rem;
+        font-size: 2.3rem;
     }
     section#stats div.stats .stats_card h4 {
         font-size: 3rem;
@@ -650,7 +660,7 @@ section#stats div.stats .stats_card span {
         font-size: 3rem;
     }
     section#stats div.stats .stats_card p {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
     section#stats div.stats .stats_card h4 {
         font-size: 2.5rem;
@@ -758,7 +768,7 @@ section#register div.details .register_card h4::after {
 
 section#register div.details .register_card p {
     margin: 1rem auto;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 500;
     font-family: var(--mainfont);
     color: var(--lightblack);
@@ -769,18 +779,18 @@ section#register div.details .register_card p {
 section#register div.details .register_card a.btn {
     margin: 2rem auto 1rem;
     padding: 0.8rem 1.6rem;
-    font-size: 1.8rem;
-    font-weight: 700;
-    font-family: var(--curlfont);
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: var(--codefont);
     color: var(--darkwhite);
-    background: rgba(62, 100, 255, 1);
-    letter-spacing: 0.5px;
+    background: var(--primarylight);
+    letter-spacing: 0.6px;
     border-radius: 10px;
     transition: all 0.2s ease;
 }
 
 section#register div.details .register_card a.btn:hover {
-    background: rgba(62, 100, 255, 0.8);
+    background: var(--primarydark);
 }
 
 /* **************************** Responsive **************************** */
@@ -810,7 +820,7 @@ section#register div.details .register_card a.btn:hover {
     }
     section#register div.heading h1,
     section#register div.sub_head h2 {
-        font-size: 2.5rem;
+        font-size: 2.7rem;
     }
     section#register div.details {
         margin: 2rem;
@@ -823,10 +833,6 @@ section#register div.details .register_card a.btn:hover {
     }
     section#register div.details .register_card h4 {
         font-size: 2.8rem;
-    }
-    section#register div.details .register_card a.btn {
-        font-size: 1.6rem;
-        font-weight: 600;
     }
 }
 
@@ -854,20 +860,23 @@ section#timeline div.sub_head h3 {
 
 section#timeline div.sub_head p {
     margin: 1rem auto;
-    font-size: 2rem;
-    font-weight: 500;
-    font-family: var(--codefont);
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: var(--curlfont);
     color: var(--darkgrey);
     text-align: center;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
 }
 
 section#timeline div.sub_head p span {
     padding: 0.2rem 1rem;
+    font-weight: 500;
+    font-family: var(--codefont);
     color: var(--darkwhite);
     background: var(--primarylight);
     border-radius: 20px;
     user-select: none;
+    letter-spacing: 1px;
 }
 
 section#timeline div.details {
@@ -901,42 +910,43 @@ section#timeline div.details .events {
     align-items: center;
     flex-direction: column;
     border: none;
-    border-left: 4px solid rgba(62, 100, 255, 0.8);
+    border-left: 4px solid var(--primarylight);
 }
 
 section#timeline div.details .events::before,
 section#timeline div.details .events::after {
     position: absolute;
     padding: 0.5rem 1rem;
-    font-size: 1.8rem;
-    font-weight: 600;
-    font-family: var(--mainfont);
-    color: var(--darkwhite);
-    text-align: center;
-    letter-spacing: 0.5px;
-    border-radius: 20px;
     width: fit-content;
     height: fit-content;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: var(--codefont);
+    color: var(--darkwhite);
+    text-align: center;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    z-index: 2;
 }
 
 section#timeline div.details .events::before {
     content: "Begin";
-    top: -1.5%;
-    left: -6%;
+    top: -3rem;
+    left: -3.8rem;
     background: var(--lightgreen);
 }
 
 section#timeline div.details .events::after {
     content: "Ended";
-    bottom: -1.5%;
-    left: -6.5%;
+    bottom: -3rem;
+    left: -4.2rem;
     background: var(--lightorange);
 }
 
 section#timeline div.details .events .event_card {
     position: relative;
     margin: 2rem auto;
-    padding: 2rem 4rem;
+    padding: 3rem 2rem;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -949,12 +959,12 @@ section#timeline div.details .events .event_card {
 
 section#timeline div.details .events .event_card i {
     position: absolute;
-    top: -5%;
+    top: 0;
     left: -8.2rem;
     width: 4rem;
     height: 4rem;
     background: var(--lightwhite);
-    border: 2px solid rgba(62, 100, 255, 0.6);
+    border: 2px solid var(--primarylight);
     border-radius: 50%;
     z-index: 1;
 }
@@ -974,12 +984,12 @@ section#timeline div.details .events .event_card span {
     margin: 0.5rem 0;
     padding: 0.5rem 1rem;
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 600;
     font-family: var(--mainfont);
     color: var(--darkwhite);
     background: var(--primarylight);
-    letter-spacing: 0.5px;
-    border-radius: 20px;
+    letter-spacing: 0.8px;
+    border-radius: 10px;
     user-select: none;
 }
 
@@ -987,40 +997,40 @@ section#timeline div.details .events .event_card h2 {
     margin: 0 0 1rem;
     font-size: 2rem;
     font-weight: 600;
-    font-family: var(--mainfont);
+    font-family: var(--codefont);
     color: var(--primarydark);
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
 }
 
 section#timeline div.details .events .event_card h4 {
     position: relative;
     margin: 0 0 1rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 600;
     font-family: var(--mainfont);
     color: var(--lightblack);
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
 }
 
 section#timeline div.details .events .event_card h4::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -50%;
+    bottom: -1rem;
     height: 4px;
-    width: 80%;
+    width: 100%;
     background: linear-gradient(45deg, var(--primarylight), var(--darkwhite));
     border-radius: 4px;
 }
 
 section#timeline div.details .events .event_card p {
-    margin: 1.5rem 0 0;
+    margin: 1rem 0 0;
     font-size: 1.6rem;
     font-weight: 600;
     font-family: var(--curlfont);
     font-style: italic;
     color: var(--darkgrey);
-    letter-spacing: 0.5px;
+    letter-spacing: 0.6px;
 }
 
 /* **************************** Responsive **************************** */
@@ -1031,19 +1041,20 @@ section#timeline div.details .events .event_card p {
         padding-right: 0;
     }
     section#timeline div.details .events .event_card {
-        padding: 2rem 3rem;
+        padding: 2.5rem 2rem;
     }
 }
 
 @media (max-width: 992px) {
     section#timeline div.sub_head {
         margin: 4rem auto;
-        padding: 1rem 6rem;
+        padding: 1rem 4rem;
     }
     section#timeline div.details {
         flex-direction: column;
     }
     section#timeline div.details .fig {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1053,47 +1064,38 @@ section#timeline div.details .events .event_card p {
     }
     section#timeline div.details .events {
         margin: auto;
-        padding: 2rem 3rem;
-        width: max-content;
-        background: rgba(247, 250, 252, 0.8);
-    }
-    section#timeline div.details .events .event_card i {
-        left: -5.2rem;
+        width: fit-content;
     }
 }
 
 @media (max-width: 768px) {
+    section#timeline div.details .events {
+        margin: auto 2rem;
+    }
+}
+
+@media (max-width: 572px) {
+    section#timeline div.heading {
+        margin: auto 2rem;
+    }
+    section#timeline div.heading span.divider_2 {
+        height: 50vh;
+    }
     section#timeline div.details {
         margin: 2rem;
     }
     section#timeline div.details .events {
-        margin: auto 2rem;
-        width: fit-content;
+        padding-left: 3rem;
     }
-}
-
-@media (max-width: 472px) {
-    section#timeline div.heading {
-        margin: auto 2rem;
-    }
-    section#timeline div.details .events {
-        margin: auto 2rem;
-        padding-right: 0;
-        width: fit-content;
+    section#timeline div.details .events .event_card i {
+        left: -5.2rem;
     }
     section#timeline div.details .events .event_card span {
+        margin: 1rem 0;
         position: relative;
         top: 0;
         right: 0;
-        margin: 1rem 0;
-    }
-    section#timeline div.details .events::before {
-        top: -1%;
-        left: -9%;
-    }
-    section#timeline div.details .events::after {
-        bottom: -1%;
-        left: -10.5%;
+        border-radius: 4px;
     }
 }
 
@@ -1125,10 +1127,9 @@ section#projects div.sub_head h2 {
 section#projects div.timer {
     position: relative;
     margin: 4rem auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    width: max-content;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 section#projects div.timer .time {
@@ -1150,11 +1151,11 @@ section#projects div.timer .time span {
 }
 
 section#projects div.timer .time p {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 600;
     font-family: var(--mainfont);
     color: var(--lightblack);
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -1167,6 +1168,9 @@ section#projects div.timer .time p {
     }
     section#projects div.sub_head h2 {
         font-size: 2.8rem;
+    }
+    section#projects div.timer {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -1258,7 +1262,7 @@ section#team div.members .member_card h2 {
     font-family: var(--codefont);
     color: var(--lightblack);
     text-align: center;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.4px;
     transition: all 0.2s ease;
 }
 
@@ -1332,13 +1336,6 @@ section#team div.members .member_card .social a:hover i {
         width: 25rem;
         height: 25rem;
     }
-    section#team div.members .member_card h2 {
-        font-size: 2.5rem;
-    }
-    section#team div.members .member_card p span {
-        font-size: 1.5rem;
-        font-weight: 500;
-    }
 }
 
 @media (max-width: 472px) {
@@ -1346,7 +1343,7 @@ section#team div.members .member_card .social a:hover i {
         margin: auto 2rem;
     }
     section#team div.members {
-        padding: 2rem;
+        padding: 0;
     }
 }
 
@@ -1501,6 +1498,7 @@ section#faqs div.faqs {
 section#faqs div.faqs .faq_card {
     margin: 2rem auto;
     padding: 1rem 2rem;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1540,7 +1538,7 @@ section#faqs div.faqs .faq_card span h4 {
     font-family: var(--mainfont);
     color: var(--darkblack);
     text-align: left;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.6px;
     transition: all 0.2s ease;
 }
 
@@ -1552,7 +1550,7 @@ section#faqs div.faqs .faq_card span p {
     font-family: var(--curlfont);
     color: var(--lightblack);
     text-align: left;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
 }
 
 section#faqs div.faqs .faq_card:hover span h4,
@@ -1576,13 +1574,16 @@ section#faqs div.faqs .faq_card.active span p {
         padding: 1rem 6rem;
     }
     section#faqs div.faqs .faq_card span h4 {
-        line-height: 1.6;
+        line-height: 1.4;
     }
 }
 
 @media (max-width: 472px) {
     section#faqs div.heading {
         margin: auto 2rem;
+    }
+    section#faqs div.faqs .faq_card {
+        width: 100%;
     }
 }
 
@@ -1614,7 +1615,7 @@ section#contact div.sub_head h2 {
     font-size: 3rem;
     font-weight: 600;
     font-family: var(--mainfont);
-    color: var(--darkblack);
+    color: var(--lightblack);
     text-align: center;
     letter-spacing: 0.5px;
 }
@@ -1640,7 +1641,7 @@ section#contact div.sub_head p {
     margin: 2rem auto;
     font-size: 2rem;
     font-weight: 500;
-    font-family: var(--codefont);
+    font-family: var(--mainfont);
     color: var(--darkgrey);
     text-align: center;
     letter-spacing: 0.5px;
@@ -1656,6 +1657,7 @@ section#contact div.platforms {
 }
 
 section#contact div.platforms .social_box {
+    position: relative;
     margin: 2rem;
     padding: 2rem;
     width: 25rem;
@@ -1667,11 +1669,25 @@ section#contact div.platforms .social_box {
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.8);
     box-shadow: 0 2px 4px rgba(50, 69, 107, 0.1);
-    transition: all 0.2s linear;
+    z-index: 1;
 }
 
-section#contact div.platforms .social_box:hover {
-    box-shadow: 0 0 0 3px rgba(62, 100, 255, 0.8);
+section#contact div.platforms .social_box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3.5px solid rgba(62, 100, 255, 0.8);
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.2s linear;
+    z-index: -1;
+}
+
+section#contact div.platforms .social_box:hover:after {
+    opacity: 1;
 }
 
 section#contact div.platforms .social_box i {
@@ -1685,16 +1701,16 @@ section#contact div.platforms .social_box i {
 
 section#contact div.platforms .social_box span {
     margin: 1rem 0 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 500;
-    font-family: var(--mainfont);
+    font-family: var(--codefont);
     color: var(--lightblack);
     text-align: left;
     letter-spacing: 0.5px;
 }
 
 section#contact div.platforms .social_box a {
-    font-size: 1.7rem;
+    font-size: 2rem;
     font-weight: 600;
     font-family: var(--mainfont);
     color: var(--darkblack);

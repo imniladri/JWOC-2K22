@@ -6,7 +6,7 @@ header {
     z-index: 10;
     width: 100%;
     padding: 1rem 8rem;
-    background: rgba(6, 30, 53, 0.8);
+    background: rgba(13, 21, 36, 0.7);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     opacity: 1;
     visibility: visible;
@@ -49,8 +49,8 @@ header nav a.nav_brand img {
 header nav a.nav_brand span {
     margin: auto 0.2rem;
     font-size: 3rem;
-    font-weight: 600;
-    font-family: var(--mainfont);
+    font-weight: 700;
+    font-family: "Orbitron", sans-serif;
     color: var(--darkwhite);
 }
 
@@ -62,7 +62,7 @@ header.scrolled nav a.nav_brand span {
 /* Navbar Auth Btn */
 header nav a.authIn {
     margin: 0;
-    padding: 0.8rem 1.2rem;
+    padding: 0.6rem 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,17 +85,17 @@ header nav a.authIn:hover {
 
 header nav a.authIn i {
     margin: auto 0.3rem;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: var(--darkwhite);
 }
 
 header nav a.authIn span {
     margin: auto 0.3rem;
-    font-size: 1.8rem;
-    font-weight: 600;
-    font-family: var(--mainfont);
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: var(--codefont);
     color: var(--darkwhite);
-    letter-spacing: 0.2px;
+    letter-spacing: 0.8px;
 }
 
 /* **************************** Header Menu Btn **************************** */
@@ -109,8 +109,8 @@ header div.menu_btn {
     align-items: center;
     width: 5rem;
     height: 5rem;
-    background: rgba(6, 30, 53, 1);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    background: rgba(13, 21, 36, 0.8);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
     border-radius: 50px;
     cursor: pointer;
     z-index: 20;

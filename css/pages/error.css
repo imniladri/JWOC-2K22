@@ -24,21 +24,21 @@ div.error_404 img {
 div.error_404 h3 {
     margin: 1rem auto;
     font-size: 4rem;
-    font-weight: 700;
+    font-weight: 600;
     font-family: var(--codefont);
     color: var(--lightblack);
     text-align: center;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
 }
 
 div.error_404 p {
     margin: 1rem auto;
-    font-size: 2.3rem;
+    font-size: 2.2rem;
     font-weight: 600;
     font-family: var(--mainfont);
     color: var(--lightblack);
     text-align: center;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
 }
 
 div.error_404 a.btn_404 {
@@ -50,7 +50,7 @@ div.error_404 a.btn_404 {
     color: var(--darkwhite);
     background: var(--lightblack);
     text-align: center;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
     border-radius: 10px;
 }
 

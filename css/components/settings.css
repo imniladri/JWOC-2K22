@@ -11,9 +11,10 @@
 
 /* **************************** Fonts **************************** */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&display=swap");
 
 /* **************************** Site General Settings **************************** */
 
@@ -51,15 +52,15 @@ body {
 
 :root {
     /* Default Colors */
-    --darkblack: #3c434e;
-    --lightblack: #495464;
+    --darkblack: #222831;
+    --lightblack: #3c434e;
     --darkwhite: #ffffff;
     --lightwhite: #f7fafc;
     --darkgrey: #787a91;
     --lightgrey: #9ba4b4;
 
     /* Theme Colors */
-    --primaryoff: #61eaff;
+    --primaryoff: #99feff;
     --primarylight: #385cf0;
     --primarydark: #1d4cb0;
     --highlight: #f7f0c2;
@@ -67,9 +68,9 @@ body {
     --lightgreen: #20ce65;
 
     /* Default Fonts */
-    --mainfont: "Poppins", sans-serif;
-    --codefont: "Ubuntu", sans-serif;
-    --curlfont: "Nunito", sans-serif;
+    --mainfont: "Inter", sans-serif;
+    --codefont: "Outfit", sans-serif;
+    --curlfont: "Quicksand", sans-serif;
 }
 
 /* **************************** Scroll Bar **************************** */
@@ -120,7 +121,7 @@ section#divider div.skewed {
     position: relative;
     width: 100%;
     height: 10rem;
-    background: linear-gradient(45deg, #061e35, #05192d);
+    background: linear-gradient(315deg, #0d1524 0%, #0f1927 80%);
     transform: skewY(2deg);
     transform-origin: top right;
     z-index: -1;
@@ -130,22 +131,12 @@ section#divider div.skewed {
 
 @font-face {
     font-family: "Blanka";
-    src: url(/assets/font/Blanka.otf);
+    src: url(../../assets/font/Blanka.otf);
 }
 
 @font-face {
     font-family: "Anurati";
-    src: url(/assets/font/Anurati.otf);
-}
-/*
-@font-face {
-    font-family: "Azonix";
-    src: url(/assets/font/Azonix.otf);
+    src: url(../../assets/font/Anurati.otf);
 }
 
-@font-face {
-    font-family: "CyberSky";
-    src: url(/assets/font/CyberSky.otf);
-}
-*/
 /* **************************** Styles End **************************** */
