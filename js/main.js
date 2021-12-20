@@ -41,7 +41,6 @@ $('a[href^="#"]').click(function (e) {
             scrollTop: $($(this).attr("href")).offset().top,
         },
         500
-        // "easeInOutExpo"
     );
 });
 
@@ -60,8 +59,9 @@ $(".goBack").click(function () {
 
 // Count Down Function *********************************************
 
-setInterval(function () {
-    const finalDate = new Date("18 January, 2022").getTime();
+function countTimer() {
+    const getDate = $("div.timer").attr("data-date");
+    const finalDate = new Date(getDate).getTime();
     const intDate = new Date().getTime();
 
     let seconds = 1000;
@@ -83,4 +83,8 @@ setInterval(function () {
     $("#hour").text(h);
     $("#minute").text(m);
     $("#second").text(s);
+}
+
+setInterval(function () {
+    countTimer();
 }, 1000);
