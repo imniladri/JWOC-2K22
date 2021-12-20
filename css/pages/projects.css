@@ -58,7 +58,7 @@ section#projects_container div.projects_content {
 div.project_card {
     position: relative;
     margin: 2rem;
-    padding: 2rem;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,13 +88,13 @@ div.project_card:hover:before {
 div.project_card h2 {
     position: relative;
     margin: 1rem auto;
-    font-size: 3rem;
+    font-size: 2.6rem;
     font-weight: 500;
     font-family: var(--codefont);
     color: var(--lightblack);
     text-align: center;
     text-shadow: 0 0.5px var(--lightblack);
-    letter-spacing: 0.2px;
+    letter-spacing: 0.6px;
 }
 
 div.project_card h2::after {
@@ -153,22 +153,21 @@ div.project_card p {
     font-family: var(--mainfont);
     color: var(--lightblack);
     text-align: center;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.5px;
 }
 
 /* Project Link */
 div.project_card a.btn {
     margin: 1rem auto;
-    padding: 0.5rem 2rem;
-    font-size: 2rem;
+    padding: 0.4rem 1.8rem;
+    font-size: 1.8rem;
     font-weight: 500;
     font-family: var(--codefont);
     color: var(--darkwhite);
     background: var(--primarylight);
-    box-shadow: 0 2px 4px rgba(50, 69, 107, 0.2);
     text-align: center;
     letter-spacing: 0.5px;
-    border-radius: 4px;
+    border-radius: 8px;
     transition: all 0.2s linear;
 }
 
@@ -177,19 +176,15 @@ div.project_card a.btn:hover {
 }
 
 /* Project Admin/Author */
-div.project_card h4 {
-    margin: 1rem auto auto;
-}
-
 div.project_card h4 a {
     margin: 0.5rem auto;
-    padding: 0 0.8rem;
-    font-size: 1.8rem;
+    padding: 0.2rem 0.8rem;
+    font-size: 1.7rem;
     font-weight: 500;
     font-family: var(--mainfont);
     color: var(--primarydark);
     background: transparent;
-    border-radius: 4px;
+    border-radius: 8px;
     text-align: center;
     text-decoration: none;
     letter-spacing: 0.2px;

@@ -2,7 +2,25 @@
 
 section#auth_register {
     position: relative;
-    margin: 12rem auto 6rem;
+    margin: 6rem auto;
+    padding: 6rem 2rem;
+    background: rgba(247, 250, 252, 0.8);
+}
+
+section#auth_register::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/assets/img/pattern_auth.png);
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+:root {
+    --secondaryoff: #009dae;
 }
 
 /* **************************** Sub Head Section **************************** */
@@ -26,13 +44,13 @@ section#auth_register div.sub_head h2 {
     letter-spacing: 3px;
     text-align: center;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.8);
     box-shadow: 0 2px 4px rgba(50, 69, 107, 0.2);
 }
 
 section#auth_register div.sub_head p {
     margin: 1rem auto;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     font-weight: 500;
     font-family: var(--codefont);
     color: var(--lightblack);
@@ -56,22 +74,37 @@ form#auth_form {
 }
 
 form#auth_form .form-group {
+    position: relative;
     margin: 3rem auto;
     padding: 3rem 2rem 2rem;
     display: block;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 0 3px rgba(73, 84, 100, 0.4);
-    transition: all 0.2s linear;
+    background: var(--darkwhite);
+    box-shadow: 0 0 2px rgb(50, 69, 107, 0.2);
+    border-radius: 12px !important;
+    z-index: 1;
 }
 
-form#auth_form .form-group:hover {
-    box-shadow: 0 0 0 2.5px rgba(62, 100, 255, 0.8);
+form#auth_form .form-group::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3.1px solid var(--primarylight);
+    border-radius: 12px;
+    opacity: 0;
+    transition: all 0.2s linear;
+    z-index: -1;
+}
+
+form#auth_form .form-group:hover:after {
+    opacity: 1;
 }
 
 form#auth_form .form-group label {
-    margin: 1px auto;
-    font-size: 1.6rem;
+    margin: 0.5rem auto 1px;
+    font-size: 1.7rem;
     font-weight: 500;
     font-family: var(--mainfont);
     color: var(--lightblack);
@@ -83,30 +116,35 @@ form#auth_form .form-group label span {
     font-weight: 700;
 }
 
+form#auth_form .form-group p {
+    margin: 1px auto 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: var(--curlfont);
+    font-style: italic;
+    color: var(--secondaryoff);
+    letter-spacing: 0.2px;
+}
+
 form#auth_form .form-group input,
 form#auth_form .form-group textarea {
     margin: 1rem auto;
-    padding: 0 0 0.5rem;
-    font-size: 2.2rem;
+    padding: 0.5rem;
+    font-size: 2rem;
     font-weight: 500;
     font-family: var(--codefont);
-    color: var(--lightblack) !important;
-    background: transparent !important;
-    letter-spacing: 0.5px;
-    border: none;
-    border-bottom: 2px solid rgba(73, 84, 100, 0.3);
-    border-radius: 0 !important;
-    box-shadow: none !important;
+    color: var(--lightblack);
+    background: var(--lightwhite);
+    border: 2px solid rgba(155, 164, 180, 0.4);
+    border-radius: 6px;
+    letter-spacing: 0.6px;
+    box-shadow: none;
     transition: all 0.2s linear;
 }
 
 form#auth_form .form-group textarea {
-    font-size: 2rem;
-}
-
-form#auth_form .form-group input:focus,
-form#auth_form .form-group textarea:focus {
-    border-bottom: 2px solid rgba(62, 100, 255, 0.8);
+    font-size: 1.8rem;
+    font-weight: 400;
 }
 
 form#auth_form .form-group input:-webkit-autofill,
@@ -114,19 +152,19 @@ form#auth_form .form-group input:-webkit-autofill:hover,
 form#auth_form .form-group input:-webkit-autofill:focus,
 form#auth_form .form-group input:-webkit-autofill:active {
     -webkit-text-fill-color: var(--lightblack);
-    box-shadow: 0 0 0 30px var(--darkwhite) inset !important;
+    box-shadow: 0 0 0 30px var(--lightwhite) inset !important;
 }
 
 form#auth_form button.btn-auth {
     margin: 0;
     padding: 1rem 2rem;
     width: 100%;
-    font-size: 1.8rem;
-    font-weight: 600;
-    font-family: var(--mainfont);
+    font-size: 2.2rem;
+    font-weight: 500;
+    font-family: var(--codefont);
     color: var(--darkwhite);
     background: var(--primarylight);
-    border-radius: 4px;
+    border-radius: 12px;
     letter-spacing: 1px;
 }
 
@@ -137,6 +175,9 @@ form#auth_form button.btn-auth:hover {
 /* **************************** Responsive **************************** */
 
 @media (max-width: 992px) {
+    section#auth_register::before {
+        background-size: 100%;
+    }
     form#auth_form {
         width: 100%;
         padding: 3rem 4rem 6rem;
@@ -144,18 +185,27 @@ form#auth_form button.btn-auth:hover {
 }
 
 @media (max-width: 768px) {
+    section#auth_register::before {
+        background-size: 120%;
+    }
     form#auth_form .form-group input {
         font-size: 2rem;
         letter-spacing: 0.2px;
     }
 }
 
-@media (max-width: 402px) {
+@media (max-width: 572px) {
+    section#auth_register::before {
+        background-size: 150%;
+    }
     form#auth_form {
-        padding: 3rem 2rem 6rem;
+        padding: 3rem 0 6rem;
     }
     form#auth_form .form-group {
         border-radius: 6px;
+    }
+    form#auth_form button.btn-auth {
+        font-size: 2rem;
     }
 }
 
