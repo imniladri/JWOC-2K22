@@ -44,7 +44,7 @@ html {
 /* **************************** Body Settings **************************** */
 
 body {
-    background: var(--lightwhite);
+    background: var(--darkwhite);
     font-family: var(--mainfont);
 }
 
