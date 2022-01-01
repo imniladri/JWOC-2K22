@@ -8,7 +8,7 @@ const intValue = 1000 * 60 * 60 * 24;
 let eventsTimeline = [
     {
         id: 1,
-        date: "2 January, 2022",
+        date: "16 January, 2022",
         name: "JWoC Program Announced",
         desc: "Here we go announced our JWoC program as a big start!",
 
@@ -17,19 +17,19 @@ let eventsTimeline = [
         completeClass: "",
         completeStyle: "",
         daysLeft: Math.floor(
-            (new Date("2 January, 2022").getTime() - intDate) / intValue
+            (new Date("16 January, 2022").getTime() - intDate) / intValue
         ),
     },
     {
         id: 2,
-        date: "2 January, 2022",
+        date: "16 January, 2022",
         name: "Mentor & Mentee Registration",
         desc: "All the mentors & mentees can start your registration from now on.",
 
         completeClass: "",
         completeStyle: "",
         daysLeft: Math.floor(
-            (new Date("2 January, 2022").getTime() - intDate) / intValue
+            (new Date("16 January, 2022").getTime() - intDate) / intValue
         ),
     },
     {
