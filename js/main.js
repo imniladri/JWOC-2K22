@@ -1,11 +1,21 @@
 // Loaded ******************************************************
 
 $(window).on("load", () => {
-    $("#preloader").css({
-        opacity: 0,
-        visibility: "hidden",
-        transitionDelay: "4s",
-    });
+    let FirstTime_Loaded = sessionStorage.getItem("FirstTime_Loaded");
+    sessionStorage.setItem("FirstTime_Loaded", "enabled");
+
+    if (FirstTime_Loaded === "enabled") {
+        $("#preloader").css({
+            opacity: 0,
+            visibility: "hidden",
+        });
+    } else {
+        $("#preloader").css({
+            opacity: 0,
+            visibility: "hidden",
+            transitionDelay: "4s",
+        });
+    }
 });
 
 // Scrolled *******************************************************

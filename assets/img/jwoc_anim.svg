@@ -58,11 +58,19 @@
 
     <script>
 		window.addEventListener("load", () => {
-			var svg = document.querySelector('svg');
+            let FirstTime_SVG_Loaded = sessionStorage.getItem("FirstTime_SVG_Loaded");
+            sessionStorage.setItem("FirstTime_SVG_Loaded", "enabled");
+			let svg = document.querySelector('svg');
 
-			setTimeout(() => {
-				svg.setAttribute("class", "loaded");
-			}, 4000);
+            if (FirstTime_SVG_Loaded === "enabled") {
+                setTimeout(() => {
+                    svg.setAttribute("class", "loaded");
+                }, 100);
+            } else {
+                setTimeout(() => {
+                    svg.setAttribute("class", "loaded");
+                }, 4000);
+            }
 		});
 	</script>
     
