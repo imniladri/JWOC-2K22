@@ -76,11 +76,11 @@ form#auth_form {
 form#auth_form .form-group {
     position: relative;
     margin: 3rem auto;
-    padding: 3rem 2rem 2rem;
+    padding: 2rem;
     display: block;
     background: var(--darkwhite);
     box-shadow: 0 0 2px rgb(50, 69, 107, 0.2);
-    border-radius: 12px !important;
+    border-radius: 12px;
     z-index: 1;
 }
 
@@ -130,7 +130,7 @@ form#auth_form .form-group input,
 form#auth_form .form-group textarea {
     margin: 1rem auto;
     padding: 0.5rem;
-    font-size: 2rem;
+    font-size: 1.9rem;
     font-weight: 500;
     font-family: var(--codefont);
     color: var(--lightblack);
@@ -143,8 +143,9 @@ form#auth_form .form-group textarea {
 }
 
 form#auth_form .form-group textarea {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-weight: 400;
+    text-align: justify;
 }
 
 form#auth_form .form-group input:-webkit-autofill,
@@ -164,8 +165,8 @@ form#auth_form button.btn-auth {
     font-family: var(--codefont);
     color: var(--darkwhite);
     background: var(--primarylight);
-    border-radius: 12px;
-    letter-spacing: 1px;
+    border-radius: 10px;
+    letter-spacing: 0.8px;
 }
 
 form#auth_form button.btn-auth:hover {
@@ -185,12 +186,22 @@ form#auth_form button.btn-auth:hover {
 }
 
 @media (max-width: 768px) {
+    section#auth_register div.sub_head {
+        padding: 2rem 1rem;
+    }
+    section#auth_register div.sub_head h2 {
+        font-size: 3rem;
+    }
+    section#auth_register div.sub_head p {
+        font-size: 2.2rem;
+    }
+
     section#auth_register::before {
         background-size: 120%;
     }
     form#auth_form .form-group input {
-        font-size: 2rem;
-        letter-spacing: 0.2px;
+        font-size: 1.8rem;
+        letter-spacing: 0.4px;
     }
 }
 
@@ -201,8 +212,9 @@ form#auth_form button.btn-auth:hover {
     form#auth_form {
         padding: 3rem 0 6rem;
     }
-    form#auth_form .form-group {
-        border-radius: 6px;
+    form#auth_form .form-group,
+    form#auth_form .form-group::after {
+        border-radius: 8px;
     }
     form#auth_form button.btn-auth {
         font-size: 2rem;
