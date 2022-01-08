@@ -1,6 +1,6 @@
 /* **************************** Bulletin Styles **************************** */
 
-/* **************************** Code of Conduct **************************** */
+/* **************************** Heading Styles **************************** */
 
 section#bulletin {
     position: relative;
@@ -17,7 +17,7 @@ section#bulletin div.manual {
     flex-direction: column;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 4px 8px rgba(50, 69, 107, 0.2);
+    box-shadow: 0 0 4px rgba(50, 69, 107, 0.4);
 }
 
 div.bulletin img,
@@ -44,7 +44,7 @@ div.manual h2::after {
     content: "";
     position: absolute;
     left: 50%;
-    bottom: -60%;
+    bottom: -2rem;
     transform: translateX(-50%);
     height: 0.6rem;
     width: 100%;
@@ -57,9 +57,35 @@ div.manual h2::after {
     );
 }
 
+div.bulletin h3,
+div.manual h3 {
+    margin: 2rem auto 6rem;
+    font-size: 2.4rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: #f0134d;
+    text-align: center;
+    letter-spacing: 0.8px;
+}
+
+/* **************************** Body Content Styles **************************** */
+
+/* ********************** Code of Conduct ********************** */
+
 div.bulletin h4,
 div.manual h4 {
-    margin: 6rem auto 3rem;
+    margin: 2rem auto;
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--primarydark);
+    text-align: left;
+    letter-spacing: 0.8px;
+}
+
+div.bulletin p,
+div.manual p {
+    margin: 1rem auto;
     font-size: 2.2rem;
     font-weight: 500;
     font-family: var(--mainfont);
@@ -69,18 +95,15 @@ div.manual h4 {
     line-height: 1.8;
 }
 
-div.bulletin p,
-div.manual p {
-    position: relative;
+div.bulletin ul,
+div.manual ul {
     margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    padding: 0;
+    list-style: none;
 }
 
-div.bulletin p span,
-div.manual p span {
+div.bulletin ul li,
+div.manual ul li {
     margin: 2rem auto;
     padding: 2rem;
     font-size: 2rem;
@@ -91,21 +114,19 @@ div.manual p span {
     text-align: justify;
     letter-spacing: 0.5px;
     line-height: 1.6;
-    border-radius: 0 10px 10px 0;
     border: none;
+    border-radius: 0 10px 10px 0;
     border-left: 6px solid rgba(62, 100, 255, 0.8);
 }
 
-div.bulletin p span a,
-div.manual p span a {
+div.bulletin ul li a {
     margin: 0.5rem auto;
     font-weight: 600;
     color: var(--primarylight);
     text-decoration: none;
 }
 
-div.bulletin p span a:hover,
-div.manual p span a:hover {
+div.bulletin ul li a:hover {
     color: var(--primarydark);
     text-decoration: underline;
 }
@@ -138,104 +159,123 @@ div.manual a.btn span {
     margin: auto 0.2rem;
     font-size: 2rem;
     font-weight: 600;
-    font-family: var(--mainfont);
+    font-family: var(--codefont);
     color: var(--darkwhite);
     text-align: center;
     letter-spacing: 1px;
 }
 
-/* ********************* Mentor & Student Manual Styles ********************* */
+/* ********************* Mentor & Student Manual ********************* */
 
 section#bulletin div.manual {
     align-items: flex-start;
 }
 
-div.manual h2 {
-    margin: 1rem auto 2rem;
-    font-size: 3.5rem;
+div.manual .block_grp {
+    margin: 2rem 0;
 }
 
-div.manual h4 {
-    margin: 2rem 0 1rem;
-    font-size: 3rem;
-    font-weight: 500;
-    font-family: var(--codefont);
-    color: var(--primarydark);
-    text-align: left;
-}
-
-div.manual h5 {
+div.manual .block_grp h6 {
     margin: 1rem 0;
     font-size: 2.2rem;
     font-weight: 600;
     font-family: var(--mainfont);
-    color: var(--lightorange);
+    color: #f90716;
     text-align: left;
+    letter-spacing: 0.4px;
 }
 
-div.manual p {
-    margin: 0;
-    align-items: flex-start;
-}
-
-div.manual p span {
-    margin: 1rem 0;
-    padding: 1rem;
+div.manual .block_grp ul li {
+    padding: 1rem 1.5rem;
     font-size: 1.8rem;
-    width: 100%;
+    line-height: 1.7;
 }
 
-div.manual h6 p {
-    margin: 2rem 0;
-    font-size: 2rem;
+div.manual .block_grp ul li span,
+div.manual .block_grp ul li b {
+    display: inline-block;
+    margin: auto;
+    padding: 0 1rem;
+    width: fit-content;
+    font-size: 1.7rem;
     font-weight: 500;
-    font-family: var(--mainfont);
-    color: var(--lightblack);
-    text-align: justify;
-    letter-spacing: 0.5px;
-    line-height: 1.8;
+    font-family: var(--codefont);
+    border-radius: 2rem;
 }
 
-div.manual h6 p a {
-    display: contents;
-    margin: 0 0.5rem;
+div.manual .block_grp ul li b {
+    padding: 0 0.8rem;
+    font-weight: 600;
+    color: var(--darkwhite);
+    background: var(--primarydark);
+    border-radius: 8px;
+}
+
+div.manual .block_grp ul li span:nth-child(1) {
+    background: #40c463;
+    color: var(--darkwhite);
+}
+div.manual .block_grp ul li span:nth-child(2) {
+    background: #ffc501;
+    color: var(--darkblack);
+}
+div.manual .block_grp ul li span:nth-child(3) {
+    background: #f90716;
+    color: var(--darkwhite);
+}
+
+div.manual .block_grp ul.blue li {
+    background: rgba(62, 100, 255, 0.05);
+    border-left: 6px solid rgba(62, 100, 255, 0.8);
+}
+div.manual .block_grp ul.yellow li {
+    background: rgba(255, 227, 0, 0.05);
+    border-left: 6px solid rgba(255, 227, 0, 0.8);
+}
+div.manual .block_grp ul.violet li {
+    background: rgba(121, 0, 255, 0.05);
+    border-left: 6px solid rgba(121, 0, 255, 0.8);
+}
+
+div.manual .sub_block_grp {
+    margin: 2.5rem 0;
+}
+
+div.manual .sub_block_grp p {
+    margin: 1.5rem 0;
+    font-size: 2rem;
+    line-height: 1.7;
+}
+
+div.manual .sub_block_grp p i {
+    font-weight: 600;
+    font-style: italic;
+    color: var(--lightorange);
+}
+
+div.manual .sub_block_grp p a {
     font-weight: 600;
     color: var(--primarylight);
     text-decoration: none;
 }
 
-div.manual h6 p a:hover {
+div.manual .sub_block_grp p a:hover {
     color: var(--primarydark);
-    text-decoration: underline;
 }
 
 /* **************************** Responsive **************************** */
+
+@media (max-width: 1240px) {
+    section#bulletin div.bulletin,
+    section#bulletin div.manual {
+        padding: 4rem 6rem;
+    }
+}
 
 @media (max-width: 992px) {
     section#bulletin div.bulletin,
     section#bulletin div.manual {
         padding: 4rem;
-    }
-    div.bulletin h4 {
-        font-size: 2rem;
-        line-height: 1.6;
-    }
-    div.manual h4 {
-        font-size: 2.8rem;
-        line-height: 1.4;
-    }
-    div.bulletin p span,
-    div.manual p span {
-        font-size: 1.8rem;
-        line-height: 1.5;
-    }
-    div.bulletin a.btn i,
-    div.manual a.btn i {
-        font-size: 2.4rem;
-    }
-    div.bulletin a.btn span,
-    div.manual a.btn span {
-        font-size: 1.8rem;
     }
 }
 
@@ -247,6 +287,23 @@ div.manual h6 p a:hover {
     section#bulletin div.manual {
         padding: 3rem;
         border-radius: 10px;
+    }
+    div.bulletin img,
+    div.manual img {
+        width: 12rem;
+    }
+    div.bulletin h3,
+    div.manual h3 {
+        margin: 2rem auto 4rem;
+    }
+    div.bulletin h4,
+    div.manual h4 {
+        font-size: 2.8rem;
+    }
+    div.bulletin p,
+    div.manual p {
+        font-size: 2rem;
+        line-height: 1.6;
     }
 }
 

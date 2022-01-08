@@ -64,9 +64,11 @@ div.loader .svglayer img {
 div.loader h4 {
     margin: 1rem auto;
     font-size: 3rem;
-    font-weight: 700;
-    font-family: var(--curlfont);
+    font-weight: 600;
+    font-family: "Orbitron", sans-serif;
     color: var(--primarydark);
+    text-transform: lowercase;
+    letter-spacing: 1px;
     opacity: 1;
     animation: fade 1.2s linear infinite;
 }
