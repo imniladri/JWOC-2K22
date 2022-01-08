@@ -18,10 +18,12 @@ header.scrolled {
     background: rgba(255, 255, 255, 0.8);
 }
 
+/*
 header.active {
     opacity: 0;
     visibility: hidden;
 }
+*/
 
 header nav {
     display: flex;
@@ -29,9 +31,10 @@ header nav {
     align-items: center;
 }
 
-/* **************************** Header Brand & Auth Btn **************************** */
+/* **************************** Header Nav Brand & Nav Btn **************************** */
 
-/* Navbar Logo */
+/* ====== Nav Brand Logo ====== */
+
 header nav a.nav_brand {
     display: flex;
     justify-content: center;
@@ -59,8 +62,9 @@ header.scrolled nav a.nav_brand span {
     color: var(--lightblack);
 }
 
-/* Navbar Auth Btn */
-header nav a.authIn {
+/* ====== Nav Button ====== */
+
+header nav a.nav_btn {
     margin: 0;
     padding: 0.6rem 1rem;
     display: flex;
@@ -72,24 +76,24 @@ header nav a.authIn {
     transition: all 0.2s ease;
 }
 
-header nav a.authIn.disabled {
+header nav a.nav_btn.disabled {
     cursor: not-allowed;
     pointer-events: unset;
     opacity: 0.8;
     background: var(--primarylight) !important;
 }
 
-header nav a.authIn:hover {
+header nav a.nav_btn:hover {
     background: var(--primarydark);
 }
 
-header nav a.authIn i {
+header nav a.nav_btn i {
     margin: auto 0.3rem;
     font-size: 2.2rem;
     color: var(--darkwhite);
 }
 
-header nav a.authIn span {
+header nav a.nav_btn span {
     margin: auto 0.3rem;
     font-size: 2rem;
     font-weight: 500;
