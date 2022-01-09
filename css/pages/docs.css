@@ -74,7 +74,7 @@ div.manual h3 {
 
 div.bulletin h4,
 div.manual h4 {
-    margin: 2rem auto;
+    margin: 1rem auto;
     font-size: 3rem;
     font-weight: 500;
     font-family: var(--codefont);
@@ -178,9 +178,9 @@ div.manual .block_grp {
 div.manual .block_grp h6 {
     margin: 1rem 0;
     font-size: 2.2rem;
-    font-weight: 600;
-    font-family: var(--mainfont);
-    color: #f90716;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: #f0134d;
     text-align: left;
     letter-spacing: 0.4px;
 }
@@ -212,7 +212,7 @@ div.manual .block_grp ul li b {
 }
 
 div.manual .block_grp ul li span:nth-child(1) {
-    background: #40c463;
+    background: #20d14f;
     color: var(--darkwhite);
 }
 div.manual .block_grp ul li span:nth-child(2) {
@@ -295,6 +295,7 @@ div.manual .sub_block_grp p a:hover {
     div.bulletin h3,
     div.manual h3 {
         margin: 2rem auto 4rem;
+        font-size: 2.2rem;
     }
     div.bulletin h4,
     div.manual h4 {
@@ -304,6 +305,14 @@ div.manual .sub_block_grp p a:hover {
     div.manual p {
         font-size: 2rem;
         line-height: 1.6;
+    }
+    div.manual .block_grp h6 {
+        font-size: 2.1rem;
+    }
+    div.manual .block_grp ul.yellow li:nth-child(1) span,
+    div.manual .block_grp ul.yellow li:nth-child(2) span {
+        display: block;
+        margin: 0.5rem 1rem;
     }
 }
 
