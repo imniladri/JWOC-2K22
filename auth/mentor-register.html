@@ -76,11 +76,29 @@
             <img src="/assets/img/winter_text.png" alt="Winter Text" />
         </div>
 
-        <form id="auth_form" class="container">
+        <form id="auth_form" class="container" name="mentor-registration">
             <div class="form-group">
                 <label for="name">Your Name <span>*</span></label>
                 <p>How do we know you?</p>
                 <input type="text" class="form-control" placeholder="" id="name" name="Name" required />
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address <span>*</span></label>
+                <p>Your email address through which we can contact :)</p>
+                <input type="email" class="form-control" placeholder="" id="email" name="Email" required />
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number <span>*</span></label>
+                <p>We will call you, only if required!</p>
+                <input type="tel" class="form-control" placeholder="" id="phone" name="Phone" required />
+            </div>
+
+            <div class="form-group">
+                <label for="whatsapp">WhatsApp Number <span>*</span></label>
+                <p>We will text you, only if required!</p>
+                <input type="tel" class="form-control" placeholder="" id="whatsapp" name="Whatsapp" required />
             </div>
 
             <div class="form-group">
@@ -90,61 +108,65 @@
             </div>
 
             <div class="form-group">
-                <label for="gituser">Github Username <span>*</span></label>
+                <label for="year">Current Year <span>*</span></label>
+                <p>What is your current year of study?</p>
+
+                <select name="year" id="year" required>
+                    <option value="1">1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
+                    <option value="4">4th Year</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="github">Github Profile Link <span>*</span></label>
                 <p>What's your github identity?</p>
-                <input type="text" class="form-control" placeholder="" id="gituser" name="GitUser" required />
+                <input type="url" class="form-control" placeholder="" id="github" name="GitHub" required />
             </div>
 
             <div class="form-group">
-                <label for="email">Email Address <span>*</span></label>
-                <p>Your IP address through which we can contact :)</p>
-                <input type="email" class="form-control" placeholder="" id="email" name="Email" required />
+                <label for="linkedIn">LinkedIn Profile Link <span>*</span></label>
+                <p>Please share your LinkedIn profile</p>
+                <input type="url" class="form-control" placeholder="" id="linkedIn" name="LinkedIn" required />
             </div>
 
             <div class="form-group">
-                <label for="pname">Project Name <span>*</span></label>
+                <label for="projectName">Project Name <span>*</span></label>
                 <p>What are you working on?</p>
-                <input type="text" class="form-control" placeholder="" id="pname" name="ProjectName" required />
+                <input type="text" class="form-control" placeholder="" id="projectName" name="ProjectName" required />
             </div>
 
             <div class="form-group">
-                <label for="plink">Project Link <span>*</span></label>
+                <label for="projectLink">Project Link <span>*</span></label>
                 <p>Share with us to get some help!</p>
-                <input type="url" class="form-control" placeholder="" id="plink" name="ProjectLink" required />
+                <input type="url" class="form-control" placeholder="" id="projectLink" name="ProjectLink" required />
             </div>
 
             <div class="form-group">
-                <label for="pdesc">Project Description <span>*</span></label>
+                <label for="projectDescription">Project Description <span>*</span></label>
                 <p>Brief knowledge about it will help us to!</p>
-                <textarea class="form-control" placeholder="" id="pdesc" name="ProjectDesc" rows="4"
+                <textarea class="form-control" placeholder="" id="projectDescription" name="ProjectDesc" rows="4"
                     required></textarea>
             </div>
 
             <div class="form-group">
-                <label for="name">WhatsApp Contact <span>*</span></label>
-                <p>We will text you, only if required!</p>
-                <input type="text" class="form-control" placeholder="" id="name" name="name" required />
-            </div>
-
-            <div class="form-group">
-                <label for="pdesc">Do you have any previous mentorship experience? <span>*</span></label>
+                <label for="answer1">Do you have any previous mentorship experience? <span>*</span></label>
                 <p>Just share with us to know each other!</p>
-                <textarea class="form-control" placeholder="" id="pdesc" name="ProjectDesc" rows="4"
-                    required></textarea>
+                <textarea class="form-control" placeholder="" id="answer1" name="answer1" rows="4" required></textarea>
             </div>
 
             <div class="form-group">
-                <label for="pdesc">What drives you for contributing to Open Source? <span>*</span></label>
+                <label for="answer2">What drives you for contributing to Open Source? <span>*</span></label>
                 <p>We like to know about your interests!</p>
-                <textarea class="form-control" placeholder="" id="pdesc" name="ProjectDesc" rows="4"
-                    required></textarea>
+                <textarea class="form-control" placeholder="" id="answer2" name="answer2" rows="4" required></textarea>
             </div>
 
-            <label class="form-group input-checkbox" for="manual_check">
-                <input type="checkbox" id="manual_check" name="T&C" value="Manual Accepted" required />
+            <label class="form-group input-checkbox" for="manualCheckbox">
+                <input type="checkbox" id="manualCheckbox" name="manualCheckbox" value="Manual Accepted" required />
                 <div><i class="bx bx-check"></i></div>
                 <h5>
-                    I have read the <a href="../docs/mentor-manual.html" target="_blank">mentor's manual</a>
+                    I have read the <a href="../docs/mentor-manual.html" target="_blank">mentors' manual</a>
                     and will follow the rules & regulations. <span>*</span>
                 </h5>
             </label>

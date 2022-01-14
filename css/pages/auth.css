@@ -128,19 +128,28 @@ form#auth_form .form-group p {
 }
 
 form#auth_form .form-group input,
+form#auth_form .form-group select,
 form#auth_form .form-group textarea {
     margin: 1rem auto;
-    padding: 0.5rem;
-    font-size: 1.9rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.8rem;
     font-weight: 500;
     font-family: var(--codefont);
     color: var(--lightblack);
     background: var(--lightwhite);
     border: 2px solid rgba(155, 164, 180, 0.4);
     border-radius: 6px;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.8px;
     box-shadow: none;
     transition: all 0.2s linear;
+}
+
+form#auth_form .form-group select {
+    width: 100%;
+    height: 4.5rem;
+    font-size: 1.7rem;
+    outline: none;
+    cursor: pointer;
 }
 
 form#auth_form .form-group textarea {
@@ -162,9 +171,10 @@ form#auth_form label.input-checkbox {
 
 form#auth_form label.input-checkbox input {
     margin: 0;
-    display: none;
+    position: absolute;
+    top: 4rem;
+    left: 0;
     opacity: 0;
-    visibility: hidden;
 }
 
 form#auth_form label.input-checkbox div {
