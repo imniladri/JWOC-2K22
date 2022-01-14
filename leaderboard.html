@@ -14,13 +14,13 @@
 
     <!-- Meta Author, Description, Keywords -->
     <meta name="author" content="JWOC ORG" />
-    <meta name="description" content="JGEC Winter of Code is a long coding event organised by JGEC." />
+    <meta name="description" content="Participant's Ranks in JWoC: JGEC Winter of Code, 2k22." />
     <meta name="keywords" content="jwoc, 2k22, jgec, winter, developer, code, jgec winter of code" />
 
     <!-- Meta OG: Site, Title, Description, Image, Link Displayed -->
     <meta property="og:site_name" content="JWOC 2K22" />
     <meta property="og:title" content="JWOC 2K22" />
-    <meta property="og:description" content="JGEC Winter of Code is a long coding event organised by JGEC." />
+    <meta property="og:description" content="Participant's Ranks in JWoC: JGEC Winter of Code, 2k22." />
     <meta property="og:image" content="https://jwoc.tech/assets/img/opengraph.png" />
     <meta property="og:url" content="https://jwoc.tech/" />
 
@@ -40,13 +40,14 @@
     <link rel="stylesheet" href="./css/components/settings.css" />
     <link rel="stylesheet" href="./css/components/footer.css" />
     <link rel="stylesheet" href="./css/components/header.css" />
-    <link rel="stylesheet" href="./css/pages/soon.css" />
+    <link rel="stylesheet" href="./css/pages/leaderboard.css" />
 
     <!-- External JS -->
     <script defer src="./js/libraries/jquery-3.6.0.min.js"></script>
 
     <!-- Main JS -->
     <script defer src="./js/main.js"></script>
+    <script defer src="./js/data/leaderboard.data.js"></script>
 
 </head>
 
@@ -69,17 +70,35 @@
     <!-- Header Navbar End -->
 
     <!-- Banner Start -->
-    <section id="comingsoon">
+    <section id="leaderboard">
         <div class="sub_head">
             <h2>Leaderboard</h2>
             <p>Check your rank here!</p>
         </div>
 
-        <div class="comingsoon container">
-            <img src="./assets/img/coming_soon.svg" alt="Coming Soon Img" />
-            <h4>You will get your rank once the event started!</h4>
-            <p>Till then checkout our schedule timeline.</p>
-            <a href="./" class="btn">Go To Home</a>
+        <div class="leaderboard container">
+            <!-- Winners -->
+            <div class="winners">
+                <!-- All Winners Mapped: "leaderboard.data.js" -->
+            </div>
+
+            <!-- Search -->
+            <form class="searchUser">
+                <input type="search" id="search" name="search" class="form-control"
+                    placeholder="Enter your github username!" required autocomplete="off" />
+            </form>
+
+            <!-- Ranks -->
+            <div class="rank_table">
+                <div class="rank_head">
+                    <h2>#Rank</h2>
+                    <h2>Name</h2>
+                    <h2>Github Handle</h2>
+                    <h2>Points</h2>
+                </div>
+
+                <!-- All Ranks Mapped: "leaderboard.data.js" -->
+            </div>
         </div>
     </section>
     <!-- Banner End -->

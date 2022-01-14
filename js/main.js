@@ -98,3 +98,14 @@ function countTimer() {
 setInterval(function () {
     countTimer();
 }, 1000);
+
+// Search Function of USERNAME *********************************************
+
+$("form.searchUser input#search").on("keyup", function () {
+    let value = $(this).val().toLowerCase();
+    $("div.rank_table div.rank_body").filter(function () {
+        $(this).toggle(
+            $(this).find("h2 a").text().toLowerCase().indexOf(value) > -1
+        );
+    });
+});

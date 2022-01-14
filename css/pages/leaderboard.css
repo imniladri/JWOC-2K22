@@ -1,0 +1,270 @@
+/* **************************** Leader Board Styles **************************** */
+
+section#leaderboard {
+    position: relative;
+    margin: 12rem auto 6rem;
+}
+
+/* **************************** Sub Head Section **************************** */
+
+section#leaderboard div.sub_head {
+    position: relative;
+    margin: 2rem auto;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section#leaderboard div.sub_head h2 {
+    padding: 0.5rem 1rem 1.5rem;
+    font-size: 3.2rem;
+    font-weight: 600;
+    font-family: "Blanka";
+    color: var(--lightblack);
+    letter-spacing: 3px;
+    text-align: center;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 2px 4px rgba(50, 69, 107, 0.2);
+}
+
+section#leaderboard div.sub_head p {
+    margin: 1rem auto;
+    font-size: 2.2rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* **************************** Banner Section **************************** */
+
+div.leaderboard {
+    margin: 2rem auto;
+    padding: 2rem;
+    position: relative;
+}
+
+/* ==================== Search Bar ==================== */
+
+div.leaderboard form.searchUser {
+    position: relative;
+    margin: 4rem auto;
+}
+
+div.leaderboard form.searchUser input {
+    margin: auto;
+    padding: 1rem 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--lightgrey);
+    background: var(--darkwhite);
+    border: 3px solid var(--darkgrey);
+    letter-spacing: 1px;
+    border-radius: 6px;
+    box-shadow: none;
+    transition: all 0.15s linear;
+}
+
+div.leaderboard form.searchUser input:focus,
+div.leaderboard form.searchUser input:not(:placeholder-shown) {
+    color: var(--lightblack);
+}
+
+/* ==================== Winners Table ==================== */
+
+div.leaderboard .winners {
+    margin: 4rem auto 8rem;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-content: center;
+    place-items: center;
+    gap: 3rem;
+}
+
+div.leaderboard .winners .position_card {
+    position: relative;
+    margin: auto;
+    padding: 2rem;
+    width: 100%;
+    height: -webkit-fill-available;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: var(--darkwhite);
+    box-shadow: 0 0 4px rgba(50, 69, 107, 0.4);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+div.leaderboard .winners .position_card img {
+    margin: 1rem;
+    margin-right: 2rem;
+    width: 10rem;
+    height: auto;
+}
+
+div.leaderboard .winners .position_card img:nth-child(1) {
+    width: 9rem;
+}
+
+div.leaderboard .winners .position_card h2 {
+    margin: 0.5rem auto;
+    font-size: 2.4rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--lightblack);
+    text-align: left;
+    letter-spacing: 0.5px;
+}
+
+div.leaderboard .winners .position_card a {
+    margin: 1rem auto;
+    padding: 0.4rem 1rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--lightblack);
+    background: rgba(255, 227, 0, 0.3);
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.2px;
+    transition: all 0.1s linear;
+}
+
+div.leaderboard .winners .position_card a:hover {
+    background: rgba(255, 227, 0, 0.5);
+}
+
+div.leaderboard .winners .position_card h4 {
+    margin: 1rem auto;
+    padding: 0.4rem 1rem;
+    width: fit-content;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--darkwhite);
+    background: rgba(56, 92, 240, 0.9);
+    text-align: center;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    cursor: default;
+}
+
+/* ==================== Rank Table ==================== */
+
+div.leaderboard .rank_table {
+    position: relative;
+    margin: 4rem auto;
+    display: table;
+    width: 100%;
+}
+
+div.leaderboard .rank_head,
+div.leaderboard .rank_body {
+    display: table-row;
+}
+
+div.leaderboard .rank_head {
+    background: var(--lightblack);
+}
+
+div.leaderboard .rank_body:nth-child(odd) {
+    background: var(--darkwhite);
+}
+div.leaderboard .rank_body:nth-child(odd) {
+    background: var(--lightwhite);
+}
+
+/*
+div.leaderboard .rank_head h2:nth-child(1),
+div.leaderboard .rank_body h2:nth-child(1) {
+    width: 5rem;
+}
+div.leaderboard .rank_head h2:nth-child(2),
+div.leaderboard .rank_body h2:nth-child(2) {
+    width: 20rem;
+    text-align: left !important;
+}
+div.leaderboard .rank_head h2:nth-child(3),
+div.leaderboard .rank_body h2:nth-child(3) {
+    width: 5rem;
+}
+div.leaderboard .rank_head h2:nth-child(4),
+div.leaderboard .rank_body h2:nth-child(4) {
+    width: 5rem;
+}
+*/
+
+div.leaderboard .rank_head h2 {
+    display: table-cell;
+    padding: 1.5rem 1rem;
+    font-size: 2.1rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--darkwhite);
+    text-align: center;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+}
+
+div.leaderboard .rank_body h2 {
+    display: table-cell;
+    padding: 1.5rem 1rem;
+    vertical-align: middle;
+    font-size: 1.9rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.5px;
+    border-top: 1px solid rgb(50, 69, 107, 0.2);
+    border-bottom: 1px solid rgb(50, 69, 107, 0.2);
+}
+
+div.leaderboard .rank_body h2 a {
+    margin: 1rem auto;
+    padding: 0.4rem 1rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--lightblack);
+    background: transparent;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.2px;
+    transition: all 0.1s linear;
+}
+
+div.leaderboard .rank_body h2 a:hover {
+    background: rgba(255, 227, 0, 0.5);
+}
+
+/* **************************** Responsive **************************** */
+
+@media (max-width: 992px) {
+    div.leaderboard .winners {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 572px) {
+    div.leaderboard .rank_head h2 {
+        font-size: 1.8rem;
+    }
+    div.leaderboard .rank_body h2,
+    div.leaderboard .rank_body h2 a {
+        font-size: 1.7rem;
+    }
+}
+
+/* **************************** Styles End **************************** */
