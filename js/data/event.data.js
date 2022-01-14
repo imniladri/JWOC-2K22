@@ -14,8 +14,8 @@ let eventsTimeline = [
 
         // completeClass: "bx bx-check",
         // completeStyle: "display:none",
-        completeClass: "",
-        completeStyle: "",
+        completeClass: "bx bx-check",
+        completeStyle: "display:none",
         daysLeft: Math.floor(
             (new Date("15 January, 2022").getTime() - intDate) / intValue
         ),
@@ -82,14 +82,14 @@ let eventsTimeline = [
     },
     {
         id: 7,
-        date: "31 January, 2022",
+        date: "1 February, 2022",
         name: "Coding Period Starts",
         desc: "Finally the moment is here, You can start working on your desired projects. Code Hard!",
 
         completeClass: "",
         completeStyle: "",
         daysLeft: Math.floor(
-            (new Date("31 January, 2022").getTime() - intDate) / intValue
+            (new Date("1 February, 2022").getTime() - intDate) / intValue
         ),
     },
     {
