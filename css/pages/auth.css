@@ -255,6 +255,41 @@ form#auth_form button.btn-auth:hover {
     background: var(--primarydark);
 }
 
+/* ********************** Form Input Tags Styles ********************** */
+
+div.bootstrap-tagsinput {
+  padding: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+  color: var(--lightblack);
+}
+
+div.bootstrap-tagsinput input {
+  width: 100vw;
+  height: 4rem;
+}
+
+div.bootstrap-tagsinput .tag {
+  display: inline-block;
+  margin: 0.2rem auto;
+  padding: 0.3rem 1rem 0.6rem;
+  width: fit-content;
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: var(--codefont);
+  background: var(--primarylight);
+  color: var(--darkwhite);
+  border-radius: 8px;
+  letter-spacing: 0.6px;
+}
+
+div.bootstrap-tagsinput .tag [data-role="remove"] {
+  font-size: 1.8rem;
+  vertical-align: text-bottom;
+  box-shadow: none !important;
+}
+
 /* **************************** Responsive **************************** */
 
 @media (max-width: 992px) {

@@ -35,6 +35,7 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="../css/libraries/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/libraries/tagsinput.css" />
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="../css/components/settings.css" />
@@ -44,6 +45,7 @@
 
     <!-- External JS -->
     <script defer src="../js/libraries/jquery-3.6.0.min.js"></script>
+    <script defer src="../js/libraries/tagsinput.min.js"></script>
 
     <!-- Main JS -->
     <script defer src="../js/main.js"></script>
@@ -103,7 +105,7 @@
 
             <div class="form-group">
                 <label for="college">College <span>*</span></label>
-                <p>Where did you belong to?</p>
+                <p>Where do you study?</p>
                 <input type="text" class="form-control" placeholder="" id="college" name="College" required />
             </div>
 
@@ -121,7 +123,7 @@
 
             <div class="form-group">
                 <label for="github">Github Profile Link <span>*</span></label>
-                <p>What's your github identity?</p>
+                <p>Please share your GitHub profile</p>
                 <input type="url" class="form-control" placeholder="" id="github" name="GitHub" required />
             </div>
 
@@ -144,21 +146,27 @@
             </div>
 
             <div class="form-group">
+                <label for="projectLink">Tech Stack of your project <span>*</span></label>
+                <p>Mention the tech stack of your project!</p>
+                <input type="text" id="projectTags" data-role="tagsinput" />
+            </div>
+
+            <div class="form-group">
                 <label for="projectDescription">Project Description <span>*</span></label>
-                <p>Brief knowledge about it will help us to!</p>
+                <p>What is your project all about !</p>
                 <textarea class="form-control" placeholder="" id="projectDescription" name="ProjectDesc" rows="4"
                     required></textarea>
             </div>
 
             <div class="form-group">
                 <label for="answer1">Do you have any previous mentorship experience? <span>*</span></label>
-                <p>Just share with us to know each other!</p>
+                <p>Your experience adds value!</p>
                 <textarea class="form-control" placeholder="" id="answer1" name="answer1" rows="4" required></textarea>
             </div>
 
             <div class="form-group">
                 <label for="answer2">What drives you for contributing to Open Source? <span>*</span></label>
-                <p>We like to know about your interests!</p>
+                <p>We would like to know about your vision!</p>
                 <textarea class="form-control" placeholder="" id="answer2" name="answer2" rows="4" required></textarea>
             </div>
 
