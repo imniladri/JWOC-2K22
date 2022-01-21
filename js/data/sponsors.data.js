@@ -40,28 +40,21 @@ let silverTierData = [
         name: "Axure",
         link: "https://www.axure.com/",
         img: "./assets/img/sponsors/axure.svg",
-        width: "w10",
+        width: "w15",
     },
     {
         id: 2,
         name: "Hack Club",
         link: "https://hackclub.com/",
         img: "./assets/img/sponsors/hackclub.svg",
-        width: "w15",
+        width: "w20",
     },
     {
         id: 3,
         name: "XYZ",
         link: "https://gen.xyz/",
         img: "./assets/img/sponsors/xyz.svg",
-        width: "w10",
-    },
-    {
-        id: 4,
-        name: "Give My Certificate",
-        link: "https://givemycertificate.com/",
-        img: "./assets/img/sponsors/givemycertificate.png",
-        width: "w30",
+        width: "w15",
     },
 ];
 
@@ -89,6 +82,13 @@ let communityPartnerData = [
         img: "./assets/img/sponsors/microsoft-student.png",
         width: "w15",
     },
+    {
+        id: 4,
+        name: "Commudle",
+        link: "https://www.commudle.com/",
+        img: "./assets/img/sponsors/commudle.png",
+        width: "w20",
+    },
 ];
 
 // Media Partner
@@ -96,10 +96,10 @@ let communityPartnerData = [
 let mediaPartnerData = [
     {
         id: 1,
-        name: "Commudle",
-        link: "https://www.commudle.com/",
-        img: "./assets/img/sponsors/commudle.png",
-        width: "w20",
+        name: "Give My Certificate",
+        link: "https://givemycertificate.com/",
+        img: "./assets/img/sponsors/givemycertificate.png",
+        width: "w35",
     },
 ];
 

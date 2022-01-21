@@ -22,6 +22,7 @@ section#auth_register::before {
 :root {
     --secondaryoff: #009dae;
     --warningoff: #ff3838;
+    --discordBg: #404eed;
 }
 
 /* **************************** Sub Head Section **************************** */
@@ -258,36 +259,118 @@ form#auth_form button.btn-auth:hover {
 /* ********************** Form Input Tags Styles ********************** */
 
 div.bootstrap-tagsinput {
-  padding: 0;
-  border: none;
-  background: none;
-  box-shadow: none;
-  color: var(--lightblack);
+    padding: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+    color: var(--lightblack);
 }
 
 div.bootstrap-tagsinput input {
-  width: 100vw;
-  height: 4rem;
+    width: 100vw;
+    height: 4rem;
 }
 
 div.bootstrap-tagsinput .tag {
-  display: inline-block;
-  margin: 0.2rem auto;
-  padding: 0.3rem 1rem 0.6rem;
-  width: fit-content;
-  font-size: 1.6rem;
-  font-weight: 500;
-  font-family: var(--codefont);
-  background: var(--primarylight);
-  color: var(--darkwhite);
-  border-radius: 8px;
-  letter-spacing: 0.6px;
+    display: inline-block;
+    margin: 0.2rem auto;
+    padding: 0.3rem 1rem 0.6rem;
+    width: fit-content;
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    background: var(--primarylight);
+    color: var(--darkwhite);
+    border-radius: 8px;
+    letter-spacing: 0.6px;
 }
 
 div.bootstrap-tagsinput .tag [data-role="remove"] {
-  font-size: 1.8rem;
-  vertical-align: text-bottom;
-  box-shadow: none !important;
+    font-size: 1.8rem;
+    vertical-align: text-bottom;
+    box-shadow: none !important;
+}
+
+/* ********************** Form Discord Modal Styles ********************** */
+
+div#form_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+div#form_modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+div#form_modal div.form_modal {
+    margin: 1rem;
+    padding: 2rem 4rem;
+    width: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--lightwhite);
+    border-radius: 10px;
+    transform: scale(0);
+    transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+div#form_modal.active div.form_modal {
+    transform: scale(1);
+}
+
+div.form_modal img {
+    margin: auto;
+    width: 25rem;
+    height: auto;
+}
+
+div.form_modal h2 {
+    margin: 1rem auto;
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: var(--codefont);
+    color: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+div.form_modal p {
+    margin: 1rem auto;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: var(--codefont);
+    color: var(--darkgrey);
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+div.form_modal a {
+    margin: 1rem auto;
+    padding: 0.8rem 2rem;
+    width: fit-content;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--darkwhite);
+    background: var(--discordBg);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    letter-spacing: 0.6px;
 }
 
 /* **************************** Responsive **************************** */
@@ -335,6 +418,16 @@ div.bootstrap-tagsinput .tag [data-role="remove"] {
     }
     form#auth_form button.btn-auth {
         font-size: 2rem;
+    }
+
+    div#form_modal div.form_modal {
+        padding: 2rem;
+    }
+    div.form_modal img {
+        width: 20rem;
+    }
+    div.form_modal h2 {
+        font-size: 2.6rem;
     }
 }
 

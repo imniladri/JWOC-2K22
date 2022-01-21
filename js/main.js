@@ -109,3 +109,9 @@ $("form.searchUser input#search").on("keyup", function () {
         );
     });
 });
+
+// Activate Discord Modal *********************************************
+
+$("form[name='mentee-registration'] button#discordModal").click(function () {
+    $("div#form_modal").toggleClass("active");
+});

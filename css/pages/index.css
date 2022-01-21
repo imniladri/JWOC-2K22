@@ -210,6 +210,7 @@ section#about div.heading,
 section#register div.heading,
 section#timeline div.heading,
 section#projects div.heading,
+section#rewards div.heading,
 section#sponsors div.heading,
 section#team div.heading,
 section#faqs div.heading,
@@ -226,6 +227,7 @@ section#about div.heading h1,
 section#register div.heading h1,
 section#timeline div.heading h1,
 section#projects div.heading h1,
+section#rewards div.heading h1,
 section#sponsors div.heading h1,
 section#team div.heading h1,
 section#faqs div.heading h1,
@@ -247,6 +249,7 @@ section#about div.heading span.pseudo,
 section#register div.heading span.pseudo,
 section#timeline div.heading span.pseudo,
 section#projects div.heading span.pseudo,
+section#rewards div.heading span.pseudo,
 section#sponsors div.heading span.pseudo,
 section#team div.heading span.pseudo,
 section#faqs div.heading span.pseudo,
@@ -265,6 +268,7 @@ section#about div.heading span.divider_1,
 section#register div.heading span.divider_1,
 section#timeline div.heading span.divider_1,
 section#projects div.heading span.divider_1,
+section#rewards div.heading span.divider_1,
 section#sponsors div.heading span.divider_1,
 section#team div.heading span.divider_1,
 section#faqs div.heading span.divider_1,
@@ -283,6 +287,7 @@ section#about div.heading span.divider_2,
 section#register div.heading span.divider_2,
 section#timeline div.heading span.divider_2,
 section#projects div.heading span.divider_2,
+section#rewards div.heading span.divider_2,
 section#sponsors div.heading span.divider_2,
 section#team div.heading span.divider_2,
 section#faqs div.heading span.divider_2,
@@ -1135,6 +1140,8 @@ section#projects div.sub_head h2 {
     letter-spacing: 0.2px;
 }
 
+/* ================ Projects Timer ================ */
+
 section#projects div.timer {
     position: relative;
     margin: 4rem auto;
@@ -1171,6 +1178,91 @@ section#projects div.timer .time p {
     text-transform: uppercase;
 }
 
+/* ================ Projects Content ================ */
+
+section#projects div.details {
+    margin: 4rem auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section#projects div.details .content {
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+section#projects div.details .content h2 {
+    position: relative;
+    margin: 2rem 0;
+    font-size: 4rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--lightblack);
+    text-align: left;
+    letter-spacing: 0.5px;
+}
+
+section#projects div.details .content h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    height: 0.6rem;
+    width: 100%;
+    background: linear-gradient(45deg, var(--primarylight), var(--darkwhite));
+    border-radius: 4px;
+}
+
+section#projects div.details .content p {
+    margin: 1rem 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+    font-family: var(--mainfont);
+    color: var(--lightblack);
+    text-align: justify;
+    letter-spacing: 0.5px;
+    line-height: 1.7;
+}
+
+section#projects div.details .content a {
+    margin: 2rem 0 1rem;
+    padding: 0.6rem 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--darkwhite);
+    background: var(--primarylight);
+    letter-spacing: 0.6px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+section#projects div.details .content a:hover {
+    background: var(--primarydark);
+}
+
+section#projects div.details .figure {
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section#projects div.details .figure img {
+    margin: auto;
+    width: 70%;
+    height: auto;
+}
+
 /* **************************** Responsive **************************** */
 
 @media (max-width: 992px) {
@@ -1183,11 +1275,163 @@ section#projects div.timer .time p {
     section#projects div.timer {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    section#projects div.details {
+        margin: 0 auto;
+        padding: 2rem 4rem;
+    }
+    section#projects div.details .content h2 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    section#projects div.details .figure img {
+        width: 100%;
+    }
 }
 
 @media (max-width: 472px) {
     section#projects div.heading {
         margin: auto 2rem;
+    }
+}
+
+/* **************************** Rewards Section **************************** */
+
+section#rewards {
+    position: relative;
+    margin: 5rem auto 20rem;
+}
+
+section#rewards div.sub_head {
+    position: relative;
+    margin: 4rem auto;
+}
+
+section#rewards div.sub_head h2 {
+    margin: 1rem auto;
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: var(--mainfont);
+    color: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+section#rewards div.sub_head h2 span {
+    display: inline-block;
+    margin: 2px auto;
+    padding: 0.4rem 0.6rem;
+    color: var(--darkwhite);
+    background: var(--primarylight);
+    border-radius: 8px;
+}
+
+section#rewards div.sub_head p {
+    margin: 1rem auto;
+    font-size: 2.2rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--darkgrey);
+    text-align: center;
+    letter-spacing: 0.8px;
+}
+
+section#rewards div.content {
+    position: relative;
+    margin: 2rem 8rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section#rewards div.content .reward_card {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section#rewards div.content .reward_card .fig {
+    width: 30rem;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+section#rewards div.content .reward_card:nth-child(2) .fig {
+    width: 35rem;
+}
+section#rewards div.content .reward_card:nth-child(4) .fig {
+    width: 40rem;
+}
+section#rewards div.content .reward_card:nth-child(5) .fig {
+    width: 33rem;
+}
+
+section#rewards div.content .reward_card .fig:hover {
+    transform: scale(1.1);
+}
+
+section#rewards div.content .reward_card img {
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+section#rewards div.content .reward_card h4 {
+    margin: 1rem auto;
+    font-size: 2.5rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--lightblack);
+    text-align: center;
+    letter-spacing: 0.4px;
+}
+
+/* **************************** Responsive **************************** */
+
+@media (max-width: 992px) {
+    section#rewards div.sub_head {
+        padding: 1rem 6rem;
+    }
+    section#rewards div.sub_head h2 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    section#rewards div.content .reward_card:nth-child(2) .fig {
+        width: 30rem;
+    }
+    section#rewards div.content .reward_card:nth-child(4) .fig {
+        width: 35rem;
+    }
+    section#rewards div.content .reward_card:nth-child(5) .fig {
+        width: 30rem;
+    }
+}
+
+@media (max-width: 472px) {
+    section#rewards div.heading {
+        margin: auto 2rem;
+    }
+    section#rewards div.sub_head h2 {
+        font-size: 2.6rem;
+    }
+    section#rewards div.sub_head p {
+        font-size: 2rem;
+    }
+    section#rewards div.content {
+        padding: 2rem;
+    }
+    section#rewards div.content .reward_card {
+        margin: 0;
     }
 }
 
@@ -1263,7 +1507,7 @@ section#sponsors div.details {
 }
 
 section#sponsors div.details .category {
-    margin: 6rem auto;
+    margin: 6rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1305,9 +1549,8 @@ section#sponsors div.details .category .title h4 {
 }
 
 section#sponsors div.details .category .sponsors {
-    padding: 0 4rem;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -1318,12 +1561,24 @@ section#sponsors div.details .category .sponsors img {
     height: auto;
 }
 
-section#sponsors div.details .category .sponsors img.w10 {width: 10rem}
-section#sponsors div.details .category .sponsors img.w15 {width: 15rem}
-section#sponsors div.details .category .sponsors img.w20 {width: 20rem}
-section#sponsors div.details .category .sponsors img.w25 {width: 25rem}
-section#sponsors div.details .category .sponsors img.w30 {width: 30rem}
-section#sponsors div.details .category .sponsors img.w35 {width: 35rem}
+section#sponsors div.details .category .sponsors img.w10 {
+    width: 10rem;
+}
+section#sponsors div.details .category .sponsors img.w15 {
+    width: 15rem;
+}
+section#sponsors div.details .category .sponsors img.w20 {
+    width: 20rem;
+}
+section#sponsors div.details .category .sponsors img.w25 {
+    width: 25rem;
+}
+section#sponsors div.details .category .sponsors img.w30 {
+    width: 30rem;
+}
+section#sponsors div.details .category .sponsors img.w35 {
+    width: 35rem;
+}
 
 section#sponsors div.details .category .sponsors h3 {
     margin: auto;
@@ -1347,6 +1602,9 @@ section#sponsors div.details .category .sponsors h3 {
     section#sponsors div.sub_head {
         padding: 1rem 6rem;
     }
+    section#sponsors div.details .category {
+        margin: 4rem auto;
+    }
     section#sponsors div.details .category .title {
         margin: 2rem auto;
     }
@@ -1356,16 +1614,25 @@ section#sponsors div.details .category .sponsors h3 {
     section#sponsors div.details .category .title::after {
         display: none;
     }
-    section#sponsors div.details .category .sponsors {
-        justify-content: center;
-    }
 
-    section#sponsors div.details .category .sponsors img.w10 {width: 8rem}
-    section#sponsors div.details .category .sponsors img.w15 {width: 13rem}
-    section#sponsors div.details .category .sponsors img.w20 {width: 17rem}
-    section#sponsors div.details .category .sponsors img.w25 {width: 22rem}
-    section#sponsors div.details .category .sponsors img.w30 {width: 27rem}
-    section#sponsors div.details .category .sponsors img.w35 {width: 32rem}
+    section#sponsors div.details .category .sponsors img.w10 {
+        width: 8rem;
+    }
+    section#sponsors div.details .category .sponsors img.w15 {
+        width: 13rem;
+    }
+    section#sponsors div.details .category .sponsors img.w20 {
+        width: 17rem;
+    }
+    section#sponsors div.details .category .sponsors img.w25 {
+        width: 22rem;
+    }
+    section#sponsors div.details .category .sponsors img.w30 {
+        width: 27rem;
+    }
+    section#sponsors div.details .category .sponsors img.w35 {
+        width: 32rem;
+    }
 }
 
 @media (max-width: 472px) {

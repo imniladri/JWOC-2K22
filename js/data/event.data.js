@@ -17,7 +17,9 @@ let eventsTimeline = [
         completeClass: "bx bx-check",
         completeStyle: "display:none",
         daysLeft: Math.floor(
-            (new Date("16 January, 2022").getTime() - intDate) / intValue
+            (new Date("16 January, 2022 23:59:59").getTime() - intDate) /
+                intValue +
+                1
         ),
     },
     {
@@ -29,7 +31,9 @@ let eventsTimeline = [
         completeClass: "bx bx-check",
         completeStyle: "display:none",
         daysLeft: Math.floor(
-            (new Date("16 January, 2022").getTime() - intDate) / intValue
+            (new Date("16 January, 2022 23:59:59").getTime() - intDate) /
+                intValue +
+                1
         ),
     },
     {
@@ -41,7 +45,9 @@ let eventsTimeline = [
         completeClass: "",
         completeStyle: "",
         daysLeft: Math.floor(
-            (new Date("24 January, 2022").getTime() - intDate) / intValue
+            (new Date("24 January, 2022 23:59:59").getTime() - intDate) /
+                intValue +
+                1
         ),
     },
     {
@@ -53,7 +59,9 @@ let eventsTimeline = [
         completeClass: "",
         completeStyle: "",
         daysLeft: Math.floor(
-            (new Date("24 January, 2022").getTime() - intDate) / intValue
+            (new Date("24 January, 2022 23:59:59").getTime() - intDate) /
+                intValue +
+                1
         ),
     },
     {
@@ -65,7 +73,9 @@ let eventsTimeline = [
         completeClass: "",
         completeStyle: "",
         daysLeft: Math.floor(
-            (new Date("28 January, 2022").getTime() - intDate) / intValue
+            (new Date("28 January, 2022 23:59:59").getTime() - intDate) /
+                intValue +
+                1
         ),
     },
     {
@@ -77,7 +87,9 @@ let eventsTimeline = [
         completeClass: "",
         completeStyle: "",
         daysLeft: Math.floor(
-            (new Date("30 January, 2022").getTime() - intDate) / intValue
+            (new Date("30 January, 2022 23:59:59").getTime() - intDate) /
+                intValue +
+                1
         ),
     },
     {
@@ -89,7 +101,9 @@ let eventsTimeline = [
         completeClass: "",
         completeStyle: "",
         daysLeft: Math.floor(
-            (new Date("1 February, 2022").getTime() - intDate) / intValue
+            (new Date("1 February, 2022 23:59:59").getTime() - intDate) /
+                intValue +
+                1
         ),
     },
     {
@@ -101,7 +115,9 @@ let eventsTimeline = [
         completeClass: "",
         completeStyle: "",
         daysLeft: Math.floor(
-            (new Date("20 February, 2022").getTime() - intDate) / intValue
+            (new Date("20 February, 2022 23:59:59").getTime() - intDate) /
+                intValue +
+                1
         ),
     },
     {
@@ -113,7 +129,9 @@ let eventsTimeline = [
         completeClass: "",
         completeStyle: "",
         daysLeft: Math.floor(
-            (new Date("2 March, 2022").getTime() - intDate) / intValue
+            (new Date("2 March, 2022 23:59:59").getTime() - intDate) /
+                intValue +
+                1
         ),
     },
     {
@@ -125,7 +143,9 @@ let eventsTimeline = [
         completeClass: "",
         completeStyle: "",
         daysLeft: Math.floor(
-            (new Date("8 March, 2022").getTime() - intDate) / intValue
+            (new Date("8 March, 2022 23:59:59").getTime() - intDate) /
+                intValue +
+                1
         ),
     },
 ];
