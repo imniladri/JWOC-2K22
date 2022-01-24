@@ -110,6 +110,21 @@ $("form.searchUser input#search").on("keyup", function () {
     });
 });
 
+// Search Function of PROJECTS *********************************************
+
+$("form.searchTech input#search").on("keyup", function () {
+    let value = $(this).val().toLowerCase();
+    $("div.project_card").filter(function () {
+        $(this).toggle(
+            $(this)
+                .find(".project_desc .tags span")
+                .text()
+                .toLowerCase()
+                .indexOf(value) > -1
+        );
+    });
+});
+
 // Activate Discord Modal *********************************************
 
 $("form[name='mentee-registration'] button#discordModal").click(function () {

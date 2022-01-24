@@ -7,9 +7,9 @@ let projectsDetails = [
         id: 1,
         projectName: "Project Name",
         projectDesc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe!",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe!",
         projectLink: "#",
-        projectTech: `<span>Docker</span> <span>Javascript</span> <span>Python</span>`,
+        projectTech: `<span>Django</span> <span>PHP</span> <span>Angular JS</span>`,
 
         mentorName: "Hello World!",
         mentorEmail: "hello.world@xyz.com",
@@ -20,9 +20,9 @@ let projectsDetails = [
         id: 2,
         projectName: "Project Name",
         projectDesc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe!",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe!",
         projectLink: "#",
-        projectTech: `<span>Docker</span> <span>Javascript</span> <span>Python</span>`,
+        projectTech: `<span>C#</span> <span>C++</span> <span>C</span>`,
 
         mentorName: "Hello World!",
         mentorEmail: "hello.world@xyz.com",
@@ -33,9 +33,9 @@ let projectsDetails = [
         id: 3,
         projectName: "Project Name",
         projectDesc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe!",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe!",
         projectLink: "#",
-        projectTech: `<span>Docker</span> <span>Javascript</span> <span>Python</span>`,
+        projectTech: `<span>Node JS</span> <span>React JS</span> <span>Python</span>`,
 
         mentorName: "Hello World!",
         mentorEmail: "hello.world@xyz.com",
@@ -46,9 +46,9 @@ let projectsDetails = [
         id: 4,
         projectName: "Project Name",
         projectDesc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe!",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe!",
         projectLink: "#",
-        projectTech: `<span>Docker</span> <span>Javascript</span> <span>Python</span>`,
+        projectTech: `<span>Docker</span> <span>AI</span> <span>ML</span>`,
 
         mentorName: "Hello World!",
         mentorEmail: "hello.world@xyz.com",
@@ -59,9 +59,9 @@ let projectsDetails = [
         id: 5,
         projectName: "Project Name",
         projectDesc:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe!",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe!",
         projectLink: "#",
-        projectTech: `<span>Docker</span> <span>Javascript</span> <span>Python</span>`,
+        projectTech: `<span>HTML</span> <span>Javascript</span> <span>CSS</span>`,
 
         mentorName: "Hello World!",
         mentorEmail: "hello.world@xyz.com",
@@ -84,7 +84,8 @@ Object.values(projectsDetails).map((val) => {
                 <h2>${val.projectName}</h2>
                 <h6>Tech Stack</h6>
                 <div class="tags">${val.projectTech}</div>
-                <p>${val.projectDesc}</p>
+                <p class="clampText">${val.projectDesc}</p>
+                <span>Read More</span>
                 <a href="${val.projectLink}" class="btn" target="_blank">See Now</a>
             </div>
 
@@ -115,4 +116,15 @@ $("div.project_card div#toggleBtn").each(function () {
     $(this).click(function () {
         $(this).toggleClass("active");
     });
+});
+
+$("div.project_card div.project_desc").each(function () {
+    $(this)
+        .find("span")
+        .click(function () {
+            $(this).prev().toggleClass("clampText");
+            $(this).prev().hasClass("clampText")
+                ? $(this).text("Read More")
+                : $(this).text("Read Less");
+        });
 });

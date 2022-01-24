@@ -45,6 +45,34 @@ section#projects_container div.sub_head p {
     letter-spacing: 0.5px;
 }
 
+/* **************************** Search Bar | Project Tech **************************** */
+
+section#projects_container form.searchTech {
+    position: relative;
+    margin: 4rem;
+}
+
+section#projects_container form.searchTech input {
+    margin: auto;
+    padding: 1rem 1.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--lightgrey);
+    background: var(--darkwhite);
+    border: 3px solid var(--darkgrey);
+    letter-spacing: 1px;
+    border-radius: 6px;
+    box-shadow: none;
+    transition: all 0.15s linear;
+}
+
+section#projects_container form.searchTech input:focus,
+section#projects_container form.searchTech input:not(:placeholder-shown) {
+    color: var(--lightblack);
+    border: 3px solid var(--lightblack);
+}
+
 /* **************************** Projects Content Section **************************** */
 
 section#projects_container div.projects_content {
@@ -215,11 +243,25 @@ div.project_card .project_desc p {
     color: var(--lightblack);
     text-align: center;
     letter-spacing: 0.5px;
+}
 
+div.project_card .project_desc p.clampText {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+}
+
+div.project_card .project_desc span {
+    margin: -1rem auto auto;
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: var(--curlfont);
+    color: #ff1700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    cursor: pointer;
 }
 
 /* ============== Project Link ============== */
