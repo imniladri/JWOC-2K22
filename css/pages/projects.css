@@ -7,7 +7,7 @@ section#projects_container {
 
 :root {
     --variantCyan: #0cecdd;
-    --variantYellow: #fff338;
+    --variantYellow: #fff01f;
 }
 
 /* **************************** Sub Head Section **************************** */
@@ -63,12 +63,10 @@ section#projects_container div.projects_content {
 div.project_card {
     position: relative;
     margin: 2rem;
-    padding: 1rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: rgba(255, 255, 255, 1);
     box-shadow: 0 0 8px rgba(50, 69, 107, 0.2);
     border-radius: 10px;
 }
@@ -78,7 +76,7 @@ div.project_card::before {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: var(--primarylight);
+    background: var(--variantYellow);
     transform: rotate(3deg);
     border-radius: 10px;
     z-index: -1;
@@ -104,8 +102,50 @@ div.project_card:hover:after {
     transform: rotate(3deg);
 }
 
-/* Project Name */
-div.project_card h2 {
+/* =========================== Project Project Toggle Btn =========================== */
+
+div.project_card div#toggleBtn {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 8rem;
+    height: 7rem;
+    font-size: 3rem;
+    color: var(--darkwhite);
+    background: var(--primarylight);
+    clip-path: circle(50% at 50% 100%);
+    z-index: 1;
+    cursor: pointer;
+}
+
+div.project_card div#toggleBtn i.bx {
+    transform: rotateX(0deg);
+    transition: all 0.2s linear;
+}
+
+div.project_card div#toggleBtn.active i.bx {
+    transform: rotateX(180deg);
+}
+
+/* =========================== Project Project Details =========================== */
+
+div.project_card .project_desc {
+    margin: auto;
+    padding: 1rem 2rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+}
+
+/* ============== Project Name ============== */
+
+div.project_card .project_desc h2 {
     position: relative;
     margin: 1rem auto;
     font-size: 2.6rem;
@@ -113,11 +153,10 @@ div.project_card h2 {
     font-family: var(--codefont);
     color: var(--lightblack);
     text-align: center;
-    text-shadow: 0 0.5px var(--lightblack);
     letter-spacing: 0.6px;
 }
 
-div.project_card h2::after {
+div.project_card .project_desc h2::after {
     content: "";
     position: absolute;
     left: 0;
@@ -133,8 +172,9 @@ div.project_card h2::after {
     );
 }
 
-/* Project Tech Stacks */
-div.project_card h6 {
+/* ============== Project Tech Stacks ============== */
+
+div.project_card .project_desc h6 {
     margin: 1rem auto 0.5rem;
     font-size: 1.6rem;
     font-weight: 500;
@@ -144,7 +184,7 @@ div.project_card h6 {
     letter-spacing: -0.2px;
 }
 
-div.project_card .tags {
+div.project_card .project_desc .tags {
     margin: auto auto 0.5rem;
     display: flex;
     justify-content: center;
@@ -152,7 +192,7 @@ div.project_card .tags {
     flex-wrap: wrap;
 }
 
-div.project_card .tags span {
+div.project_card .project_desc .tags span {
     margin: 0.5rem;
     padding: 0.2rem 0.8rem;
     font-size: 1.2rem;
@@ -165,8 +205,9 @@ div.project_card .tags span {
     border-radius: 10px;
 }
 
-/* Project Description */
-div.project_card p {
+/* ============== Project Description ============== */
+
+div.project_card .project_desc p {
     margin: 1rem auto;
     font-size: 1.4rem;
     font-weight: 500;
@@ -181,11 +222,12 @@ div.project_card p {
     -webkit-box-orient: vertical;
 }
 
-/* Project Link */
-div.project_card a.btn {
-    margin: 1rem auto;
-    padding: 0.4rem 1.8rem;
-    font-size: 1.8rem;
+/* ============== Project Link ============== */
+
+div.project_card .project_desc a.btn {
+    margin: 1rem auto 2rem;
+    padding: 0.6rem 2rem;
+    font-size: 2rem;
     font-weight: 500;
     font-family: var(--codefont);
     color: var(--darkwhite);
@@ -196,40 +238,115 @@ div.project_card a.btn {
     transition: all 0.2s linear;
 }
 
-div.project_card a.btn:hover {
+div.project_card .project_desc a.btn:hover {
     background: var(--primarydark);
 }
 
-/* Project Admin/Author */
-div.project_card h4 a {
-    margin: 0.5rem auto;
-    padding: 0.2rem 0.8rem;
-    font-size: 1.7rem;
+/* =========================== Project Mentor Details =========================== */
+
+div.project_card .mentor_desc {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(62, 100, 255, 1);
+    border-radius: 10px;
+    clip-path: circle(10% at 50% 100%);
+    transition: all 0.6s ease-in-out;
+}
+
+div.project_card div#toggleBtn.active + div.mentor_desc {
+    clip-path: circle(150% at 50% 100%);
+}
+
+/* ============== Mentor Head ============== */
+
+div.project_card .mentor_desc h4 {
+    margin: 1rem auto 0;
+    font-size: 1.8rem;
     font-weight: 500;
     font-family: var(--mainfont);
-    color: var(--primarydark);
-    background: transparent;
+    color: var(--lightwhite);
+    text-align: center;
+    letter-spacing: 0.4px;
+}
+
+/* ============== Mentor Name ============== */
+
+div.project_card .mentor_desc h2 {
+    position: relative;
+    margin: 1rem auto 1.5rem;
+    font-size: 2.6rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--darkwhite);
+    text-align: center;
+    letter-spacing: 0.6px;
+}
+
+div.project_card .mentor_desc h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -20%;
+    height: 4px;
+    width: 100%;
+    border-radius: 4px;
+    background: var(--darkwhite);
+}
+
+/* ============== Mentor Mail ============== */
+
+div.project_card .mentor_desc a.btn {
+    margin: 1rem auto;
+    padding: 0.6rem 1.2rem;
+    padding-right: 0.9rem;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: var(--codefont);
+    color: var(--lightwhite);
+    background: var(--primarylight);
+    border: 3.5px solid var(--darkwhite);
+    text-align: center;
+    letter-spacing: 1px;
     border-radius: 8px;
-    text-align: center;
-    text-decoration: none;
-    letter-spacing: 0.2px;
-    transition: all 0.1s linear;
+    box-shadow: 0 0 4px rgb(50, 69, 107, 0.2);
 }
 
-div.project_card h4 a:hover {
-    background: rgba(62, 100, 255, 0.2);
-}
+/* ============== Mentor Social Handles ============== */
 
-div.project_card h4 span {
+div.project_card .mentor_desc .social {
     margin: 0.5rem auto;
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 700;
-    font-family: var(--curlfont);
-    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.project_card .mentor_desc .social a.btn {
+    margin: 0 1rem;
+    padding: 0.7rem;
+    font-size: 2.3rem;
     color: var(--lightblack);
-    text-align: center;
-    letter-spacing: 0.2px;
+    background: var(--darkwhite);
+    border-radius: 6px;
+    box-shadow: 0 0 4px rgb(50, 69, 107, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+div.project_card .mentor_desc .social a.btn i {
+    transition: transform 0.8s ease;
+}
+
+div.project_card .mentor_desc .social a.btn:hover i {
+    transform: rotateY(1turn);
 }
 
 /* **************************** Responsive **************************** */
@@ -239,7 +356,8 @@ div.project_card h4 span {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    div.project_card h2 {
+    div.project_card .project_desc h2,
+    div.project_card .mentor_desc h2 {
         font-size: 2.8rem;
     }
 }

@@ -115,3 +115,9 @@ $("form.searchUser input#search").on("keyup", function () {
 $("form[name='mentee-registration'] button#discordModal").click(function () {
     $("div#form_modal").toggleClass("active");
 });
+
+// Discord Modal CLose *********************************************
+
+$("div#form_modal i#modal_close").click(function () {
+    $("div#form_modal").removeClass("active");
+});

@@ -315,6 +315,7 @@ div#form_modal.active {
 }
 
 div#form_modal div.form_modal {
+    position: relative;
     margin: 1rem;
     padding: 2rem 4rem;
     width: 50rem;
@@ -371,6 +372,15 @@ div.form_modal a {
     text-decoration: none;
     border-radius: 6px;
     letter-spacing: 0.6px;
+}
+
+div.form_modal i.bx {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 3.4rem;
+  color: var(--warningoff);
+  cursor: pointer;
 }
 
 /* **************************** Responsive **************************** */

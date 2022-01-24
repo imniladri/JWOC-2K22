@@ -5,48 +5,68 @@
 let projectsDetails = [
     {
         id: 1,
-        name: "Project Name",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe!",
-        link: "#",
-        adminName: "User Name",
-        adminLink: "#",
-        techTags: `<span>Docker</span> <span>Javascript</span> <span>Python</span>`,
+        projectName: "Project Name",
+        projectDesc:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe!",
+        projectLink: "#",
+        projectTech: `<span>Docker</span> <span>Javascript</span> <span>Python</span>`,
+
+        mentorName: "Hello World!",
+        mentorEmail: "hello.world@xyz.com",
+        mentorGithub: "https://github.com/",
+        mentorLinkedin: "https://linkedin.com/",
     },
     {
         id: 2,
-        name: "Project Name",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe!",
-        link: "#",
-        adminName: "User Name",
-        adminLink: "#",
-        techTags: `<span>Docker</span> <span>Javascript</span> <span>Python</span>`,
+        projectName: "Project Name",
+        projectDesc:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe!",
+        projectLink: "#",
+        projectTech: `<span>Docker</span> <span>Javascript</span> <span>Python</span>`,
+
+        mentorName: "Hello World!",
+        mentorEmail: "hello.world@xyz.com",
+        mentorGithub: "https://github.com/",
+        mentorLinkedin: "https://linkedin.com/",
     },
     {
         id: 3,
-        name: "Project Name",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe!",
-        link: "#",
-        adminName: "User Name",
-        adminLink: "#",
-        techTags: `<span>Docker</span> <span>Javascript</span> <span>Python</span>`,
+        projectName: "Project Name",
+        projectDesc:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe!",
+        projectLink: "#",
+        projectTech: `<span>Docker</span> <span>Javascript</span> <span>Python</span>`,
+
+        mentorName: "Hello World!",
+        mentorEmail: "hello.world@xyz.com",
+        mentorGithub: "https://github.com/",
+        mentorLinkedin: "https://linkedin.com/",
     },
     {
         id: 4,
-        name: "Project Name",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe!",
-        link: "#",
-        adminName: "User Name",
-        adminLink: "#",
-        techTags: `<span>Docker</span> <span>Javascript</span> <span>Python</span>`,
+        projectName: "Project Name",
+        projectDesc:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe!",
+        projectLink: "#",
+        projectTech: `<span>Docker</span> <span>Javascript</span> <span>Python</span>`,
+
+        mentorName: "Hello World!",
+        mentorEmail: "hello.world@xyz.com",
+        mentorGithub: "https://github.com/",
+        mentorLinkedin: "https://linkedin.com/",
     },
     {
         id: 5,
-        name: "Project Name",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe!",
-        link: "#",
-        adminName: "User Name",
-        adminLink: "#",
-        techTags: `<span>Docker</span> <span>Javascript</span> <span>Python</span>`,
+        projectName: "Project Name",
+        projectDesc:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eos quibusdam consequatur cumque saepe!",
+        projectLink: "#",
+        projectTech: `<span>Docker</span> <span>Javascript</span> <span>Python</span>`,
+
+        mentorName: "Hello World!",
+        mentorEmail: "hello.world@xyz.com",
+        mentorGithub: "https://github.com/",
+        mentorLinkedin: "https://linkedin.com/",
     },
 ];
 
@@ -60,15 +80,39 @@ Object.values(projectsDetails).map((val) => {
     projectsContent.innerHTML += `
         <!-- Project ${val.id} -->
         <div class="project_card">
-            <h2>${val.name}</h2>
-            <h6>Tech Stack</h6>
-            <div class="tags">${val.techTags}</div>
-            <p>${val.desc}</p>
-            <a href="${val.link}" class="btn">See Now</a>
-            <h4>
-                <a href="${val.adminLink}">${val.adminName}</a>
-                <span>(Admin)</span>
-            </h4>
+            <div class="project_desc">
+                <h2>${val.projectName}</h2>
+                <h6>Tech Stack</h6>
+                <div class="tags">${val.projectTech}</div>
+                <p>${val.projectDesc}</p>
+                <a href="${val.projectLink}" class="btn" target="_blank">See Now</a>
+            </div>
+
+            <div id="toggleBtn">
+                <i class="bx bxs-chevron-up"></i>
+            </div>
+
+            <div class="mentor_desc">
+                <h4>Project Mentor</h4>
+                <h2>${val.mentorName}</h2>
+                <a href="mailto:${val.mentorEmail}" class="btn">Mail Mentor</a>
+                <div class="social">
+                    <a href="${val.mentorGithub}" class="btn" target="_blank">
+                        <i class="bx bxl-github"></i>
+                    </a>
+                    <a href="${val.mentorLinkedin}" class="btn" target="_blank">
+                        <i class="bx bxl-linkedin"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     `;
+});
+
+// Project Card Toggle Btn Active *********************************************
+
+$("div.project_card div#toggleBtn").each(function () {
+    $(this).click(function () {
+        $(this).toggleClass("active");
+    });
 });
