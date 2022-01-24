@@ -5,6 +5,11 @@ section#projects_container {
     margin: 12rem auto 6rem;
 }
 
+:root {
+    --variantCyan: #0cecdd;
+    --variantYellow: #fff338;
+}
+
 /* **************************** Sub Head Section **************************** */
 
 section#projects_container div.sub_head {
@@ -75,13 +80,28 @@ div.project_card::before {
     height: 100%;
     background: var(--primarylight);
     transform: rotate(3deg);
-    border-radius: 5px;
+    border-radius: 10px;
     z-index: -1;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
+}
+
+div.project_card::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--variantCyan);
+    transform: rotate(-3deg);
+    border-radius: 10px;
+    z-index: -1;
+    transition: all 0.3s ease;
 }
 
 div.project_card:hover:before {
     transform: rotate(-3deg);
+}
+div.project_card:hover:after {
+    transform: rotate(3deg);
 }
 
 /* Project Name */
@@ -154,6 +174,11 @@ div.project_card p {
     color: var(--lightblack);
     text-align: center;
     letter-spacing: 0.5px;
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 /* Project Link */
