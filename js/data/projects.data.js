@@ -11,7 +11,7 @@ let projectsDetails = [
         projectLink: "#",
         projectTech: `<span>Django</span> <span>PHP</span> <span>Angular JS</span>`,
 
-        mentorName: "Hello World!",
+        mentorName: "Hello Peter!",
         mentorEmail: "hello.world@xyz.com",
         mentorGithub: "https://github.com/",
         mentorLinkedin: "https://linkedin.com/",
@@ -24,7 +24,7 @@ let projectsDetails = [
         projectLink: "#",
         projectTech: `<span>C#</span> <span>C++</span> <span>C</span>`,
 
-        mentorName: "Hello World!",
+        mentorName: "Hello Peter!",
         mentorEmail: "hello.world@xyz.com",
         mentorGithub: "https://github.com/",
         mentorLinkedin: "https://linkedin.com/",
@@ -37,7 +37,7 @@ let projectsDetails = [
         projectLink: "#",
         projectTech: `<span>Node JS</span> <span>React JS</span> <span>Python</span>`,
 
-        mentorName: "Hello World!",
+        mentorName: "Hello Peter!",
         mentorEmail: "hello.world@xyz.com",
         mentorGithub: "https://github.com/",
         mentorLinkedin: "https://linkedin.com/",
@@ -50,7 +50,7 @@ let projectsDetails = [
         projectLink: "#",
         projectTech: `<span>Docker</span> <span>AI</span> <span>ML</span>`,
 
-        mentorName: "Hello World!",
+        mentorName: "Hello Peter!",
         mentorEmail: "hello.world@xyz.com",
         mentorGithub: "https://github.com/",
         mentorLinkedin: "https://linkedin.com/",
@@ -63,7 +63,7 @@ let projectsDetails = [
         projectLink: "#",
         projectTech: `<span>HTML</span> <span>Javascript</span> <span>CSS</span>`,
 
-        mentorName: "Hello World!",
+        mentorName: "Hello Peter!",
         mentorEmail: "hello.world@xyz.com",
         mentorGithub: "https://github.com/",
         mentorLinkedin: "https://linkedin.com/",
@@ -94,6 +94,7 @@ Object.values(projectsDetails).map((val) => {
             </div>
 
             <div class="mentor_desc">
+                <h6 class="bx bx-user"></h6>
                 <h4>Project Mentor</h4>
                 <h2>${val.mentorName}</h2>
                 <a href="mailto:${val.mentorEmail}" class="btn">Mail Mentor</a>

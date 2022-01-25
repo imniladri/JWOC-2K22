@@ -305,6 +305,21 @@ div.project_card div#toggleBtn.active + div.mentor_desc {
     clip-path: circle(150% at 50% 100%);
 }
 
+/* ============== Mentor Icon ============== */
+
+div.project_card .mentor_desc h6 {
+    margin: 0 auto;
+    font-size: 4rem;
+    color: var(--lightwhite);
+    opacity: 0;
+    transition: all 0.2s ease;
+    transition-delay: 0.4s;
+}
+
+div.project_card div#toggleBtn.active + .mentor_desc h6 {
+    opacity: 1;
+}
+
 /* ============== Mentor Head ============== */
 
 div.project_card .mentor_desc h4 {
@@ -314,7 +329,14 @@ div.project_card .mentor_desc h4 {
     font-family: var(--mainfont);
     color: var(--lightwhite);
     text-align: center;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.6px;
+    opacity: 0;
+    transition: all 0.2s ease;
+    transition-delay: 0.4s;
+}
+
+div.project_card div#toggleBtn.active + .mentor_desc h4 {
+    opacity: 1;
 }
 
 /* ============== Mentor Name ============== */
@@ -327,7 +349,14 @@ div.project_card .mentor_desc h2 {
     font-family: var(--codefont);
     color: var(--darkwhite);
     text-align: center;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.8px;
+    opacity: 0;
+    transition: all 0.2s ease;
+    transition-delay: 0.4s;
+}
+
+div.project_card div#toggleBtn.active + .mentor_desc h2 {
+    opacity: 1;
 }
 
 div.project_card .mentor_desc h2::after {
@@ -357,6 +386,18 @@ div.project_card .mentor_desc a.btn {
     letter-spacing: 1px;
     border-radius: 8px;
     box-shadow: 0 0 4px rgb(50, 69, 107, 0.2);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+div.project_card .mentor_desc a.btn:hover {
+    color: var(--lightblack);
+    background: var(--darkwhite);
+    border: 3.5px solid var(--primarylight);
+}
+
+div.project_card div#toggleBtn.active + .mentor_desc a.btn {
+    opacity: 1;
 }
 
 /* ============== Mentor Social Handles ============== */
@@ -366,6 +407,13 @@ div.project_card .mentor_desc .social {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transition-delay: 0.2s;
+}
+
+div.project_card div#toggleBtn.active + .mentor_desc .social {
+    opacity: 1;
 }
 
 div.project_card .mentor_desc .social a.btn {
@@ -374,6 +422,7 @@ div.project_card .mentor_desc .social a.btn {
     font-size: 2.3rem;
     color: var(--lightblack);
     background: var(--darkwhite);
+    border: 3px solid var(--darkwhite);
     border-radius: 6px;
     box-shadow: 0 0 4px rgb(50, 69, 107, 0.2);
     display: flex;
@@ -381,6 +430,11 @@ div.project_card .mentor_desc .social a.btn {
     align-items: center;
     text-decoration: none;
     transition: all 0.2s ease;
+}
+
+div.project_card .mentor_desc .social a.btn:hover {
+    color: var(--darkwhite);
+    background: var(--primarylight);
 }
 
 div.project_card .mentor_desc .social a.btn i {
