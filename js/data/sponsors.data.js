@@ -18,13 +18,20 @@ let goldTierData = [
     },
     {
         id: 2,
+        name: "Sashido",
+        link: "https://www.sashido.io/",
+        img: "./assets/img/sponsors/sashido.png",
+        width: "w20",
+    },
+    {
+        id: 3,
         name: "JetBrains",
         link: "https://www.jetbrains.com/",
         img: "./assets/img/sponsors/jetbrains.svg",
         width: "w15",
     },
     {
-        id: 3,
+        id: 4,
         name: "Reboot Marketing",
         link: "https://rebootmarketing.in/",
         img: "./assets/img/sponsors/rebootmarketing.png",
