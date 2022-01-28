@@ -4,7 +4,15 @@
 
 // Diamond Tier
 
-let diamondTierData = [];
+let diamondTierData = [
+    {
+        id: 1,
+        name: "TopCoder",
+        link: "https://www.topcoder.com/",
+        img: "./assets/img/sponsors/topcoder.png",
+        width: "w20",
+    },
+];
 
 // Gold Tier
 
