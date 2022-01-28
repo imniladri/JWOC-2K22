@@ -43,7 +43,7 @@ section#comingsoon div.sub_head p {
 /* **************************** Banner Section **************************** */
 
 section#comingsoon div.comingsoon {
-    margin: 4rem auto;
+    margin: 2rem auto;
     padding: 2rem 4rem;
     display: flex;
     justify-content: center;
@@ -51,9 +51,15 @@ section#comingsoon div.comingsoon {
     flex-direction: column;
 }
 
-section#comingsoon div.comingsoon img {
+section#comingsoon div.comingsoon img.soon_img {
     margin: auto auto 2rem;
     width: 40%;
+    height: auto;
+}
+
+section#comingsoon div.comingsoon img.close_img {
+    margin: auto auto 2rem;
+    width: 30%;
     height: auto;
 }
 
@@ -70,7 +76,7 @@ section#comingsoon div.comingsoon h4 {
 section#comingsoon div.comingsoon p {
     margin: 1rem auto;
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 500;
     font-family: var(--mainfont);
     color: var(--lightblack);
     text-align: center;
@@ -97,7 +103,8 @@ section#comingsoon div.comingsoon a:hover {
 /* **************************** Responsive **************************** */
 
 @media (max-width: 992px) {
-    section#comingsoon div.comingsoon img {
+    section#comingsoon div.comingsoon img.soon_img,
+    section#comingsoon div.comingsoon img.close_img {
         width: 80%;
     }
 }

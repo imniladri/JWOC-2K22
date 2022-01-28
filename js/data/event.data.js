@@ -37,7 +37,7 @@ let eventsTimeline = [
         ),
     },
     {
-        id: 4,
+        id: 3,
         date: "25 January, 2022",
         name: "Projects Announcement Begins",
         desc: "The wait is over! We are going to reveal the selected projects",
@@ -51,7 +51,7 @@ let eventsTimeline = [
         ),
     },
     {
-        id: 3,
+        id: 4,
         date: "28 & 30 January, 2022",
         name: "Mentor & Mentee Registration Ends",
         desc: "Mentor and Mentee registration has been extended, Register Now!!!",
@@ -70,8 +70,8 @@ let eventsTimeline = [
         name: "Community Bonding Starts",
         desc: "Interact with your mentors and get to know about the projects",
 
-        completeClass: "",
-        completeStyle: "",
+        completeClass: "bx bx-check",
+        completeStyle: "display:none",
         daysLeft: Math.floor(
             (new Date("28 January, 2022 23:59:59").getTime() - intDate) /
                 intValue +
@@ -108,42 +108,42 @@ let eventsTimeline = [
     },
     {
         id: 8,
-        date: "20 February, 2022",
-        name: "Phase I Completion",
-        desc: "The first phase of the event ends here!",
+        date: "1 March, 2022",
+        name: "Phase II Begins, End of Phase I",
+        desc: "The first phase of the event ends here & second phase starts!",
 
         completeClass: "",
         completeStyle: "",
         daysLeft: Math.floor(
-            (new Date("20 February, 2022 23:59:59").getTime() - intDate) /
+            (new Date("1 March, 2022 23:59:59").getTime() - intDate) /
                 intValue +
                 1
         ),
     },
     {
         id: 9,
-        date: "2 March, 2022",
+        date: "9 March, 2022",
         name: "Phase II Ends - JWoC Ends",
         desc: "The final stage concludes here!",
 
         completeClass: "",
         completeStyle: "",
         daysLeft: Math.floor(
-            (new Date("2 March, 2022 23:59:59").getTime() - intDate) /
+            (new Date("9 March, 2022 23:59:59").getTime() - intDate) /
                 intValue +
                 1
         ),
     },
     {
         id: 10,
-        date: "8 March, 2022 (Tentative)",
+        date: "14 March, 2022 (Tentative)",
         name: "Official Result Announcement",
         desc: "Standup for the Champions!",
 
         completeClass: "",
         completeStyle: "",
         daysLeft: Math.floor(
-            (new Date("8 March, 2022 23:59:59").getTime() - intDate) /
+            (new Date("14 March, 2022 23:59:59").getTime() - intDate) /
                 intValue +
                 1
         ),
