@@ -101,18 +101,18 @@ setInterval(function () {
 
 // Search Function of USERNAME *********************************************
 
-$("form.searchUser input#search").on("keyup", function () {
+$("form.searchUser input#search").on("input", function () {
     let value = $(this).val().toLowerCase();
-    $("div.rank_table div.rank_body").filter(function () {
+    $("div.rank_table tbody tr").filter(function () {
         $(this).toggle(
-            $(this).find("h2 a").text().toLowerCase().indexOf(value) > -1
+            $(this).find("td a").text().toLowerCase().indexOf(value) > -1
         );
     });
 });
 
 // Search Function of PROJECTS *********************************************
 
-$("form.searchTech input#search").on("keyup", function () {
+$("form.searchTech input#search").on("input", function () {
     let value = $(this).val().toLowerCase();
     $("div.project_card").filter(function () {
         $(this).toggle(
