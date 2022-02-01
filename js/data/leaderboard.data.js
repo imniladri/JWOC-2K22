@@ -7,30 +7,33 @@
 let winnersData = [
     {
         id: 1,
-        name: "Lorem Ipsum",
-        githubUser: "username",
-        githubLink: "#",
+        rank: "1",
         points: "102",
-        imgSrc: "./assets/img/1st.svg",
-        imgAlt: "1st",
+        name: "Hello Peter!",
+        college: "Marvel Cinematic Universe",
+        githubUser: "username",
+        githubLink: "https://github.com/",
+        githubImg: "https://picsum.photos/200",
     },
     {
         id: 2,
-        name: "Lorem Ipsum",
-        githubUser: "username",
-        githubLink: "#",
+        rank: "2",
         points: "96",
-        imgSrc: "./assets/img/2nd.svg",
-        imgAlt: "2nd",
+        name: "Hello Peter!",
+        college: "Marvel Cinematic Universe",
+        githubUser: "username",
+        githubLink: "https://github.com/",
+        githubImg: "https://picsum.photos/200",
     },
     {
         id: 3,
-        name: "Lorem Ipsum",
+        rank: "3",
+        points: "85",
+        name: "Hello Peter!",
+        college: "Marvel Cinematic Universe",
         githubUser: "username",
-        githubLink: "#",
-        points: "89",
-        imgSrc: "./assets/img/3rd.svg",
-        imgAlt: "3rd",
+        githubLink: "https://github.com/",
+        githubImg: "https://picsum.photos/200",
     },
 ];
 
@@ -39,43 +42,48 @@ let winnersData = [
 let ranksData = [
     {
         id: 1,
-        name: "Lorem Ipsum",
         rank: "4",
-        user: "username1",
-        link: "#",
         points: "52",
+        name: "Lorem Ipsum",
+        githubUser: "username1",
+        githubLink: "https://github.com/",
+        githubImg: "https://picsum.photos/200",
     },
     {
         id: 2,
-        name: "Lorem Ipsum",
         rank: "5",
-        user: "username2",
-        link: "#",
         points: "49",
+        name: "Lorem Ipsum",
+        githubUser: "username2",
+        githubLink: "https://github.com/",
+        githubImg: "https://picsum.photos/200",
     },
     {
         id: 3,
-        name: "Lorem Ipsum",
         rank: "6",
-        user: "username3",
-        link: "#",
         points: "32",
+        name: "Lorem Ipsum",
+        githubUser: "username3",
+        githubLink: "https://github.com/",
+        githubImg: "https://picsum.photos/200",
     },
     {
         id: 4,
-        name: "Lorem Ipsum",
         rank: "7",
-        user: "username4",
-        link: "#",
         points: "20",
+        name: "Lorem Ipsum",
+        githubUser: "username4",
+        githubLink: "https://github.com/",
+        githubImg: "https://picsum.photos/200",
     },
     {
         id: 5,
-        name: "Lorem Ipsum",
         rank: "8",
-        user: "username5",
-        link: "#",
         points: "14",
+        name: "Lorem Ipsum",
+        githubUser: "username5",
+        githubLink: "https://github.com/",
+        githubImg: "https://picsum.photos/200",
     },
 ];
 
@@ -84,20 +92,25 @@ let ranksData = [
 /* ********************************************************** */
 
 let winnersContent = document.querySelector("div.leaderboard div.winners");
-let ranksContent = document.querySelector("div.leaderboard div.rank_table");
+let ranksContent = document.querySelector(
+    "div.leaderboard div.rank_table table tbody"
+);
 
 // Leaderboard Winners Preview
 
 Object.values(winnersData).map((val) => {
     winnersContent.innerHTML += `
         <div class="position_card">
-            <div class="figure">
-                <img src="${val.imgSrc}" alt="${val.imgAlt}" />
+            <div class="stats">
+                <h2>${val.points}</h2>
+                <p>Points</p>
+                <span>Rank: ${val.rank}</span>
             </div>
-            <div class="content">
-                <h2>${val.name}</h2>
-                <a href="${val.githubLink}">${val.githubUser}</a>
-                <h4>Points: ${val.points}</h4>
+            <div class="desc">
+                <img src="${val.githubImg}" alt="Github Avatar" />
+                <h1>${val.name}</h1>
+                <a href="${val.githubLink}" class="btn">@${val.githubUser}</a>
+                <p>${val.college}</p>
             </div>
         </div>
     `;
@@ -107,11 +120,11 @@ Object.values(winnersData).map((val) => {
 
 Object.values(ranksData).map((val) => {
     ranksContent.innerHTML += `
-        <div class="rank_body">
-            <h2>${val.rank}</h2>
-            <h2>${val.name}</h2>
-            <h2><a href="${val.link}">${val.user}</a></h2>
-            <h2>${val.points}</h2>
-        </div>
+        <tr>
+            <td>${val.rank}</td>
+            <td><img src="${val.githubImg}" /> ${val.name}</td>
+            <td><a href="${val.githubLink}">${val.githubUser}</a></td>
+            <td>${val.points}</td>
+        </tr>
     `;
 });
