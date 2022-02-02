@@ -584,19 +584,22 @@ section#stats div.stats {
     padding: 8rem 2rem;
     background: rgba(62, 100, 255, 0.9) url(../../assets/img/pattern_bg.png)
         fixed center / 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 30rem);
+    place-content: center;
+    place-items: center;
+    gap: 2rem;
 }
 
 section#stats div.stats .stats_card {
-    margin: 2rem;
-    padding: 2rem 6rem;
+    margin: auto;
+    padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 8px 16px rgba(50, 69, 107, 0.2);
@@ -604,11 +607,11 @@ section#stats div.stats .stats_card {
 }
 
 section#stats div.stats .stats_card:hover {
-    transform: translateY(-2rem);
+    transform: translateY(-1rem);
 }
 
 section#stats div.stats .stats_card i {
-    margin: 1rem auto auto;
+    margin: auto;
     padding: 1.5rem;
     font-size: 4rem;
     color: var(--darkwhite);
@@ -643,6 +646,7 @@ section#stats div.stats .stats_card span {
     font-weight: 500;
     font-family: var(--mainfont);
     font-style: italic;
+    text-align: center;
     color: var(--darkgrey);
 }
 
@@ -664,13 +668,10 @@ section#stats div.stats .stats_card span {
     }
 }
 
-@media (max-width: 552px) {
+@media (max-width: 572px) {
     section#stats div.stats {
         padding: 4rem 1rem;
-    }
-    section#stats div.stats .stats_card {
-        margin: 2rem 1rem;
-        padding: 1rem 6rem;
+        grid-template-columns: repeat(auto-fill, 20rem);
     }
     section#stats div.stats .stats_card i {
         font-size: 3rem;
@@ -680,18 +681,6 @@ section#stats div.stats .stats_card span {
     }
     section#stats div.stats .stats_card h4 {
         font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 472px) {
-    section#stats div.stats .stats_card {
-        padding: 1rem 2rem;
-    }
-}
-
-@media (max-width: 412px) {
-    section#stats div.stats .stats_card {
-        padding: 1rem;
     }
 }
 
@@ -907,11 +896,14 @@ section#timeline div.details .fig {
     position: sticky;
     top: 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 section#timeline div.details .fig img {
     margin: auto;
-    width: 100%;
+    width: 85%;
     height: auto;
     z-index: -1;
 }
@@ -1071,9 +1063,6 @@ section#timeline div.details .events .event_card p {
     }
     section#timeline div.details .fig {
         position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     section#timeline div.details .fig img {
         width: 50%;
@@ -1228,7 +1217,7 @@ section#projects div.details .content p {
     color: var(--lightblack);
     text-align: justify;
     letter-spacing: 0.5px;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 section#projects div.details .content a {
@@ -1513,6 +1502,10 @@ section#sponsors div.details .category {
     align-items: center;
 }
 
+section#sponsors div.details .category.learning {
+  margin: 10rem 2rem;
+}
+
 section#sponsors div.details .category .title {
     position: relative;
     display: flex;
@@ -1534,8 +1527,15 @@ section#sponsors div.details .category .title::after {
 
 section#sponsors div.details .category .title img {
     margin: auto;
-    width: 8rem;
+    width: auto;
     height: auto;
+}
+
+section#sponsors div.details .category .title img.w5 {
+  width: 5rem;
+}
+section#sponsors div.details .category .title img.w6 {
+  width: 6rem;
 }
 
 section#sponsors div.details .category .title h4 {
@@ -1602,14 +1602,12 @@ section#sponsors div.details .category .sponsors h3 {
     section#sponsors div.sub_head {
         padding: 1rem 6rem;
     }
-    section#sponsors div.details .category {
+    section#sponsors div.details .category,
+    section#sponsors div.details .category.learning {
         margin: 4rem auto;
     }
     section#sponsors div.details .category .title {
         margin: 2rem auto;
-    }
-    section#sponsors div.details .category .title img {
-        width: 7rem;
     }
     section#sponsors div.details .category .title::after {
         display: none;

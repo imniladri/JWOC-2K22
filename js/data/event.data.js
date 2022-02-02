@@ -10,7 +10,7 @@ let eventsTimeline = [
         id: 1,
         date: "16 January, 2022",
         name: "JWoC Program Announced",
-        desc: "This is where we set the ball rolling",
+        desc: "This is where we set the ball rolling!",
 
         // completeClass: "bx bx-check",
         // completeStyle: "display:none",
@@ -26,7 +26,7 @@ let eventsTimeline = [
         id: 2,
         date: "16 January, 2022",
         name: "Mentor & Mentee Registration",
-        desc: "Registration begins for Mentors and Mentees",
+        desc: "Registration begins for Mentors and Mentees!",
 
         completeClass: "bx bx-check",
         completeStyle: "display:none",
@@ -40,7 +40,7 @@ let eventsTimeline = [
         id: 3,
         date: "25 January, 2022",
         name: "Projects Announcement Begins",
-        desc: "The wait is over! We are going to reveal the selected projects",
+        desc: "The wait is over! We are going to reveal the selected projects.",
 
         completeClass: "bx bx-check",
         completeStyle: "display:none",
@@ -54,7 +54,7 @@ let eventsTimeline = [
         id: 4,
         date: "28 & 30 January, 2022",
         name: "Mentor & Mentee Registration Ends",
-        desc: "Mentor and Mentee registration has been extended, Register Now!!!",
+        desc: "Here comes to an end for mentor & mentee registration for JWoC 2K22.",
 
         completeClass: "bx bx-check",
         completeStyle: "display:none",
@@ -80,14 +80,14 @@ let eventsTimeline = [
     },
     {
         id: 6,
-        date: "30 January, 2022",
+        date: "31 January, 2022",
         name: "Community Bonding Ends",
         desc: "From now on we will work together!",
 
-        completeClass: "",
-        completeStyle: "",
+        completeClass: "bx bx-check",
+        completeStyle: "display:none",
         daysLeft: Math.floor(
-            (new Date("30 January, 2022 23:59:59").getTime() - intDate) /
+            (new Date("31 January, 2022 23:59:59").getTime() - intDate) /
                 intValue +
                 1
         ),
@@ -98,8 +98,8 @@ let eventsTimeline = [
         name: "Coding Period Starts",
         desc: "Finally the moment is here, You can start working on your desired projects. Code Hard!",
 
-        completeClass: "",
-        completeStyle: "",
+        completeClass: "bx bx-check",
+        completeStyle: "display:none",
         daysLeft: Math.floor(
             (new Date("1 February, 2022 23:59:59").getTime() - intDate) /
                 intValue +

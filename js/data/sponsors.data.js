@@ -118,6 +118,18 @@ let mediaPartnerData = [
     },
 ];
 
+// Learning Partner
+
+let learningPartnerData = [
+    {
+        id: 1,
+        name: "Gitopia",
+        link: "https://gitopia.com/",
+        img: "./assets/img/sponsors/gitopia.svg",
+        width: "w20",
+    },
+];
+
 /* ********************************************************** */
 // Sponsors Preview Mapping
 /* ********************************************************** */
@@ -127,6 +139,7 @@ let goldTierContent = document.querySelector("div.gold div.sponsors");
 let silverTierContent = document.querySelector("div.silver div.sponsors");
 let communityPartnerContent = document.querySelector("div.community div.sponsors");
 let mediaPartnerContent = document.querySelector("div.media div.sponsors");
+let learningPartnerContent = document.querySelector("div.learning div.sponsors");
 
 // Diamond Tier Preview
 
@@ -172,6 +185,16 @@ Object.values(communityPartnerData).map((val) => {
 
 Object.values(mediaPartnerData).map((val) => {
     mediaPartnerContent.innerHTML += `
+        <a href="${val.link}" target="_blank">
+            <img src="${val.img}" alt="${val.name}" class="${val.width}" />
+        </a>
+    `;
+});
+
+// Learning Partner Preview
+
+Object.values(learningPartnerData).map((val) => {
+    learningPartnerContent.innerHTML += `
         <a href="${val.link}" target="_blank">
             <img src="${val.img}" alt="${val.name}" class="${val.width}" />
         </a>
