@@ -131,32 +131,31 @@ Object.values(ranksData).map((val) => {
 
 // Confetti Particles *******************************************************
 
-var duration = 5 * 1000;
-var animationEnd = Date.now() + duration;
-
-function randomInRange(min, max) {
-    return Math.random() * (max - min) + min;
-}
+var end = Date.now() + 3 * 1000;
 
 (function frame() {
-    var timeLeft = animationEnd - Date.now();
-    var ticks = Math.max(500, 1000 * (timeLeft / duration));
-
     confetti({
-        particleCount: 1,
-        startVelocity: 20,
-        ticks: ticks,
-        origin: {
-            x: Math.random(),
-            y: 0,
-        },
-        colors: ["#ff1700", "#ff67e7", "#5800ff"],
-        shapes: ["circle"],
-        gravity: randomInRange(2, 0),
-        scalar: randomInRange(0.9, 0.9),
+        particleCount: 2,
+        angle: 60,
+        spread: 100,
+        origin: { x: 0 },
+        colors: ["#ff1700", "#5800ff"],
+        zIndex: -1,
+        resize: true,
+        useWorker: true,
+    });
+    confetti({
+        particleCount: 2,
+        angle: 120,
+        spread: 100,
+        origin: { x: 1 },
+        colors: ["#ff1700", "#5800ff"],
+        zIndex: -1,
+        resize: true,
+        useWorker: true,
     });
 
-    if (timeLeft > 0) {
+    if (Date.now() < end) {
         requestAnimationFrame(frame);
     }
 })();
