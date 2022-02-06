@@ -3,6 +3,8 @@
 section#leaderboard {
     position: relative;
     margin: 12rem auto 6rem;
+
+    background: url(../../assets/img/confetti_bg.png) fixed center / 50%;
 }
 
 /* **************************** Sub Head Section **************************** */
@@ -321,6 +323,10 @@ div.leaderboard tbody td a {
     div.leaderboard tbody td,
     div.leaderboard tbody td a {
         font-size: 1.8rem;
+    }
+
+    section#leaderboard {
+        background-size: 100%;
     }
 }
 
