@@ -71,6 +71,13 @@ let silverTierData = [
         img: "./assets/img/sponsors/xyz.svg",
         width: "w15",
     },
+    {
+        id: 4,
+        name: "Badelog",
+        link: "https://badelog.co.in/",
+        img: "./assets/img/sponsors/badelog.png",
+        width: "w20",
+    },
 ];
 
 // Community Partner
