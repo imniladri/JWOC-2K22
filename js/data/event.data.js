@@ -140,8 +140,8 @@ let eventsTimeline = [
         name: "Official Result Announcement",
         desc: "Standup for the Champions!",
 
-        completeClass: "",
-        completeStyle: "",
+        completeClass: "bx bx-check",
+        completeStyle: "display:none",
         daysLeft: Math.floor(
             (new Date("14 March, 2022 23:59:59").getTime() - intDate) /
                 intValue +
