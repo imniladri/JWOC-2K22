@@ -138,7 +138,7 @@ let eventsTimeline = [
         id: 10,
         date: "14 March, 2022",
         name: "Official Result Announcement",
-        desc: "Standup for the Champions!",
+        desc: "Standup for the Champions! <a href='https://leaderboard.jwoc.tech/' target='_blank'>Get Here!</a>",
 
         completeClass: "bx bx-check",
         completeStyle: "display:none",
