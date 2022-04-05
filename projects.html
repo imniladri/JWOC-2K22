@@ -76,10 +76,15 @@
             <p>Our projects available for contribution by registered mentees.</p>
         </div>
 
-        <form class="searchTech">
+        <form class="searchTech" id="searchForm">
             <input type="search" id="search" name="search" class="form-control"
-                placeholder="Search for a tech stacks and get your project!" required autocomplete="off" />
+                placeholder="Search for tech stack or project or mentor name!" required autocomplete="off" />
         </form>
+
+        <div class="spinner" id="projectLoader">
+            <div class="cube1"></div>
+            <div class="cube2"></div>
+        </div>
 
         <div class="projects_content">
             <!-- All Projects Mapped: "projects.data.js" -->
